@@ -3,8 +3,6 @@ import 'package:scoped_model/scoped_model.dart';
 import 'package:sgaapp/models/user_model.dart';
 import 'package:sgaapp/screens/login_screen.dart';
 import 'package:sgaapp/screens/splash_screen.dart';
-import 'package:sgaapp/tabs/products_tab.dart';
-
 import 'db/database.dart';
 //import 'package:sgaapp/screens/signup_screen.dart';
 
