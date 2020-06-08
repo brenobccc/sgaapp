@@ -33,7 +33,6 @@ class _HomePageState extends State<HomePage> {
         child: Icon(Icons.add),
       ),
       appBar: AppBar(
-        backgroundColor: Colors.pink,
         title: Text('Minhas anotações'),
       ),
       body: Padding(
