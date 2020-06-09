@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: "Flutter's Clothing",
         theme: ThemeData(
-            primarySwatch: Colors.orange, primaryColor: Colors.orange[200]),
+            primarySwatch: Colors.purple, primaryColor: Colors.orange[200]),
         debugShowCheckedModeBanner: false,
         home: SplashPage(),
         routes: routers,
