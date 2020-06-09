@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sgaapp/screens/signup_screen.dart';
 
 class LojasTab extends StatelessWidget {
-  List<Widget> containers = [
+  final List<Widget> containers = [
     Container(
       decoration: BoxDecoration(
         color: Colors.white,
@@ -33,20 +32,9 @@ class LojasTab extends StatelessWidget {
                   'data',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 25, 
+                    fontSize: 25,
                     fontWeight: FontWeight.bold,
-                    ),
-                ),
-              ),
-
-              Tab(
-                child: Text(
-                  'data',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 25,  
-                    fontWeight: FontWeight.bold,
-                    ),
+                  ),
                 ),
               ),
               Tab(
@@ -54,9 +42,19 @@ class LojasTab extends StatelessWidget {
                   'data',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 25,   
+                    fontSize: 25,
                     fontWeight: FontWeight.bold,
-                    ),
+                  ),
+                ),
+              ),
+              Tab(
+                child: Text(
+                  'data',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ]),

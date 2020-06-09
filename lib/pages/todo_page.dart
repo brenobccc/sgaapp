@@ -50,8 +50,7 @@ class _TodoPageState extends State<TodoPage> {
           }
         },
         shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(15)    
-            )),
+            borderRadius: BorderRadius.all(Radius.circular(15))),
         icon: Icon(
           Icons.save,
           size: 30,
@@ -59,7 +58,7 @@ class _TodoPageState extends State<TodoPage> {
         ),
         label: Text(
           '  Salvar  ',
-          style: TextStyle(fontSize: 15,color: Colors.white),
+          style: TextStyle(fontSize: 15, color: Colors.white),
         ),
         foregroundColor: Colors.white,
         backgroundColor: Colors.orangeAccent,
@@ -70,13 +69,13 @@ class _TodoPageState extends State<TodoPage> {
           controller: _titleController,
           cursorColor: Colors.white54,
           showCursor: true,
-          style: Theme.of(context).textTheme.headline,
+          style: Theme.of(context).textTheme.bodyText2,
           decoration: InputDecoration(
               hintText: 'Animal',
               border: InputBorder.none,
               hintStyle: Theme.of(context)
                   .textTheme
-                  .headline
+                  .bodyText2
                   .copyWith(color: Colors.white54)),
         ),
         leading: IconButton(

@@ -2,19 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:sgaapp/db/database.dart';
 import 'package:sgaapp/models/user_model.dart';
-import 'package:sgaapp/pages/home_page.dart';
+
 import 'package:sgaapp/screens/home_screen.dart';
 import 'package:sgaapp/screens/signup_screen.dart';
+
 class LoginScreen extends StatefulWidget {
-     LoginScreen({Key key, this.db}): super( key: key);
+  LoginScreen({Key key, this.db}) : super(key: key);
   final AppDatabase db;
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-
-
   final _emailController = TextEditingController();
 
   final _passController = TextEditingController();
@@ -22,8 +21,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final _formKey = GlobalKey<FormState>();
   final _scaffoldKey = GlobalKey<ScaffoldState>();
 
-
-  bool _showPassword=false;
+  bool _showPassword = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +35,6 @@ class _LoginScreenState extends State<LoginScreen> {
         return Form(
           key: _formKey,
           child: ListView(
-
             padding: EdgeInsets.all(16.0),
             children: <Widget>[
               Image(image: AssetImage('assets/bee.png')),
@@ -50,36 +47,37 @@ class _LoginScreenState extends State<LoginScreen> {
                   enabledBorder: UnderlineInputBorder(
                     borderSide: BorderSide(color: Colors.white),
                   ),
-
                 ),
                 keyboardType: TextInputType.emailAddress,
                 validator: (text) {
                   if (text.isEmpty || !text.contains("@"))
                     return "E-mail Inválido!";
+                  return null;
                 },
               ),
               SizedBox(height: 16.0),
               TextFormField(
                 controller: _passController,
                 decoration: InputDecoration(
-                  icon: Icon(Icons.lock),
-                  hintText: "Senha",
-                  enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white),
-                  ),
-                  suffixIcon: GestureDetector(
-                    child: Icon( _showPassword == false ? Icons.visibility_off : Icons.visibility),
-                    onTap: (){
-                      setState(() {
-                        _showPassword = !_showPassword;
-                      });
-                    },
-
-
-                  )),
+                    icon: Icon(Icons.lock),
+                    hintText: "Senha",
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.white),
+                    ),
+                    suffixIcon: GestureDetector(
+                      child: Icon(_showPassword == false
+                          ? Icons.visibility_off
+                          : Icons.visibility),
+                      onTap: () {
+                        setState(() {
+                          _showPassword = !_showPassword;
+                        });
+                      },
+                    )),
                 obscureText: _showPassword == false ? true : false,
                 validator: (text) {
                   if (text.isEmpty || text.length < 6) return "Senha Inválida!";
+                  return null;
                 },
               ),
               Align(
@@ -92,14 +90,13 @@ class _LoginScreenState extends State<LoginScreen> {
                         backgroundColor: Colors.redAccent,
                         duration: Duration(seconds: 3),
                       ));
-                    else{
+                    else {
                       model.recoverPass(_emailController.text);
                       _scaffoldKey.currentState.showSnackBar(SnackBar(
                         content: Text("Confira seu e-mail!"),
                         backgroundColor: Theme.of(context).primaryColor,
                         duration: Duration(seconds: 4),
-                      )
-                      );
+                      ));
                     }
                   },
                   child: Text(
@@ -113,10 +110,9 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(
                 height: 44.0,
                 child: RaisedButton(
-                elevation: 6.0,
+                  elevation: 6.0,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30.0)
-                  ),
+                      borderRadius: BorderRadius.circular(30.0)),
                   child: Text(
                     "Entrar",
                     style: TextStyle(
@@ -149,8 +145,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   elevation: 6.0,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30.0)
-                  ),
+                      borderRadius: BorderRadius.circular(30.0)),
                   textColor: Colors.white,
                   color: Color(0xFFE59730),
                   onPressed: () {
@@ -168,7 +163,12 @@ class _LoginScreenState extends State<LoginScreen> {
 
   void _onSuccess() {
     //Navigator.of(context).pop();
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>HomeScreen(db: widget.db,)));
+    Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+            builder: (context) => HomeScreen(
+                  db: widget.db,
+                )));
   }
 
   void _onFail() {

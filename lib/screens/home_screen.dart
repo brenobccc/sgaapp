@@ -4,7 +4,7 @@ import 'package:sgaapp/pages/home_page.dart';
 import 'package:sgaapp/tabs/home_tab.dart';
 import 'package:sgaapp/tabs/lojas_tab.dart';
 import 'package:sgaapp/tabs/meus_pedidos.dart';
-import 'package:sgaapp/tabs/products_tab.dart';
+
 import 'package:sgaapp/widgets/custom_drawer.dart';
 
 class HomeScreen extends StatelessWidget {
