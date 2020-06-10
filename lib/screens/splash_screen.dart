@@ -16,16 +16,9 @@ class SplashPage extends StatefulWidget {
 class SplashPageState extends State<SplashPage> {
   Future<void> navigationToNextPage() {
     if (LocalAuth.instance.auth) {
-      return Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (context) => HomeScreen(
-            db: GetIt.I.get<AppDatabase>(),
-          ),
-        ),
-      );
+      return Navigator.of(context).pushReplacementNamed('/HomePagePrincipal');
     }
-    return Navigator.pushReplacementNamed(context, '/HomePage');
+    return Navigator.of(context).pushReplacementNamed('/HomePage');
   }
 
   startSplashScreenTimer() async {
