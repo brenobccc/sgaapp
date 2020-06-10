@@ -10,8 +10,7 @@ class CustomDrawer extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    ///DEGRADÊ NA BARRA DE OPÇÕES
-    
+  
     return Drawer(
       child: Stack(
         children: <Widget>[
@@ -42,7 +41,6 @@ class CustomDrawer extends StatelessWidget {
                       bottom: 0.0,
                       child: ScopedModelDescendant<UserModel>(
                         builder: (context, child, model) {
-                          // print(model.isLoggedIn());
                           return Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
@@ -81,8 +79,10 @@ class CustomDrawer extends StatelessWidget {
               DrawerTile(Icons.control_point, "Controle de Animais", pageController, 1),
               DrawerTile(Icons.location_on, "Pecuária", pageController, 2),
               DrawerTile(Icons.playlist_add_check, "Apicultura",pageController, 3),
-              DrawerTile(Icons.help, "Opcões",pageController, 4),
-            ],
+              DrawerTile(Icons.help, "Sobre",pageController, 4),
+              DrawerTile(Icons.keyboard_backspace, "Dicas",pageController, 5),
+        
+            ], 
           )
         ],
       ),
