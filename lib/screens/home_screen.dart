@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:sgaapp/db/database.dart';
 import 'package:sgaapp/pages/home_page.dart';
-import 'package:sgaapp/tabs/home_tab.dart';
-import 'package:sgaapp/tabs/lojas_tab.dart';
-import 'package:sgaapp/tabs/meus_pedidos.dart';
-
+import 'package:sgaapp/views/home/home_teste.dart';
+import 'package:sgaapp/views/home/tabs/lojas_tab.dart';
+import 'package:sgaapp/views/home/tabs/meus_pedidos.dart';
 import 'package:sgaapp/widgets/custom_drawer.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -19,7 +18,11 @@ class HomeScreen extends StatelessWidget {
       physics: NeverScrollableScrollPhysics(),
       children: <Widget>[
         Scaffold(
-          body: HomeTab(),
+          appBar: AppBar(
+            backgroundColor: Colors.orange[300],
+            elevation: 0,
+          ),
+          body: Home(),
           drawer: CustomDrawer(_pageController),
         ),
         Scaffold(
