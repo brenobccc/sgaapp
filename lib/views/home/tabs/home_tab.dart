@@ -3,12 +3,13 @@ import 'package:flutter/material.dart';
 class HomeTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Widget _buildBodyBack() => Container(
-          color: Colors.blueAccent[100],
-        );
+    // Widget _buildBodyBack() => Container(
+    //       color: Colors.blueAccent[100],
+    //     );
 
     return Stack(
       children: <Widget>[
+        Image.asset("assets/splash.png"),
         ClipPath(
           child: Container(
               
@@ -28,7 +29,9 @@ class HomeTab extends StatelessWidget {
                   Color(0xFF3383CD),
                   Color(0xFF11249F),
                 ],
-              ))),
+                
+              )),
+              ),
         ),
         CustomScrollView(
           slivers: <Widget>[
