@@ -22,7 +22,7 @@ class SplashPageState extends State<SplashPage> {
   }
 
   startSplashScreenTimer() async {
-    var _duration = new Duration(seconds: 5);
+    var _duration = new Duration(seconds: 3);
     return new Timer(_duration, navigationToNextPage);
   }
 
