@@ -1,8 +1,10 @@
 import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+
 import 'package:scoped_model/scoped_model.dart';
 import 'package:flutter/material.dart';
+import 'package:sgaapp/shared/auth.dart';
 
 class UserModel extends Model {
   //usuario atual
@@ -16,7 +18,11 @@ class UserModel extends Model {
   @override
   void addListener(VoidCallback listener) {
     super.addListener(listener);
-    _loadCurrentUser();
+    _loadCurrentUser().then((_) {
+      if (isLoggedIn()) {
+        LocalAuth.instance.auth = true;
+      }
+    });
   }
 
   void signUp(

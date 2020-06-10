@@ -1,8 +1,12 @@
-
 import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get_it/get_it.dart';
+import 'package:sgaapp/db/database.dart';
+import 'package:sgaapp/shared/auth.dart';
+
+import 'home_screen.dart';
 
 class SplashPage extends StatefulWidget {
   @override
@@ -10,14 +14,25 @@ class SplashPage extends StatefulWidget {
 }
 
 class SplashPageState extends State<SplashPage> {
- void navigationToNextPage() {
-    Navigator.pushReplacementNamed(context, '/HomePage');
+  Future<void> navigationToNextPage() {
+    if (LocalAuth.instance.auth) {
+      return Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => HomeScreen(
+            db: GetIt.I.get<AppDatabase>(),
+          ),
+        ),
+      );
+    }
+    return Navigator.pushReplacementNamed(context, '/HomePage');
   }
 
   startSplashScreenTimer() async {
-  var _duration = new Duration(seconds: 5);
-  return new Timer(_duration, navigationToNextPage);
-}
+    var _duration = new Duration(seconds: 5);
+    return new Timer(_duration, navigationToNextPage);
+  }
+
   @override
   void initState() {
     super.initState();
@@ -29,19 +44,19 @@ class SplashPageState extends State<SplashPage> {
     SystemChrome.setEnabledSystemUIOverlays([]);
 
     return Container(
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage("assets/splash.png"),
-          fit: BoxFit.cover,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/splash.png"),
+            fit: BoxFit.cover,
+          ),
         ),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-           //Image(image: AssetImage('assets/bee.png')),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            //Image(image: AssetImage('assets/bee.png')),
             SizedBox(height: 150.0),
             CircularProgressIndicator(),
-        ],
-      ));
+          ],
+        ));
   }
 }
