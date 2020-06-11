@@ -19,30 +19,31 @@ class _TelaDeFundoState extends State<TelaDeFundo> {
       children: <Widget>[
         ClipPath(
           child: Container(
-            height: 170,
-            width: double.infinity,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(20.0),
-                  bottomRight: Radius.circular(20.0),
-                ),
-                gradient: LinearGradient(
-                  begin: Alignment.topRight,
-                  end: Alignment.bottomLeft,
-                  colors: [
-                    widget.cor ?? Colors.orange[300],
-                    widget.cor ?? Colors.orange[300],
-                  ],
-                )),
-            child: Align(
-                alignment: AlignmentDirectional(0, -1),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: widget.indicador,
-                )),
-          ),
+              height: 170,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(20.0),
+                    bottomRight: Radius.circular(20.0),
+                  ),
+                  gradient: LinearGradient(
+                    begin: Alignment.topRight,
+                    end: Alignment.bottomLeft,
+                    colors: [
+                      widget.cor ?? Colors.orange[300],
+                      widget.cor ?? Colors.orange[300],
+                    ],
+                  )),
+              child: widget.indicador != null
+                  ? Align(
+                      alignment: AlignmentDirectional(0, -1),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: widget.indicador,
+                      ))
+                  : Container()),
         ),
-        widget.tela
+        widget.tela ?? Container()
       ],
     );
   }

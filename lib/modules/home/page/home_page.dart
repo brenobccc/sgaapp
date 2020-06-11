@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sgaapp/components/tela_fundo.dart';
 import 'package:sgaapp/modules/home/componets/card_home.dart';
 import 'package:sgaapp/modules/home/componets/circule.dart';
 
@@ -33,13 +34,12 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
-      backgroundColor: Colors.white,
-      body: Container(
-        height: double.infinity,
-        child: Stack(
-          children: <Widget>[
-            Center(
+        resizeToAvoidBottomPadding: false,
+        backgroundColor: Colors.white,
+        body: TelaDeFundo(
+          tela: Container(
+            height: double.infinity,
+            child: Center(
               child: Padding(
                 padding: EdgeInsets.only(
                     top: MediaQuery.of(context).size.height * 0.03),
@@ -61,9 +61,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-          ],
-        ),
-      ),
-    );
+          ),
+        ));
   }
 }
