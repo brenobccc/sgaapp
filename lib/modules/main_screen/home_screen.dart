@@ -35,7 +35,7 @@ class HomeScreen extends StatelessWidget {
           appBar: AppBar(
             backgroundColor: Colors.green,
             title: Text(
-              'Controlle de animais',
+              'Controle de animais',
               style: TextStyle(
                 fontSize: 28.0,
                 fontWeight: FontWeight.bold,
