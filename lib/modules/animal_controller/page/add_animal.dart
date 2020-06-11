@@ -3,16 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:sgaapp/db/database.dart';
 import 'package:sgaapp/entitys/todo_entity.dart';
 
-class TodoPage extends StatefulWidget {
-  TodoPage({Key key, this.db, this.todo}) : super(key: key);
+class AddAnimal extends StatefulWidget {
+  AddAnimal({Key key, this.db, this.todo}) : super(key: key);
   final AppDatabase db;
   final TodoEntity todo;
 
   @override
-  _TodoPageState createState() => _TodoPageState();
+  _AddAnimalState createState() => _AddAnimalState();
 }
 
-class _TodoPageState extends State<TodoPage> {
+class _AddAnimalState extends State<AddAnimal> {
   var _titleController;
 
   var _anotationController;

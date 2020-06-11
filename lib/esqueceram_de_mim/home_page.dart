@@ -2,17 +2,18 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sgaapp/db/database.dart';
 import 'package:sgaapp/entitys/todo_entity.dart';
-import 'package:sgaapp/pages/todo_page.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key key, this.db}) : super(key: key);
+import 'package:sgaapp/modules/animal_controller/page/add_animal.dart';
+
+class Teste extends StatefulWidget {
+  const Teste({Key key, this.db}) : super(key: key);
   final AppDatabase db;
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _TesteState createState() => _TesteState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _TesteState extends State<Teste> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +23,7 @@ class _HomePageState extends State<HomePage> {
             context,
             MaterialPageRoute(
               builder: (context) {
-                return TodoPage(db: widget.db);
+                return AddAnimal(db: widget.db);
               },
             ),
           );
@@ -51,7 +52,7 @@ class _HomePageState extends State<HomePage> {
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) {
-                                    return TodoPage(
+                                    return AddAnimal(
                                         db: widget.db,
                                         todo: snapshot.data[index]);
                                   },

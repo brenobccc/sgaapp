@@ -1,6 +1,7 @@
 //tesye
 import 'package:flutter/material.dart';
-import 'package:sgaapp/views/ScrenCards/componets/cards.dart';
+
+import 'componets/cards.dart';
 
 class ScreenCards extends StatefulWidget {
   @override
@@ -28,12 +29,8 @@ class _ScreenCardsState extends State<ScreenCards> {
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
-     
-      resizeToAvoidBottomPadding:false,
-      
-      
+      resizeToAvoidBottomPadding: false,
       body: SafeArea(
-      
         child: Column(
           children: <Widget>[
             Container(
@@ -67,7 +64,7 @@ class _ScreenCardsState extends State<ScreenCards> {
                   // childAspectRatio: 0.85,
                   childAspectRatio: 0.9,
                 ),
-                padding: EdgeInsets.symmetric(horizontal: 25,vertical:15),
+                padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
                 itemCount: tags.length,
                 itemBuilder: (context, index) {
                   return Cards();

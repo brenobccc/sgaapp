@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:sgaapp/views/home/componets/card_home.dart';
-import 'package:sgaapp/views/home/componets/circule.dart';
+import 'package:sgaapp/modules/home/componets/card_home.dart';
+import 'package:sgaapp/modules/home/componets/circule.dart';
 
-class Home extends StatefulWidget {
+class HomePage extends StatefulWidget {
   @override
-  _HomeState createState() => _HomeState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _HomeState extends State<Home> {
+class _HomePageState extends State<HomePage> {
   List<Widget> _pages = [
     CardHome(),
     CardHome(),
@@ -69,7 +69,6 @@ class _HomeState extends State<Home> {
                         Colors.orange[300],
                       ],
                     )),
-                    
                 child: Align(
                     alignment: AlignmentDirectional(0, 0),
                     child: Row(
@@ -78,8 +77,6 @@ class _HomeState extends State<Home> {
                     )),
               ),
             ),
-             
-           
             Center(
               child: Padding(
                 padding: EdgeInsets.only(

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:sgaapp/db/database.dart';
 import 'package:sgaapp/models/user_model.dart';
+import 'package:sgaapp/modules/main_screen/home_screen.dart';
 
-import 'package:sgaapp/screens/home_screen.dart';
-import 'package:sgaapp/screens/signup_screen.dart';
+import 'signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   LoginScreen({Key key, this.db}) : super(key: key);
@@ -149,7 +149,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   textColor: Colors.white,
                   color: Color(0xFFE59730),
                   onPressed: () {
-                    Navigator.of(context).pushReplacement(MaterialPageRoute(
+                    Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => SignUpScreen()));
                   },
                 ),

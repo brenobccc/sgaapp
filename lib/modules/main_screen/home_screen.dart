@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:sgaapp/db/database.dart';
-import 'package:sgaapp/pages/home_page.dart';
-import 'package:sgaapp/views/home/home_teste.dart';
-import 'package:sgaapp/views/home/tabs/dicas.dart';
-import 'package:sgaapp/views/home/tabs/lojas_tab.dart';
-import 'package:sgaapp/views/home/tabs/meus_pedidos.dart';
-import 'package:sgaapp/widgets/custom_drawer.dart';
+
+import 'package:sgaapp/modules/apicultura/page/apicultura.dart';
+import 'package:sgaapp/modules/dicas/page/dicas.dart';
+
+import 'package:sgaapp/modules/home/page/home_page.dart';
+
+import 'package:sgaapp/modules/pecuaria/lojas_tab.dart';
+
+import 'components/custom_drawer.dart';
 
 class HomeScreen extends StatelessWidget {
   final _pageController = PageController();
@@ -23,7 +26,7 @@ class HomeScreen extends StatelessWidget {
             backgroundColor: Colors.orange[300],
             elevation: 0,
           ),
-          body: Home(),
+          body: HomePage(),
           drawer: CustomDrawer(_pageController),
         ),
         Scaffold(
@@ -40,7 +43,7 @@ class HomeScreen extends StatelessWidget {
             centerTitle: true,
             elevation: 0.0,
           ),
-          body: HomePage(db: db),
+          body: HomePage(),
           drawer: CustomDrawer(_pageController),
         ),
         Scaffold(
@@ -88,10 +91,9 @@ class HomeScreen extends StatelessWidget {
             elevation: 0.0,
           ),
           drawer: CustomDrawer(_pageController),
-          body: PedidosTab(),
+          body: ApiculturaPage(),
         ),
-
-         Scaffold(
+        Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.orange[200],
             title: Text(

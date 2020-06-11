@@ -3,7 +3,7 @@ import 'package:scoped_model/scoped_model.dart';
 import 'package:sgaapp/models/user_model.dart';
 import 'dart:async';
 
-import 'home_screen.dart';
+import 'package:sgaapp/modules/main_screen/home_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
   @override
