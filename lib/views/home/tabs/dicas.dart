@@ -120,7 +120,7 @@ class _DicasState extends State<Dicas> {
                             textAlign: TextAlign.center,
                             style: Theme.of(context)
                                 .textTheme
-                                .title
+                                .bodyText2
                                 .copyWith(fontSize: 15),
                           )
                         ],
