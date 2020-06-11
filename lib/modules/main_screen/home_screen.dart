@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 import 'package:sgaapp/db/database.dart';
+import 'package:sgaapp/modules/animal_controller/page/animal_controller_page.dart';
 
 import 'package:sgaapp/modules/apicultura/page/apicultura.dart';
 import 'package:sgaapp/modules/dicas/page/dicas.dart';
@@ -7,6 +9,7 @@ import 'package:sgaapp/modules/dicas/page/dicas.dart';
 import 'package:sgaapp/modules/home/page/home_page.dart';
 
 import 'package:sgaapp/modules/pecuaria/lojas_tab.dart';
+import 'package:sgaapp/modules/pecuaria/page/pecuaria_page.dart';
 
 import 'components/custom_drawer.dart';
 
@@ -33,7 +36,7 @@ class HomeScreen extends StatelessWidget {
           appBar: AppBar(
             backgroundColor: Colors.green,
             title: Text(
-              'Pecuaria',
+              'Controlle de animais',
               style: TextStyle(
                 fontSize: 28.0,
                 fontWeight: FontWeight.bold,
@@ -43,7 +46,9 @@ class HomeScreen extends StatelessWidget {
             centerTitle: true,
             elevation: 0.0,
           ),
-          body: HomePage(),
+          body: AnimalControllerPage(
+            db: db,
+          ),
           drawer: CustomDrawer(_pageController),
         ),
         Scaffold(
@@ -61,7 +66,7 @@ class HomeScreen extends StatelessWidget {
             elevation: 0.0,
           ),
           drawer: CustomDrawer(_pageController),
-          body: LojasTab(),
+          body: PecuariaPage(),
         ),
         Scaffold(
           appBar: AppBar(
@@ -97,7 +102,7 @@ class HomeScreen extends StatelessWidget {
           appBar: AppBar(
             backgroundColor: Colors.orange[200],
             title: Text(
-              'Pecuaria',
+              'Sobre',
               style: TextStyle(
                 fontSize: 28.0,
                 fontWeight: FontWeight.bold,
