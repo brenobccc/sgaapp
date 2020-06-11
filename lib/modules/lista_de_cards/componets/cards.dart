@@ -17,7 +17,7 @@ class Cards extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Container(
-              height: height * 0.2,
+              height: height * 0.22,
               decoration: BoxDecoration(
                   borderRadius:
                       BorderRadius.only(topLeft: border, topRight: border),

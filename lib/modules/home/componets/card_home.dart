@@ -54,11 +54,27 @@ class _CardHomeState extends State<CardHome> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text(widget.titulo ?? "Erro24 descrição vazia!",
+                      Container(
+                        constraints: BoxConstraints(
+                            minWidth: MediaQuery.of(context).size.width * 0.75,
+                            maxWidth: MediaQuery.of(context).size.width * 0.79,
+                            maxHeight:
+                                MediaQuery.of(context).size.height * 0.15,
+                            minHeight:
+                                MediaQuery.of(context).size.height * 0.15),
+                        //color: Colors.red,
+                        child: Text(
+                          widget.titulo ??
+                              "Erro24 descrição vazia! Erro24 Erro24 Erro24 Erro24 Erro24 descrição vazia !",
                           style: TextStyle(
                               color: Colors.orange[300],
                               fontSize:
-                                  MediaQuery.of(context).size.width * 0.10)),
+                                  MediaQuery.of(context).size.width * 0.10),
+                          textScaleFactor: 1,
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 2,
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -77,8 +93,13 @@ class _CardHomeState extends State<CardHome> {
                     child: Center(
                       child: ListTile(
                         title: Text(
-                            widget.descricao ?? "Erro24 descrição vazia!",
-                            style: TextStyle(color: Colors.white)),
+                          widget.descricao ??
+                              "Erro24 Erro24 Erro24 Erro24 Erro24 descrição vazia fedf s fe  fefe ",
+                          style: TextStyle(color: Colors.white),
+                          textScaleFactor: 1,
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 3,
+                        ),
                         leading: Icon(Icons.fastfood),
                         trailing: Icon(Icons.keyboard_arrow_right),
                       ),

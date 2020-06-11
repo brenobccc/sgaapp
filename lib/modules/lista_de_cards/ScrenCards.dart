@@ -62,7 +62,7 @@ class _ScreenCardsState extends State<ScreenCards> {
                   mainAxisSpacing: 25.0,
                   crossAxisSpacing: 25.0,
                   // childAspectRatio: 0.85,
-                  childAspectRatio: 0.9,
+                  childAspectRatio: 0.8,
                 ),
                 padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
                 itemCount: tags.length,

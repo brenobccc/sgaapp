@@ -9,6 +9,10 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  PageController controller;
+  int indice;
+  List<Widget> itens = [];
+
   List<Widget> _pages = [
     CardHome(
       titulo: "Agronomia",
@@ -21,11 +25,8 @@ class _HomePageState extends State<HomePage> {
       descricao: "Enbaixador",
     ),
     CardHome(titulo: "Financeiro", rota: "screenCards"),
+    CardHome(rota: "screenCards"),
   ];
-
-  PageController controller;
-  int indice;
-  List<Widget> itens = [];
 
   List<Widget> indicadores() {
     itens.clear();
