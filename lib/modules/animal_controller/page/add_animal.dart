@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sgaapp/components/my_text_field_widget.dart';
+
 import 'package:sgaapp/db/database.dart';
 import 'package:sgaapp/entitys/todo_entity.dart';
+import 'package:sgaapp/modules/animal_controller/page/components/text_field_animal_controller_widget.dart';
 
 class AddAnimal extends StatefulWidget {
   AddAnimal({Key key, this.db, this.todo}) : super(key: key);
@@ -66,21 +67,8 @@ class _AddAnimalState extends State<AddAnimal> {
       ),
       appBar: AppBar(
         backgroundColor: Colors.green,
-        title: TextField(
-          controller: _titleController,
-          cursorColor: Colors.white54,
-          showCursor: true,
-          style: Theme.of(context).textTheme.bodyText2,
-          decoration: InputDecoration(
-              hintText: 'Animal',
-              border: InputBorder.none,
-              hintStyle: Theme.of(context)
-                  .textTheme
-                  .bodyText2
-                  .copyWith(color: Colors.white54)),
-        ),
         leading: IconButton(
-          icon: Icon(Icons.chevron_left),
+          icon: Icon(Icons.arrow_back_ios),
           onPressed: () {
             Navigator.pop(context, false);
           },
@@ -124,8 +112,19 @@ class _AddAnimalState extends State<AddAnimal> {
         padding: EdgeInsets.all(12),
         child: Column(
           children: <Widget>[
-            MyTextFieldWidget(
+            MyTextFieldAnimalControllerWidget(
+              controller: _titleController,
               hintText: 'Digite...',
+              title: 'Animal',
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            MyTextFieldAnimalControllerWidget(
+              controller: _anotationController,
+              hintText: 'Digite...',
+              title: 'Peso',
+              keyboardType: TextInputType.number,
             ),
           ],
         ),

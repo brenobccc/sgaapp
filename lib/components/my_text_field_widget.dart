@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 class MyTextFieldWidget extends StatelessWidget {
   final String hintText;
   final TextEditingController controller;
+  final TextInputType keyboardType;
 
-  const MyTextFieldWidget({Key key, this.hintText, this.controller})
+  const MyTextFieldWidget(
+      {Key key, this.hintText, this.controller, this.keyboardType})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -16,7 +18,7 @@ class MyTextFieldWidget extends StatelessWidget {
       ),
       child: TextField(
         controller: controller,
-        keyboardType: TextInputType.text,
+        keyboardType: keyboardType,
         decoration: InputDecoration(
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(20),
