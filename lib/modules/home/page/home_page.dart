@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
   int indice;
   List<Widget> itens = [];
 
-  List<Widget> forr() {
+  List<Widget> indicadores() {
     itens.clear();
     int tam = _pages.length;
     for (int i = 0; i < tam; i++)
@@ -37,6 +37,7 @@ class _HomePageState extends State<HomePage> {
         resizeToAvoidBottomPadding: false,
         backgroundColor: Colors.white,
         body: TelaDeFundo(
+          indicador: indicadores(),
           tela: Container(
             height: double.infinity,
             child: Center(
