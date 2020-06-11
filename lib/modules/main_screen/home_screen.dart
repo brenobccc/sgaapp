@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
+
 import 'package:sgaapp/db/database.dart';
 import 'package:sgaapp/modules/animal_controller/page/animal_controller_page.dart';
 
@@ -8,7 +8,6 @@ import 'package:sgaapp/modules/dicas/page/dicas.dart';
 
 import 'package:sgaapp/modules/home/page/home_page.dart';
 
-import 'package:sgaapp/modules/pecuaria/lojas_tab.dart';
 import 'package:sgaapp/modules/pecuaria/page/pecuaria_page.dart';
 
 import 'components/custom_drawer.dart';
