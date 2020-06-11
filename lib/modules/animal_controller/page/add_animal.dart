@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:sgaapp/components/my_text_field_widget.dart';
 import 'package:sgaapp/db/database.dart';
 import 'package:sgaapp/entitys/todo_entity.dart';
 
@@ -89,22 +90,42 @@ class _AddAnimalState extends State<AddAnimal> {
               ? IconButton(
                   icon: Icon(Icons.delete),
                   onPressed: () {
-                    widget.db.todoRepositoryDao.deleteItem(widget.todo);
-                    Navigator.pop(context, true);
+                    showDialog(
+                      context: context,
+                      builder: (_) {
+                        return AlertDialog(
+                          content: Text('Tem centeza que deseja excluir?'),
+                          actions: <Widget>[
+                            FlatButton(
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              },
+                              child: Text('Cancelar'),
+                            ),
+                            FlatButton(
+                              onPressed: () {
+                                widget.db.todoRepositoryDao
+                                    .deleteItem(widget.todo);
+                                Navigator.pop(context);
+                                Navigator.pop(context, true);
+                              },
+                              child: Text('Sim'),
+                            ),
+                          ],
+                        );
+                      },
+                    );
                   },
                 )
               : Container(),
         ],
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(24),
+        padding: EdgeInsets.all(12),
         child: Column(
           children: <Widget>[
-            TextField(
-              controller: _anotationController,
-              decoration: InputDecoration(
-                  hintText: 'Informações', border: InputBorder.none),
-              maxLines: 8,
+            MyTextFieldWidget(
+              hintText: 'Digite...',
             ),
           ],
         ),
