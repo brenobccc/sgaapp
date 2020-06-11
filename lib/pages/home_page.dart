@@ -31,8 +31,7 @@ class _HomePageState extends State<HomePage> {
           }
         },
         shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(15)    
-            )),
+            borderRadius: BorderRadius.all(Radius.circular(15))),
         icon: Icon(
           Icons.add,
           size: 30,
@@ -45,6 +44,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.orangeAccent,
       ),
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.green,
         title: Text(
           ' Animais',
@@ -82,7 +82,6 @@ class _HomePageState extends State<HomePage> {
                             subtitle: Text(snapshot.data[index].anotation),
                           ),
                         );
-                        
                       },
                     )
                   : Center(
