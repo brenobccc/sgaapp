@@ -9,34 +9,21 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List<Widget> _pages = [
-    CardHome(),
-    CardHome(),
-    CardHome(),
-    CardHome(),
-    CardHome(),
-    CardHome(),
-    CardHome(),
-    CardHome(),
-    CardHome(),
-    CardHome(),
+    CardHome(titulo: "Agronomia"),
+    CardHome(titulo: "Apicultura"),
+    CardHome(
+      titulo: "Igor",
+      descricao: "Enbaixador",
+    )
   ];
 
   PageController controller;
   int indice;
   List<Widget> itens = [];
 
-  @override
-  void initState() {
-    //controller = PageController(initialPage: widget.index);
-    //indice = widget.index;
-    super.initState();
-  }
-
   List<Widget> forr() {
     itens.clear();
-    // indice = widget.index;
-    int tam = 10;
-
+    int tam = _pages.length;
     for (int i = 0; i < tam; i++)
       itens.add(SlideDots(isActive: indice == i ? true : false));
 
@@ -52,31 +39,6 @@ class _HomePageState extends State<HomePage> {
         height: double.infinity,
         child: Stack(
           children: <Widget>[
-            ClipPath(
-              child: Container(
-                height: 170,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(20.0),
-                      bottomRight: Radius.circular(20.0),
-                    ),
-                    gradient: LinearGradient(
-                      begin: Alignment.topRight,
-                      end: Alignment.bottomLeft,
-                      colors: [
-                        Colors.orange[300],
-                        Colors.orange[300],
-                      ],
-                    )),
-                child: Align(
-                    alignment: AlignmentDirectional(0, 0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: forr(),
-                    )),
-              ),
-            ),
             Center(
               child: Padding(
                 padding: EdgeInsets.only(
@@ -91,7 +53,6 @@ class _HomePageState extends State<HomePage> {
                     onPageChanged: (index) {
                       indice = index;
                       setState(() {});
-                      print("index página RENAN $index");
                     },
                     itemBuilder: (context, index) {
                       return _pages[index];
