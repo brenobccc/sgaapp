@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sgaapp/db/database.dart';
 import 'package:sgaapp/pages/home_page.dart';
 import 'package:sgaapp/views/home/home_teste.dart';
+import 'package:sgaapp/views/home/tabs/dicas.dart';
 import 'package:sgaapp/views/home/tabs/lojas_tab.dart';
 import 'package:sgaapp/views/home/tabs/meus_pedidos.dart';
 import 'package:sgaapp/widgets/custom_drawer.dart';
@@ -88,6 +89,24 @@ class HomeScreen extends StatelessWidget {
           ),
           drawer: CustomDrawer(_pageController),
           body: PedidosTab(),
+        ),
+
+         Scaffold(
+          appBar: AppBar(
+            backgroundColor: Colors.orange[200],
+            title: Text(
+              'Pecuaria',
+              style: TextStyle(
+                fontSize: 28.0,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            centerTitle: true,
+            elevation: 0.0,
+          ),
+          drawer: CustomDrawer(_pageController),
+          body: Dicas(),
         ),
       ],
     );
