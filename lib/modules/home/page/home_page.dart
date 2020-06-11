@@ -10,12 +10,17 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List<Widget> _pages = [
-    CardHome(titulo: "Agronomia"),
-    CardHome(titulo: "Apicultura"),
     CardHome(
-      titulo: "Igor",
+      titulo: "Agronomia",
+      rota: "screenCards",
+    ),
+    CardHome(titulo: "Apicultura", rota: "screenCards"),
+    CardHome(
+      titulo: "Controle de Animais",
+      rota: "screenCards",
       descricao: "Enbaixador",
-    )
+    ),
+    CardHome(titulo: "Financeiro", rota: "screenCards"),
   ];
 
   PageController controller;

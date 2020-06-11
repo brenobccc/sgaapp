@@ -4,8 +4,11 @@ class CardHome extends StatefulWidget {
   final String descricao;
   final String titulo;
   final String icone;
+  final String rota;
+  final Map args;
 
-  const CardHome({Key key, this.descricao, this.titulo, this.icone})
+  const CardHome(
+      {Key key, this.descricao, this.titulo, this.icone, this.rota, this.args})
       : super(key: key);
 
   @override
@@ -20,9 +23,10 @@ class _CardHomeState extends State<CardHome> {
     return Padding(
       padding: const EdgeInsets.only(left: 22.0, right: 22.0),
       child: InkWell(
-        onTap: () {
-          Navigator.pushNamed(context, "screenCards");
-        },
+        onTap: () => widget.args == null
+            ? Navigator.pushNamed(context, widget.rota ?? "alertaErro")
+            : Navigator.pushNamed(context, widget.rota ?? "alertaErro",
+                arguments: widget.args),
         child: Material(
           elevation: 10,
           borderRadius: BorderRadius.all(borda),
@@ -50,7 +54,7 @@ class _CardHomeState extends State<CardHome> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text(widget.titulo??"Erro24 descrição vazia!",
+                      Text(widget.titulo ?? "Erro24 descrição vazia!",
                           style: TextStyle(
                               color: Colors.orange[300],
                               fontSize:
@@ -72,7 +76,8 @@ class _CardHomeState extends State<CardHome> {
                         minHeight: MediaQuery.of(context).size.height * 0.15),
                     child: Center(
                       child: ListTile(
-                        title: Text(widget.descricao??"Erro24 descrição vazia!",
+                        title: Text(
+                            widget.descricao ?? "Erro24 descrição vazia!",
                             style: TextStyle(color: Colors.white)),
                         leading: Icon(Icons.fastfood),
                         trailing: Icon(Icons.keyboard_arrow_right),

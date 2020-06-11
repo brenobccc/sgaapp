@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
+import 'package:sgaapp/components/tela_de_erro.dart';
 
 import 'package:sgaapp/modules/content/page/content.dart';
 import 'package:sgaapp/modules/home/page/home_page.dart';
@@ -17,5 +18,6 @@ Map<String, WidgetBuilder> routers = {
   '/HomePagePrincipal': (BuildContext context) => HomeScreen(db: db),
   'screenCards': (BuildContext context) => ScreenCards(),
   'home': (BuildContext context) => HomePage(),
-  'Content': (BuildContext context) => Content()
+  'Content': (BuildContext context) => Content(),
+  'alertaErro': (BuildContext context) => TelaDeErro()
 };
