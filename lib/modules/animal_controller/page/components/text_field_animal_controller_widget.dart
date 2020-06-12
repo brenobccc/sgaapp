@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:sgaapp/components/my_text_field_widget.dart';
 
 class MyTextFieldAnimalControllerWidget extends StatelessWidget {
@@ -6,10 +7,17 @@ class MyTextFieldAnimalControllerWidget extends StatelessWidget {
   final String hintText;
   final TextEditingController controller;
   final TextInputType keyboardType;
+  final List<TextInputFormatter> inputFormatters;
 
   const MyTextFieldAnimalControllerWidget(
-      {Key key, this.title, this.controller, this.hintText, this.keyboardType})
+      {Key key,
+      this.title,
+      this.controller,
+      this.hintText,
+      this.keyboardType,
+      this.inputFormatters})
       : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -26,6 +34,7 @@ class MyTextFieldAnimalControllerWidget extends StatelessWidget {
           controller: controller,
           hintText: hintText,
           keyboardType: keyboardType,
+          inputFormatters: inputFormatters,
         ),
       ],
     );

@@ -17,6 +17,7 @@ environment:
   sdk: ">=2.2.2 <3.0.0"
 
 dependencies:
+  
   get_it: ^4.0.2
   floor: ^0.13.0
   flutter:
@@ -35,6 +36,7 @@ dependencies:
   path_provider: ^1.6.7
   firebase_auth: ^0.16.0
   url_launcher: ^5.4.5
+  flutter_masked_text: ^0.8.0
 
 dev_dependencies:
   floor_generator: ^0.13.0
