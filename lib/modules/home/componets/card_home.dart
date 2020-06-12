@@ -5,7 +5,7 @@ class CardHome extends StatefulWidget {
   final String titulo;
   final String icone;
   final String rota;
-  final Map args;
+  final Map<dynamic, dynamic> args;
 
   const CardHome(
       {Key key, this.descricao, this.titulo, this.icone, this.rota, this.args})
@@ -23,10 +23,8 @@ class _CardHomeState extends State<CardHome> {
     return Padding(
       padding: const EdgeInsets.only(left: 22.0, right: 22.0),
       child: InkWell(
-        onTap: () => widget.args == null
-            ? Navigator.pushNamed(context, widget.rota ?? "alertaErro")
-            : Navigator.pushNamed(context, widget.rota ?? "alertaErro",
-                arguments: widget.args),
+        onTap: () => Navigator.pushNamed(context, widget.rota ?? "alertaErro",
+            arguments: widget.args),
         child: Material(
           elevation: 10,
           borderRadius: BorderRadius.all(borda),
@@ -93,8 +91,7 @@ class _CardHomeState extends State<CardHome> {
                     child: Center(
                       child: ListTile(
                         title: Text(
-                          widget.descricao ??
-                              "Erro24 Erro24 Erro24 Erro24 Erro24 descrição vazia fedf s fe  fefe ",
+                          widget.descricao ?? "sem descrição",
                           style: TextStyle(color: Colors.white),
                           textScaleFactor: 1,
                           overflow: TextOverflow.ellipsis,

@@ -53,13 +53,43 @@ class _AnimalControllerPageState extends State<AnimalControllerPage> {
         ),
         elevation: 5,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(24),
+      body: SafeArea(
         child: FutureBuilder<List<TodoEntity>>(
             future: widget.db.todoRepositoryDao.getAll(),
             builder: (context, snapshot) {
-              return snapshot.hasData
-                  ? ListView.builder(
+              return snapshot.hasData?
+                  // ? GridView.builder(
+                  //     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  //       crossAxisCount: 2,
+                  //       mainAxisSpacing: 25.0,
+                  //       crossAxisSpacing: 25.0,
+                  //       childAspectRatio: 0.8,
+                  //     ),
+                  //     padding:
+                  //         EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+                  //     itemCount: snapshot.data.length,
+                  //     itemBuilder: (context, index) {
+                  //       return Cards(
+                  //         descricao: snapshot.data[index].title,
+                  //         onPressed: () async {
+                  //           var result = await Navigator.push(
+                  //             context,
+                  //             MaterialPageRoute(
+                  //               builder: (context) {
+                  //                 return AddAnimal(
+                  //                     db: widget.db,
+                  //                     todo: snapshot.data[index]);
+                  //               },
+                  //             ),
+                  //           );
+                  //           if (result) {
+                  //             setState(() {});
+                  //           }
+                  //         },
+                  //       );
+                  //     },
+                  //   )
+                   ListView.builder(
                       itemCount: snapshot.data.length,
                       itemBuilder: (context, index) {
                         return Card(

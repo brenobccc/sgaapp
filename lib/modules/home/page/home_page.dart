@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sgaapp/components/tela_fundo.dart';
 import 'package:sgaapp/modules/home/componets/card_home.dart';
 import 'package:sgaapp/modules/home/componets/circule.dart';
+import 'package:sgaapp/modules/lista_de_cards/componets/cards.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -14,18 +15,66 @@ class _HomePageState extends State<HomePage> {
   List<Widget> itens = [];
 
   List<Widget> _pages = [
+    CardHome(titulo: "Agronomia", rota: "screenCards", args: {
+      'listaCards': [
+        Cards(
+          descricao: "Controle de Praga",
+          rota: 'Content',
+        ),
+        Cards(
+          descricao: "Plantio e praga por regiao",
+          rota: 'Content',
+        ),
+        Cards(
+          descricao: "Equipamento agrícola",
+          rota: 'Content',
+        ),
+      ]
+    }),
     CardHome(
-      titulo: "Agronomia",
+      titulo: "Apicultura",
       rota: "screenCards",
+      args: {
+        'listaCards': [
+          Cards(),
+          Cards(),
+          Cards(),
+        ]
+      },
     ),
-    CardHome(titulo: "Apicultura", rota: "screenCards"),
     CardHome(
       titulo: "Controle de Animais",
       rota: "screenCards",
       descricao: "Enbaixador",
+      args: {
+        'listaCards': [
+          Cards(),
+          Cards(),
+          Cards(),
+        ]
+      },
     ),
-    CardHome(titulo: "Financeiro", rota: "screenCards"),
-    CardHome(rota: "screenCards"),
+    CardHome(
+      titulo: "Financeiro",
+      rota: "screenCards",
+      args: {
+        'listaCards': [
+          Cards(),
+          Cards(),
+          Cards(),
+        ]
+      },
+    ),
+    CardHome(
+      rota: "screenCards",
+      args: {
+        'listaCards': [
+          Cards(),
+          Cards(),
+          Cards(),
+        ]
+      },
+    ),
   ];
 
   List<Widget> indicadores() {

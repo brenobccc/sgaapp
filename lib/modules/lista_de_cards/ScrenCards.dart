@@ -1,23 +1,17 @@
 //tesye
 import 'package:flutter/material.dart';
-
-import 'componets/cards.dart';
-
+import 'package:sgaapp/modules/lista_de_cards/componets/cards.dart';
 class ScreenCards extends StatefulWidget {
+  final Map argumentos;
+
+  const ScreenCards({Key key, this.argumentos}) : super(key: key);
   @override
   _ScreenCardsState createState() => _ScreenCardsState();
 }
 
 class _ScreenCardsState extends State<ScreenCards> {
   var controller = TextEditingController();
-  List<Widget> tags = <Widget>[
-    Cards(),
-    Cards(),
-    Cards(),
-    Cards(),
-    Cards(),
-    Cards(),
-  ];
+ 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,13 +55,12 @@ class _ScreenCardsState extends State<ScreenCards> {
                   crossAxisCount: 2,
                   mainAxisSpacing: 25.0,
                   crossAxisSpacing: 25.0,
-                  // childAspectRatio: 0.85,
                   childAspectRatio: 0.8,
                 ),
                 padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
-                itemCount: tags.length,
+                itemCount: widget.argumentos['listaCards'].length ?? 10,
                 itemBuilder: (context, index) {
-                  return Cards();
+                  return widget.argumentos['listaCards'][index]??Cards();
                 },
               ),
             ),

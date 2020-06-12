@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:sgaapp/db/database.dart';
 import 'package:sgaapp/models/user_model.dart';
@@ -107,30 +108,38 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               SizedBox(height: 16.0),
-              SizedBox(
-                height: 44.0,
-                child: RaisedButton(
-                  elevation: 6.0,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.0)),
-                  child: Text(
-                    "Entrar",
-                    style: TextStyle(
-                      fontSize: 20,
+
+              //LEMBRA DE REMOVERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+              InkWell(
+                onLongPress: () {
+                  Navigator.pushNamed(context, "/HomePagePrincipal",
+                      arguments: GetIt.I.get<AppDatabase>());
+                },
+                child: SizedBox(
+                  height: 44.0,
+                  child: RaisedButton(
+                    elevation: 6.0,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30.0)),
+                    child: Text(
+                      "Entrar",
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
                     ),
+                    textColor: Colors.white,
+                    color: Color(0xFFE59730),
+                    onPressed: () {
+                      if (_formKey.currentState.validate()) {
+                        model.signIn(
+                          email: _emailController.text,
+                          pass: _passController.text,
+                          onSuccess: _onSuccess,
+                          onFail: _onFail,
+                        );
+                      }
+                    },
                   ),
-                  textColor: Colors.white,
-                  color: Color(0xFFE59730),
-                  onPressed: () {
-                    if (_formKey.currentState.validate()) {
-                      model.signIn(
-                        email: _emailController.text,
-                        pass: _passController.text,
-                        onSuccess: _onSuccess,
-                        onFail: _onFail,
-                      );
-                    }
-                  },
                 ),
               ),
               SizedBox(height: 30.0),

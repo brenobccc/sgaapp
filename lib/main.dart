@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.purple, primaryColor: Colors.orange[200]),
         debugShowCheckedModeBanner: false,
         home: SplashPage(),
-        routes: routers,
+        onGenerateRoute: RouteGenerator.generateRoute,
       ),
     );
   }
