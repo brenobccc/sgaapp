@@ -57,7 +57,8 @@ class _AnimalControllerPageState extends State<AnimalControllerPage> {
         child: FutureBuilder<List<TodoEntity>>(
             future: widget.db.todoRepositoryDao.getAll(),
             builder: (context, snapshot) {
-              return snapshot.hasData?
+              return snapshot.hasData
+                  ?
                   // ? GridView.builder(
                   //     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   //       crossAxisCount: 2,
@@ -89,7 +90,7 @@ class _AnimalControllerPageState extends State<AnimalControllerPage> {
                   //       );
                   //     },
                   //   )
-                   ListView.builder(
+                  ListView.builder(
                       itemCount: snapshot.data.length,
                       itemBuilder: (context, index) {
                         return Card(
@@ -109,8 +110,14 @@ class _AnimalControllerPageState extends State<AnimalControllerPage> {
                                 setState(() {});
                               }
                             },
-                            title: Text(snapshot.data[index].title),
-                            subtitle: Text(snapshot.data[index].anotation),
+                            title: Text(snapshot.data[index].animal),
+                            subtitle: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text(snapshot.data[index].peso),
+                                Text(snapshot.data[index].idade ?? 'Teste'),
+                              ],
+                            ),
                           ),
                         );
                       },

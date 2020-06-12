@@ -20,11 +20,15 @@ class _AddAnimalState extends State<AddAnimal> {
   var _titleController;
   // var _anotationController;
   MoneyMaskedTextController _pesoController;
+  TextEditingController _idadeController;
 
   @override
   void initState() {
     _titleController = TextEditingController(
-        text: widget.todo != null ? widget.todo.title : '');
+        text: widget.todo != null ? widget.todo.animal : '');
+
+    _idadeController = TextEditingController(
+        text: widget.todo != null ? widget.todo.idade : '');
 
     // _anotationController = TextEditingController(
     //     text: widget.todo != null ? widget.todo.anotation : '');
@@ -38,7 +42,7 @@ class _AddAnimalState extends State<AddAnimal> {
 
     //Valor inicial para o peso
     if (widget.todo != null) {
-      _pesoController.text = widget.todo.anotation;
+      _pesoController.text = widget.todo.peso;
     }
 
     super.initState();
@@ -101,6 +105,18 @@ class _AddAnimalState extends State<AddAnimal> {
               //   WhitelistingTextInputFormatter.digitsOnly,
               // ],
             ),
+            SizedBox(
+              height: 15,
+            ),
+            MyTextFieldAnimalControllerWidget(
+              controller: _idadeController,
+              hintText: 'Digite...',
+              title: 'Idade',
+              keyboardType: TextInputType.number,
+              // inputFormatters: <TextInputFormatter>[
+              //   WhitelistingTextInputFormatter.digitsOnly,
+              // ],
+            ),
           ],
         ),
       ),
@@ -109,12 +125,14 @@ class _AddAnimalState extends State<AddAnimal> {
 
   void saveButtom() {
     if (_titleController.text.isNotEmpty &&
+        _idadeController.text.isNotEmpty &&
         _pesoController.text.isNotEmpty &&
         _pesoController.text != 'Kg 0,00') {
       var todo = TodoEntity(
         id: widget.todo != null ? widget.todo.id : null,
-        anotation: _pesoController.text,
-        title: _titleController.text,
+        peso: _pesoController.text,
+        animal: _titleController.text,
+        idade: _idadeController.text,
         createdAt: DateTime.now().toUtc().toString(),
       );
       if (widget.todo != null) {

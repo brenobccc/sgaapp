@@ -80,7 +80,7 @@ class _$AppDatabase extends AppDatabase {
       },
       onCreate: (database, version) async {
         await database.execute(
-            'CREATE TABLE IF NOT EXISTS `Todos` (`title` TEXT, `anotation` TEXT, `id` INTEGER PRIMARY KEY AUTOINCREMENT, `createdAt` TEXT, `updateAt` TEXT)');
+            'CREATE TABLE IF NOT EXISTS `Todos` (`animal` TEXT, `peso` TEXT, `idade` TEXT, `id` INTEGER PRIMARY KEY AUTOINCREMENT, `createdAt` TEXT, `updateAt` TEXT)');
 
         await callback?.onCreate?.call(database, version);
       },
@@ -102,8 +102,9 @@ class _$TodoRepositoryDao extends TodoRepositoryDao {
             database,
             'Todos',
             (TodoEntity item) => <String, dynamic>{
-                  'title': item.title,
-                  'anotation': item.anotation,
+                  'animal': item.animal,
+                  'idade': item.idade,
+                  'peso': item.peso,
                   'id': item.id,
                   'createdAt': item.createdAt,
                   'updateAt': item.updateAt
@@ -113,8 +114,9 @@ class _$TodoRepositoryDao extends TodoRepositoryDao {
             'Todos',
             ['id'],
             (TodoEntity item) => <String, dynamic>{
-                  'title': item.title,
-                  'anotation': item.anotation,
+                  'animal': item.animal,
+                  'idade': item.idade,
+                  'peso': item.peso,
                   'id': item.id,
                   'createdAt': item.createdAt,
                   'updateAt': item.updateAt
@@ -124,8 +126,9 @@ class _$TodoRepositoryDao extends TodoRepositoryDao {
             'Todos',
             ['id'],
             (TodoEntity item) => <String, dynamic>{
-                  'title': item.title,
-                  'anotation': item.anotation,
+                  'animal': item.animal,
+                  'peso': item.peso,
+                  'idade': item.idade,
                   'id': item.id,
                   'createdAt': item.createdAt,
                   'updateAt': item.updateAt
@@ -141,8 +144,9 @@ class _$TodoRepositoryDao extends TodoRepositoryDao {
       id: row['id'] as int,
       createdAt: row['createdAt'] as String,
       updateAt: row['updateAt'] as String,
-      title: row['title'] as String,
-      anotation: row['anotation'] as String);
+      animal: row['animal'] as String,
+      idade: row['idade'] as String,
+      peso: row['peso'] as String);
 
   final InsertionAdapter<TodoEntity> _todoEntityInsertionAdapter;
 

@@ -62,8 +62,8 @@ class _TesteState extends State<Teste> {
                                 setState(() {});
                               }
                             },
-                            title: Text(snapshot.data[index].title),
-                            subtitle: Text(snapshot.data[index].anotation),
+                            title: Text(snapshot.data[index].animal),
+                            subtitle: Text(snapshot.data[index].peso),
                           ),
                         );
                       },
