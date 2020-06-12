@@ -17,21 +17,22 @@ class AddAnimal extends StatefulWidget {
 }
 
 class _AddAnimalState extends State<AddAnimal> {
-  var _titleController;
   // var _anotationController;
   MoneyMaskedTextController _pesoController;
+  TextEditingController _animalController;
   TextEditingController _idadeController;
+  TextEditingController _descController;
 
   @override
   void initState() {
-    _titleController = TextEditingController(
+    _animalController = TextEditingController(
         text: widget.todo != null ? widget.todo.animal : '');
 
     _idadeController = TextEditingController(
         text: widget.todo != null ? widget.todo.idade : '');
 
-    // _anotationController = TextEditingController(
-    //     text: widget.todo != null ? widget.todo.anotation : '');
+    _descController = TextEditingController(
+        text: widget.todo != null ? widget.todo.idade : '');
 
     //Máscara para o peso
     _pesoController = MoneyMaskedTextController(
@@ -89,8 +90,8 @@ class _AddAnimalState extends State<AddAnimal> {
         child: Column(
           children: <Widget>[
             MyTextFieldAnimalControllerWidget(
-              controller: _titleController,
-              hintText: 'Digite...',
+              controller: _animalController,
+              hintText: 'Nome...',
               title: 'Animal',
             ),
             SizedBox(
@@ -98,24 +99,28 @@ class _AddAnimalState extends State<AddAnimal> {
             ),
             MyTextFieldAnimalControllerWidget(
               controller: _pesoController,
-              hintText: 'Digite...',
               title: 'Peso',
               keyboardType: TextInputType.number,
-              // inputFormatters: <TextInputFormatter>[
-              //   WhitelistingTextInputFormatter.digitsOnly,
-              // ],
             ),
             SizedBox(
               height: 15,
             ),
             MyTextFieldAnimalControllerWidget(
               controller: _idadeController,
-              hintText: 'Digite...',
+              hintText: 'Idade...',
               title: 'Idade',
               keyboardType: TextInputType.number,
-              // inputFormatters: <TextInputFormatter>[
-              //   WhitelistingTextInputFormatter.digitsOnly,
-              // ],
+              inputFormatters: [
+                WhitelistingTextInputFormatter.digitsOnly,
+              ],
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            MyTextFieldAnimalControllerWidget(
+              controller: _descController,
+              hintText: 'Descrição...',
+              title: 'Descrição',
             ),
           ],
         ),
@@ -124,14 +129,14 @@ class _AddAnimalState extends State<AddAnimal> {
   }
 
   void saveButtom() {
-    if (_titleController.text.isNotEmpty &&
+    if (_animalController.text.isNotEmpty &&
         _idadeController.text.isNotEmpty &&
         _pesoController.text.isNotEmpty &&
         _pesoController.text != 'Kg 0,00') {
       var todo = TodoEntity(
         id: widget.todo != null ? widget.todo.id : null,
         peso: _pesoController.text,
-        animal: _titleController.text,
+        animal: _animalController.text,
         idade: _idadeController.text,
         createdAt: DateTime.now().toUtc().toString(),
       );

@@ -114,8 +114,16 @@ class _AnimalControllerPageState extends State<AnimalControllerPage> {
                             subtitle: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
-                                Text(snapshot.data[index].peso),
-                                Text(snapshot.data[index].idade ?? 'Teste'),
+                                Text(
+                                  'idade: ${snapshot.data[index].idade} '
+                                  '${double.parse(snapshot.data[index].idade) > 1 ? "anos" : "ano"}',
+                                ),
+                                Text(
+                                  'peso: ${snapshot.data[index].peso.substring(2)} Kg',
+                                ),
+                                Text(
+                                  'Descrição: Adicionar a descrição',
+                                ),
                               ],
                             ),
                           ),
