@@ -5,7 +5,8 @@ import 'package:sgaapp/modules/animal_controller/page/add_animal.dart';
 
 import 'package:sgaapp/modules/content/page/content.dart';
 import 'package:sgaapp/modules/home/page/home_page.dart';
-import 'package:sgaapp/modules/lista_de_cards/ScrenCards.dart';
+import 'package:sgaapp/modules/lista_de_cards/lista_de_cards.dart';
+import 'package:sgaapp/modules/lista_de_cards_tab/lista_de_cards_tabs.dart';
 
 import 'package:sgaapp/modules/login/page/login_screen.dart';
 import 'package:sgaapp/modules/main_screen/home_screen.dart';
@@ -20,11 +21,17 @@ class RouteGenerator {
       '/HomePage': MaterialPageRoute(builder: (_) => LoginScreen(db: db)),
       '/HomePagePrincipal':
           MaterialPageRoute(builder: (_) => HomeScreen(db: db)),
-      'screenCards':
-          MaterialPageRoute(builder: (_) => ScreenCards(argumentos: args)),
+      'ListDeCards':
+          MaterialPageRoute(builder: (_) => ListDeCards(argumentos: args)),
+      'ListDeCardsTabs':
+          MaterialPageRoute(builder: (_) => ListDeCarsTabs(argumentos: args)),
       'home': MaterialPageRoute(builder: (_) => HomePage()),
       'Content': MaterialPageRoute(builder: (_) => Content()),
-      'addanimal': MaterialPageRoute(builder: (_) => AddAnimal(db:db, todo: args,)),
+      'addanimal': MaterialPageRoute(
+          builder: (_) => AddAnimal(
+                db: db,
+                todo: args,
+              )),
       'alertaErro': MaterialPageRoute(builder: (_) => TelaDeErro()),
     };
 

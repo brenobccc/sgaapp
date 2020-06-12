@@ -15,25 +15,63 @@ class _HomePageState extends State<HomePage> {
   List<Widget> itens = [];
 
   List<Widget> _pages = [
-    CardHome(titulo: "Agronomia", rota: "screenCards", args: {
+    CardHome(titulo: "Agronomia", rota: "ListDeCardsTabs", args: {
       'listaCards': [
-        Cards(
-          descricao: "Controle de Praga",
-          rota: 'Content',
-        ),
-        Cards(
-          descricao: "Plantio e praga por regiao",
-          rota: 'Content',
-        ),
-        Cards(
-          descricao: "Equipamento agrícola",
-          rota: 'Content',
-        ),
-      ]
+        {
+          'titulo': 'Plantio',
+          'lista': [
+            Cards(
+              descricao: "1",
+              rota: 'Content',
+            ),
+            Cards(
+              descricao: "2",
+              rota: 'Content',
+            ),
+            Cards(
+              descricao: "3",
+              rota: 'Content',
+            ),
+            Cards(
+              descricao: "4",
+              rota: 'Content',
+            ),
+            Cards(
+              descricao: "5",
+              rota: 'Content',
+            ),
+          ]
+        },
+        {
+          'titulo': 'Equipamentos agrícula',
+          'lista': [
+            Cards(
+              descricao: "1",
+              rota: 'Content',
+            ),
+            Cards(
+              descricao: "2",
+              rota: 'Content',
+            ),
+            Cards(
+              descricao: "3",
+              rota: 'Content',
+            ),
+            Cards(
+              descricao: "4",
+              rota: 'Content',
+            ),
+            Cards(
+              descricao: "5",
+              rota: 'Content',
+            ),
+          ]
+        }
+      ],
     }),
     CardHome(
       titulo: "Apicultura",
-      rota: "screenCards",
+      rota: "ListDeCards",
       args: {
         'listaCards': [
           Cards(),
@@ -44,7 +82,7 @@ class _HomePageState extends State<HomePage> {
     ),
     CardHome(
       titulo: "Controle de Animais",
-      rota: "screenCards",
+      rota: "ListDeCards",
       descricao: "Enbaixador",
       args: {
         'listaCards': [
@@ -56,7 +94,7 @@ class _HomePageState extends State<HomePage> {
     ),
     CardHome(
       titulo: "Financeiro",
-      rota: "screenCards",
+      rota: "ListDeCards",
       args: {
         'listaCards': [
           Cards(),
@@ -66,7 +104,7 @@ class _HomePageState extends State<HomePage> {
       },
     ),
     CardHome(
-      rota: "screenCards",
+      rota: "ListDeCards",
       args: {
         'listaCards': [
           Cards(),
