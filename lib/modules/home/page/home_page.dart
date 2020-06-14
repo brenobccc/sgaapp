@@ -21,23 +21,63 @@ class _HomePageState extends State<HomePage> {
           'titulo': 'Plantio',
           'lista': [
             Cards(
-              descricao: "1",
+              descricao: "Algodão",
               rota: 'Content',
             ),
             Cards(
-              descricao: "2",
+              descricao: "Amendoim",
               rota: 'Content',
             ),
             Cards(
-              descricao: "3",
+              descricao: "Arroz",
               rota: 'Content',
             ),
             Cards(
-              descricao: "4",
+              descricao: "Batata",
               rota: 'Content',
             ),
             Cards(
-              descricao: "5",
+              descricao: "Café",
+              rota: 'Content',
+            ),
+            
+            Cards(
+              descricao: "Cana-de-Açucar",
+              rota: 'Content',
+            ),
+         
+            Cards(
+              descricao: "Feijão",
+              rota: 'Content',
+            ),
+          
+            Cards(
+              descricao: "Milho",
+              rota: 'Content',
+            ),
+ 
+            Cards(
+              descricao: "Soja",
+              rota: 'Content',
+            ),
+            
+            Cards(
+              descricao: "Sorgo",
+              rota: 'Content',
+            ),
+            
+            Cards(
+              descricao: "Tomate",
+              rota: 'Content',
+            ),
+
+            Cards(
+              descricao: "Trigo",
+              rota: 'Content',
+            ),
+
+            Cards(
+              descricao: "Uva",
               rota: 'Content',
             ),
           ]
