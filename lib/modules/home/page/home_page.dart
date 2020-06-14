@@ -128,7 +128,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         resizeToAvoidBottomPadding: false,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.grey[100],
         body: TelaDeFundo(
           indicador: indicadores(),
           tela: Container(
