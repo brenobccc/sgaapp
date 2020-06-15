@@ -114,6 +114,7 @@ class HomeScreen extends StatelessWidget {
           drawer: CustomDrawer(_pageController),
           body: Dicas(),
         ),
+       
       ],
     );
   }

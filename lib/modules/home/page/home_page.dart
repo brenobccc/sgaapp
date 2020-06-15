@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
           'lista': [
             Cards(
               descricao: "Algodão",
-              rota: 'Content',
+              rota: 'Algodao_menu',
             ),
             Cards(
               descricao: "Amendoim",

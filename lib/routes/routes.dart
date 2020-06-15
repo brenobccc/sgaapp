@@ -4,8 +4,10 @@ import 'package:sgaapp/components/tela_de_erro.dart';
 import 'package:sgaapp/modules/animal_controller/page/add_animal.dart';
 
 import 'package:sgaapp/modules/content/page/content.dart';
+import 'package:sgaapp/modules/dicas/page/dicas.dart';
 import 'package:sgaapp/modules/home/page/home_page.dart';
 import 'package:sgaapp/modules/lista_de_cards/lista_de_cards.dart';
+import 'package:sgaapp/modules/lista_de_cards/plantio/plantio_teste.dart';
 import 'package:sgaapp/modules/lista_de_cards_tab/lista_de_cards_tabs.dart';
 
 import 'package:sgaapp/modules/login/page/login_screen.dart';
@@ -27,6 +29,8 @@ class RouteGenerator {
           MaterialPageRoute(builder: (_) => ListDeCarsTabs(argumentos: args)),
       'home': MaterialPageRoute(builder: (_) => HomePage()),
       'Content': MaterialPageRoute(builder: (_) => Content()),
+      
+      'Algodao_menu': MaterialPageRoute(builder: (_) => Pragas_Algodao()),
       'addanimal': MaterialPageRoute(
           builder: (_) => AddAnimal(
                 db: db,
