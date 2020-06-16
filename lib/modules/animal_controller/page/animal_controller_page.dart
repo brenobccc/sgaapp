@@ -1,19 +1,27 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 import 'package:sgaapp/db/database.dart';
 import 'package:sgaapp/entitys/todo_entity.dart';
 
 import 'add_animal.dart';
 
 class AnimalControllerPage extends StatefulWidget {
-  const AnimalControllerPage({Key key, this.db}) : super(key: key);
-  final AppDatabase db;
+  const AnimalControllerPage({Key key}) : super(key: key);
 
   @override
   _AnimalControllerPageState createState() => _AnimalControllerPageState();
 }
 
 class _AnimalControllerPageState extends State<AnimalControllerPage> {
+  AppDatabase db;
+
+  @override
+  void initState() {
+    super.initState();
+    db = GetIt.I.get<AppDatabase>();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +31,7 @@ class _AnimalControllerPageState extends State<AnimalControllerPage> {
             context,
             MaterialPageRoute(
               builder: (context) {
-                return AddAnimal(db: widget.db);
+                return AddAnimal();
               },
             ),
           );
@@ -55,8 +63,14 @@ class _AnimalControllerPageState extends State<AnimalControllerPage> {
       ),
       body: SafeArea(
         child: FutureBuilder<List<TodoEntity>>(
-          future: widget.db.todoRepositoryDao.getAll(),
+          future: GetIt.I.get<AppDatabase>().todoRepositoryDao.getAll(),
           builder: (context, snapshot) {
+            if (snapshot.data == null) {
+              return Center(
+                child: CircularProgressIndicator(),
+              );
+            }
+
             return snapshot.hasData
                 ? ListView.builder(
                     itemCount: snapshot.data.length,
@@ -68,9 +82,7 @@ class _AnimalControllerPageState extends State<AnimalControllerPage> {
                               context,
                               MaterialPageRoute(
                                 builder: (context) {
-                                  return AddAnimal(
-                                      db: widget.db,
-                                      todo: snapshot.data[index]);
+                                  return AddAnimal(todo: snapshot.data[index]);
                                 },
                               ),
                             );

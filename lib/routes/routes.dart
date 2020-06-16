@@ -31,10 +31,10 @@ class RouteGenerator {
       'Content': MaterialPageRoute(builder: (_) => Content()),
       'Algodao_menu': MaterialPageRoute(builder: (_) => AlgodaoMenu()),
       'addanimal': MaterialPageRoute(
-          builder: (_) => AddAnimal(
-                db: db,
-                todo: args,
-              )),
+        builder: (_) => AddAnimal(
+          todo: args,
+        ),
+      ),
       'alertaErro': MaterialPageRoute(builder: (_) => TelaDeErro()),
     };
 

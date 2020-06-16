@@ -2,14 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_masked_text/flutter_masked_text.dart';
-
+import 'package:get_it/get_it.dart';
 import 'package:sgaapp/db/database.dart';
+
 import 'package:sgaapp/entitys/todo_entity.dart';
 import 'package:sgaapp/modules/animal_controller/page/components/text_field_animal_controller_widget.dart';
 
 class AddAnimal extends StatefulWidget {
-  AddAnimal({Key key, this.db, this.todo}) : super(key: key);
-  final AppDatabase db;
+  AddAnimal({Key key, this.todo}) : super(key: key);
+
   final TodoEntity todo;
 
   @override
@@ -23,9 +24,12 @@ class _AddAnimalState extends State<AddAnimal> {
   TextEditingController _idadeController;
   TextEditingController _descController;
   bool verifyTextField = false;
+  AppDatabase db;
 
   @override
   void initState() {
+    db = GetIt.I.get<AppDatabase>();
+
     _animalController = TextEditingController(
         text: widget.todo != null ? widget.todo.animal : '');
 
@@ -161,9 +165,9 @@ class _AddAnimalState extends State<AddAnimal> {
         createdAt: DateTime.now().toUtc().toString(),
       );
       if (widget.todo != null) {
-        widget.db.todoRepositoryDao.updateItem(todo);
+        db.todoRepositoryDao.updateItem(todo);
       } else {
-        widget.db.todoRepositoryDao.insertItem(todo);
+        db.todoRepositoryDao.insertItem(todo);
       }
 
       Navigator.pop(context, true);
@@ -189,7 +193,7 @@ class _AddAnimalState extends State<AddAnimal> {
             ),
             FlatButton(
               onPressed: () {
-                widget.db.todoRepositoryDao.deleteItem(widget.todo);
+                db.todoRepositoryDao.deleteItem(widget.todo);
                 Navigator.pop(context);
                 Navigator.pop(context, true);
               },

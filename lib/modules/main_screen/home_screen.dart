@@ -45,9 +45,7 @@ class HomeScreen extends StatelessWidget {
             centerTitle: true,
             elevation: 0.0,
           ),
-          body: AnimalControllerPage(
-            db: db,
-          ),
+          body: AnimalControllerPage(),
           drawer: CustomDrawer(_pageController),
         ),
         Scaffold(
@@ -114,7 +112,6 @@ class HomeScreen extends StatelessWidget {
           drawer: CustomDrawer(_pageController),
           body: Dicas(),
         ),
-       
       ],
     );
   }
