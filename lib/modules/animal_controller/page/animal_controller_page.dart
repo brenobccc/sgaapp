@@ -55,85 +55,56 @@ class _AnimalControllerPageState extends State<AnimalControllerPage> {
       ),
       body: SafeArea(
         child: FutureBuilder<List<TodoEntity>>(
-            future: widget.db.todoRepositoryDao.getAll(),
-            builder: (context, snapshot) {
-              return snapshot.hasData
-                  ?
-                  // ? GridView.builder(
-                  //     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  //       crossAxisCount: 2,
-                  //       mainAxisSpacing: 25.0,
-                  //       crossAxisSpacing: 25.0,
-                  //       childAspectRatio: 0.8,
-                  //     ),
-                  //     padding:
-                  //         EdgeInsets.symmetric(horizontal: 25, vertical: 15),
-                  //     itemCount: snapshot.data.length,
-                  //     itemBuilder: (context, index) {
-                  //       return Cards(
-                  //         descricao: snapshot.data[index].title,
-                  //         onPressed: () async {
-                  //           var result = await Navigator.push(
-                  //             context,
-                  //             MaterialPageRoute(
-                  //               builder: (context) {
-                  //                 return AddAnimal(
-                  //                     db: widget.db,
-                  //                     todo: snapshot.data[index]);
-                  //               },
-                  //             ),
-                  //           );
-                  //           if (result) {
-                  //             setState(() {});
-                  //           }
-                  //         },
-                  //       );
-                  //     },
-                  //   )
-                  ListView.builder(
-                      itemCount: snapshot.data.length,
-                      itemBuilder: (context, index) {
-                        return Card(
-                          child: ListTile(
-                            onTap: () async {
-                              var result = await Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) {
-                                    return AddAnimal(
-                                        db: widget.db,
-                                        todo: snapshot.data[index]);
-                                  },
-                                ),
-                              );
-                              if (result) {
-                                setState(() {});
-                              }
-                            },
-                            title: Text(snapshot.data[index].animal),
-                            subtitle: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Text(
-                                  'idade: ${snapshot.data[index].idade} '
-                                  '${double.parse(snapshot.data[index].idade) > 1 ? "anos" : "ano"}',
-                                ),
-                                Text(
-                                  'peso: ${snapshot.data[index].peso.substring(2)} Kg',
-                                ),
-                                Text(
-                                  'Descrição: Adicionar a descrição',
-                                ),
-                              ],
-                            ),
+          future: widget.db.todoRepositoryDao.getAll(),
+          builder: (context, snapshot) {
+            return snapshot.hasData
+                ? ListView.builder(
+                    itemCount: snapshot.data.length,
+                    itemBuilder: (context, index) {
+                      return Card(
+                        child: ListTile(
+                          onTap: () async {
+                            var result = await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return AddAnimal(
+                                      db: widget.db,
+                                      todo: snapshot.data[index]);
+                                },
+                              ),
+                            );
+                            if (result) {
+                              setState(() {});
+                            }
+                          },
+                          title: Text(snapshot.data[index].animal),
+                          subtitle: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                'idade: ${snapshot.data[index].idade} '
+                                '${double.parse(snapshot.data[index].idade) > 1 ? "anos" : "ano"}',
+                              ),
+                              Text(
+                                'peso: ${snapshot.data[index].peso.substring(2)} Kg',
+                              ),
+                              snapshot.data[index].descricao.isNotEmpty
+                                  ? Text(
+                                      'Descrição: ${snapshot.data[index].descricao}',
+                                    )
+                                  : Container(),
+                            ],
                           ),
-                        );
-                      },
-                    )
-                  : Center(
-                      child: Text('Não há anotações...'),
-                    );
-            }),
+                        ),
+                      );
+                    },
+                  )
+                : Center(
+                    child: Text('Não há anotações...'),
+                  );
+          },
+        ),
       ),
     );
   }

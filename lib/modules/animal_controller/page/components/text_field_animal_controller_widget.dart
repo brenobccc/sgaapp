@@ -8,15 +8,25 @@ class MyTextFieldAnimalControllerWidget extends StatelessWidget {
   final TextEditingController controller;
   final TextInputType keyboardType;
   final List<TextInputFormatter> inputFormatters;
+  final int maxLines;
+  final String errorText;
+  final int maxLength;
+  final bool showLength;
+  final void Function(String) onChanged;
 
-  const MyTextFieldAnimalControllerWidget(
-      {Key key,
-      this.title,
-      this.controller,
-      this.hintText,
-      this.keyboardType,
-      this.inputFormatters})
-      : super(key: key);
+  const MyTextFieldAnimalControllerWidget({
+    Key key,
+    this.title,
+    this.controller,
+    this.hintText,
+    this.keyboardType,
+    this.inputFormatters,
+    this.maxLines = 1,
+    this.errorText,
+    this.maxLength,
+    this.showLength = true,
+    this.onChanged,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +41,11 @@ class MyTextFieldAnimalControllerWidget extends StatelessWidget {
           ),
         ),
         MyTextFieldWidget(
+          onChanged: onChanged,
+          showLength: showLength,
+          maxLength: maxLength,
+          errorText: errorText,
+          maxLines: maxLines,
           controller: controller,
           hintText: hintText,
           keyboardType: keyboardType,

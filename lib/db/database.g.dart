@@ -80,7 +80,7 @@ class _$AppDatabase extends AppDatabase {
       },
       onCreate: (database, version) async {
         await database.execute(
-            'CREATE TABLE IF NOT EXISTS `Todos` (`animal` TEXT, `peso` TEXT, `idade` TEXT, `id` INTEGER PRIMARY KEY AUTOINCREMENT, `createdAt` TEXT, `updateAt` TEXT)');
+            'CREATE TABLE IF NOT EXISTS `Todos` (`animal` TEXT, `peso` TEXT, `idade` TEXT, `descricao` TEXT, `id` INTEGER PRIMARY KEY AUTOINCREMENT, `createdAt` TEXT, `updateAt` TEXT)');
 
         await callback?.onCreate?.call(database, version);
       },
@@ -106,6 +106,7 @@ class _$TodoRepositoryDao extends TodoRepositoryDao {
                   'idade': item.idade,
                   'peso': item.peso,
                   'id': item.id,
+                  'descricao': item.descricao,
                   'createdAt': item.createdAt,
                   'updateAt': item.updateAt
                 }),
@@ -118,6 +119,7 @@ class _$TodoRepositoryDao extends TodoRepositoryDao {
                   'idade': item.idade,
                   'peso': item.peso,
                   'id': item.id,
+                  'descricao': item.descricao,
                   'createdAt': item.createdAt,
                   'updateAt': item.updateAt
                 }),
@@ -130,6 +132,7 @@ class _$TodoRepositoryDao extends TodoRepositoryDao {
                   'peso': item.peso,
                   'idade': item.idade,
                   'id': item.id,
+                  'descricao': item.descricao,
                   'createdAt': item.createdAt,
                   'updateAt': item.updateAt
                 });
@@ -146,6 +149,7 @@ class _$TodoRepositoryDao extends TodoRepositoryDao {
       updateAt: row['updateAt'] as String,
       animal: row['animal'] as String,
       idade: row['idade'] as String,
+      descricao: row['descricao'] as String,
       peso: row['peso'] as String);
 
   final InsertionAdapter<TodoEntity> _todoEntityInsertionAdapter;

@@ -22,6 +22,7 @@ class _AddAnimalState extends State<AddAnimal> {
   TextEditingController _animalController;
   TextEditingController _idadeController;
   TextEditingController _descController;
+  bool verifyTextField = false;
 
   @override
   void initState() {
@@ -32,7 +33,7 @@ class _AddAnimalState extends State<AddAnimal> {
         text: widget.todo != null ? widget.todo.idade : '');
 
     _descController = TextEditingController(
-        text: widget.todo != null ? widget.todo.idade : '');
+        text: widget.todo != null ? widget.todo.descricao : '');
 
     //Máscara para o peso
     _pesoController = MoneyMaskedTextController(
@@ -90,6 +91,8 @@ class _AddAnimalState extends State<AddAnimal> {
         child: Column(
           children: <Widget>[
             MyTextFieldAnimalControllerWidget(
+              maxLength: 80,
+              errorText: verifyTextFieldFun(_animalController),
               controller: _animalController,
               hintText: 'Nome...',
               title: 'Animal',
@@ -98,6 +101,7 @@ class _AddAnimalState extends State<AddAnimal> {
               height: 15,
             ),
             MyTextFieldAnimalControllerWidget(
+              errorText: verifyTextFieldFun(_pesoController),
               controller: _pesoController,
               title: 'Peso',
               keyboardType: TextInputType.number,
@@ -106,6 +110,9 @@ class _AddAnimalState extends State<AddAnimal> {
               height: 15,
             ),
             MyTextFieldAnimalControllerWidget(
+              showLength: false,
+              maxLength: 3,
+              errorText: verifyTextFieldFun(_idadeController),
               controller: _idadeController,
               hintText: 'Idade...',
               title: 'Idade',
@@ -118,6 +125,8 @@ class _AddAnimalState extends State<AddAnimal> {
               height: 15,
             ),
             MyTextFieldAnimalControllerWidget(
+              maxLength: 180,
+              maxLines: null,
               controller: _descController,
               hintText: 'Descrição...',
               title: 'Descrição',
@@ -126,6 +135,16 @@ class _AddAnimalState extends State<AddAnimal> {
         ),
       ),
     );
+  }
+
+  String verifyTextFieldFun(TextEditingController editingController) {
+    if (verifyTextField) {
+      if (editingController.text.isEmpty ||
+          editingController.text == 'Kg 0,00') {
+        return 'Campo obrigatório';
+      }
+    }
+    return null;
   }
 
   void saveButtom() {
@@ -138,6 +157,7 @@ class _AddAnimalState extends State<AddAnimal> {
         peso: _pesoController.text,
         animal: _animalController.text,
         idade: _idadeController.text,
+        descricao: _descController.text,
         createdAt: DateTime.now().toUtc().toString(),
       );
       if (widget.todo != null) {
@@ -147,6 +167,10 @@ class _AddAnimalState extends State<AddAnimal> {
       }
 
       Navigator.pop(context, true);
+    } else {
+      setState(() {
+        verifyTextField = true;
+      });
     }
   }
 

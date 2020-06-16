@@ -10,9 +10,11 @@ class TodoEntity extends EntityBase {
     this.idade,
     this.animal,
     this.peso,
+    this.descricao,
   }) : super(id, createdAt, updateAt);
 
   final String animal;
   final String peso;
   final String idade;
+  final String descricao;
 }

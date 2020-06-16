@@ -6,14 +6,24 @@ class MyTextFieldWidget extends StatelessWidget {
   final TextEditingController controller;
   final TextInputType keyboardType;
   final List<TextInputFormatter> inputFormatters;
+  final int maxLines;
+  final String errorText;
+  final int maxLength;
+  final bool showLength;
+  final void Function(String) onChanged;
 
-  const MyTextFieldWidget(
-      {Key key,
-      this.hintText,
-      this.controller,
-      this.keyboardType,
-      this.inputFormatters})
-      : super(key: key);
+  const MyTextFieldWidget({
+    Key key,
+    this.hintText,
+    this.controller,
+    this.keyboardType,
+    this.inputFormatters,
+    this.maxLines = 1,
+    this.errorText,
+    this.maxLength,
+    this.showLength = true,
+    this.onChanged,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,9 +34,12 @@ class MyTextFieldWidget extends StatelessWidget {
         color: Colors.transparent,
       ),
       child: TextField(
+        onChanged: onChanged,
+        maxLength: maxLength,
         inputFormatters: inputFormatters,
         controller: controller,
         keyboardType: keyboardType,
+        maxLines: maxLines,
         decoration: InputDecoration(
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(20),
@@ -36,6 +49,8 @@ class MyTextFieldWidget extends StatelessWidget {
             ),
           ),
           hintText: hintText,
+          errorText: errorText,
+          counter: showLength ? null : Container(width: 0),
         ),
       ),
     );
