@@ -5,21 +5,19 @@ class AlgodaoMenu extends StatefulWidget {
   _AlgodaoMenuState createState() => _AlgodaoMenuState();
 }
 
+//TELA MENU(TRES OPCOES PARA CADA PLANTIO)
 class _AlgodaoMenuState extends State<AlgodaoMenu> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.green,
+          backgroundColor: Colors.white,
           elevation: 0.0,
         ),
         body: Form(
           child: Container(
             child: Column(children: <Widget>[
-              FlatButton(
-                onPressed: () {},
-                child: Text('teste'),
-              ),
+              
               SizedBox(
                   height: 44.0,
                   child: RaisedButton(
@@ -27,7 +25,31 @@ class _AlgodaoMenuState extends State<AlgodaoMenu> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30.0)),
                     child: Text(
-                      "Entrar",
+                      "Pragas",
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                    ),
+                    textColor: Colors.white,
+                    color: Color(0xFFE59730),
+                    onPressed: () {
+
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => Pragas_Algodao()));
+                     
+                      
+                    },
+                  ),
+                ),
+
+                SizedBox(
+                  height: 44.0,
+                  child: RaisedButton(
+                    elevation: 6.0,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30.0)),
+                    child: Text(
+                      "Doenças",
                       style: TextStyle(
                         fontSize: 20,
                       ),
@@ -36,6 +58,29 @@ class _AlgodaoMenuState extends State<AlgodaoMenu> {
                     color: Color(0xFFE59730),
                     onPressed: () {
                      
+                     Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => Daninhas_Algodao())); 
+                    },
+                  ),
+                ),
+
+                SizedBox(
+                  height: 44.0,
+                  child: RaisedButton(
+                    elevation: 6.0,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30.0)),
+                    child: Text(
+                      "Daninhas",
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                    ),
+                    textColor: Colors.white,
+                    color: Color(0xFFE59730),
+                    onPressed: () {
+
+                      
                       
                     },
                   ),
@@ -46,6 +91,9 @@ class _AlgodaoMenuState extends State<AlgodaoMenu> {
   }
 }
 
+
+
+//TELA DAS PRAGAS DO ALGODÃO
 class Pragas_Algodao extends StatefulWidget {
   @override
   _Pragas_AlgodaoState createState() => _Pragas_AlgodaoState();
@@ -711,3 +759,362 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
         ));
   }
 }
+
+
+
+//TELA DAS DANINHAS DO ALGODÃO
+class Daninhas_Algodao extends StatefulWidget {
+  @override
+  _Daninhas_AlgodaoState createState() => _Daninhas_AlgodaoState();
+}
+
+class _Daninhas_AlgodaoState extends State<Daninhas_Algodao> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          title: Text(
+            'Algodão / Doenças Principais',
+            style: TextStyle(fontSize: 20),
+          ),
+          elevation: 1.0,
+        ),
+        body: Column(
+          children: <Widget>[
+            SizedBox(height: 16.0),
+            Expanded(
+                child: GridView.count(
+              physics: BouncingScrollPhysics(),
+              crossAxisCount: 2,
+              childAspectRatio: .85,
+              crossAxisSpacing: 20,
+              mainAxisSpacing: 20,
+              children: <Widget>[
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(13),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          offset: Offset(0, 17),
+                          blurRadius: 17,
+                          spreadRadius: -23,
+                          color: Colors.red,
+                        ),
+                      ],
+                    ),
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        onTap: () {},
+                        child: Padding(
+                          padding: const EdgeInsets.all(1.0),
+                          child: Column(
+                            children: <Widget>[
+                              Image.asset(
+                                'assets/mancha_de_mularia.jfif',
+                              ),
+                              Text( 
+                                '\nMancha de Ramulária',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontStyle: FontStyle.italic,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(13),
+                  child: Container(
+                    // padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(13),
+                      boxShadow: [
+                        BoxShadow(
+                          offset: Offset(0, 17),
+                          blurRadius: 17,
+                          spreadRadius: -23,
+                          color: Colors.red,
+                        ),
+                      ],
+                    ),
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        onTap: () {},
+                        child: Padding(
+                          padding: const EdgeInsets.all(1.0),
+                          child: Column(
+                            children: <Widget>[
+                              Image.asset(
+                                'assets/ramulose.jpg',
+                              ),
+                              Text(
+                                'Ramulose',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontStyle: FontStyle.italic,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(13),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          offset: Offset(0, 17),
+                          blurRadius: 17,
+                          spreadRadius: -23,
+                          color: Colors.red,
+                        ),
+                      ],
+                    ),
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        onTap: () {},
+                        child: Padding(
+                          padding: const EdgeInsets.all(1.0),
+                          child: Column(
+                            children: <Widget>[
+                              Image.asset(
+                                'assets/murcha_de_furasium.png',
+                              ),
+                              Text( 
+                                '\nMurcha de Fusarium',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontStyle: FontStyle.italic,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(13),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          offset: Offset(0, 17),
+                          blurRadius: 17,
+                          spreadRadius: -23,
+                          color: Colors.red,
+                        ),
+                      ],
+                    ),
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        onTap: () {},
+                        child: Padding(
+                          padding: const EdgeInsets.all(1.0),
+                          child: Column(
+                            children: <Widget>[
+                              Image.asset(
+                                'assets/mosaico_comum.jpg',
+                              ),
+                              Text( 
+                                '\nMurcha de Fusarium',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontStyle: FontStyle.italic,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(13),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          offset: Offset(0, 17),
+                          blurRadius: 17,
+                          spreadRadius: -23,
+                          color: Colors.red,
+                        ),
+                      ],
+                    ),
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        onTap: () {},
+                        child: Padding(
+                          padding: const EdgeInsets.all(1.0),
+                          child: Column(
+                            children: <Widget>[
+                              Image.asset(
+                                'assets/nervuras.jfif',
+                              ),
+                              Text( 
+                                '\nMosaico das nervuras',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontStyle: FontStyle.italic,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(13),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          offset: Offset(0, 17),
+                          blurRadius: 17,
+                          spreadRadius: -23,
+                          color: Colors.red,
+                        ),
+                      ],
+                    ),
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        onTap: () {},
+                        child: Padding(
+                          padding: const EdgeInsets.all(1.0),
+                          child: Column(
+                            children: <Widget>[
+                              Image.asset(
+                                'assets/vermelhao.jpg',
+                              ),
+                              Text( 
+                                'Vermelhão',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontStyle: FontStyle.italic,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+
+                
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(13),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          offset: Offset(0, 17),
+                          blurRadius: 17,
+                          spreadRadius: -23,
+                          color: Colors.red,
+                        ),
+                      ],
+                    ),
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        onTap: () {},
+                        child: Padding(
+                          padding: const EdgeInsets.all(1.0),
+                          child: Column(
+                            children: <Widget>[
+                              Image.asset(
+                                'assets/mancha_angular.jpg',
+                              ),
+                              Text( 
+                                '\nMancha Angular',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontStyle: FontStyle.italic,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+
+                
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(13),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          offset: Offset(0, 17),
+                          blurRadius: 17,
+                          spreadRadius: -23,
+                          color: Colors.red,
+                        ),
+                      ],
+                    ),
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        onTap: () {},
+                        child: Padding(
+                          padding: const EdgeInsets.all(1.0),
+                          child: Column(
+                            children: <Widget>[
+                              Image.asset(
+                                'assets/nematoides.jfif',
+                              ),
+                              Text( 
+                                '\Nematoses',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontStyle: FontStyle.italic,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+             
+              ],
+            ))
+          ],
+        ));
+  }
+}
+

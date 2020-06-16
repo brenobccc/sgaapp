@@ -29,7 +29,7 @@ class RouteGenerator {
           MaterialPageRoute(builder: (_) => ListDeCarsTabs(argumentos: args)),
       'home': MaterialPageRoute(builder: (_) => HomePage()),
       'Content': MaterialPageRoute(builder: (_) => Content()),
-      'Algodao_menu': MaterialPageRoute(builder: (_) => Pragas_Algodao()),
+      'Algodao_menu': MaterialPageRoute(builder: (_) => AlgodaoMenu()),
       'addanimal': MaterialPageRoute(
           builder: (_) => AddAnimal(
                 db: db,
