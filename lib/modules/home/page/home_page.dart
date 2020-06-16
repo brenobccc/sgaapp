@@ -11,8 +11,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   PageController controller;
-  int indice;
-  List<Widget> itens = [];
+  int indice = 0;
 
   List<Widget> _pages = [
     CardHome(titulo: "Agronomia", rota: "ListDeCardsTabs", args: {
@@ -40,42 +39,34 @@ class _HomePageState extends State<HomePage> {
               descricao: "Café",
               rota: 'Content',
             ),
-            
             Cards(
               descricao: "Cana-de-Açucar",
               rota: 'Content',
             ),
-         
             Cards(
               descricao: "Feijão",
               rota: 'Content',
             ),
-          
             Cards(
               descricao: "Milho",
               rota: 'Content',
             ),
- 
             Cards(
               descricao: "Soja",
               rota: 'Content',
             ),
-            
             Cards(
               descricao: "Sorgo",
               rota: 'Content',
             ),
-            
             Cards(
               descricao: "Tomate",
               rota: 'Content',
             ),
-
             Cards(
               descricao: "Trigo",
               rota: 'Content',
             ),
-
             Cards(
               descricao: "Uva",
               rota: 'Content',
@@ -156,9 +147,8 @@ class _HomePageState extends State<HomePage> {
   ];
 
   List<Widget> indicadores() {
-    itens.clear();
-    int tam = _pages.length;
-    for (int i = 0; i < tam; i++)
+    List<Widget> itens = [];
+    for (int i = 0; i < _pages.length; i++)
       itens.add(SlideDots(isActive: indice == i ? true : false));
 
     return itens;
@@ -185,8 +175,9 @@ class _HomePageState extends State<HomePage> {
                     itemCount: _pages.length,
                     scrollDirection: Axis.horizontal,
                     onPageChanged: (index) {
-                      indice = index;
-                      setState(() {});
+                      setState(() {
+                        indice = index;
+                      });
                     },
                     itemBuilder: (context, index) {
                       return _pages[index];
