@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:sgaapp/components/tela_de_erro.dart';
 import 'package:sgaapp/modules/animal_controller/page/add_animal.dart';
+import 'package:sgaapp/modules/animal_controller/page/animal_controller_page.dart';
 
 import 'package:sgaapp/modules/content/page/content.dart';
 
@@ -25,6 +26,8 @@ class RouteGenerator {
           MaterialPageRoute(builder: (_) => HomeScreen(db: db)),
       'ListDeCards':
           MaterialPageRoute(builder: (_) => ListDeCards(argumentos: args)),
+                'AnimalControll':
+          MaterialPageRoute(builder: (_) => AnimalControllerPage()),
       'ListDeCardsTabs':
           MaterialPageRoute(builder: (_) => ListDeCarsTabs(argumentos: args)),
       'home': MaterialPageRoute(builder: (_) => HomePage()),

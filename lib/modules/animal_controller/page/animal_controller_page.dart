@@ -25,6 +25,7 @@ class _AnimalControllerPageState extends State<AnimalControllerPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () async {
           var result = await Navigator.push(
@@ -53,7 +54,7 @@ class _AnimalControllerPageState extends State<AnimalControllerPage> {
         backgroundColor: Colors.orangeAccent,
       ),
       appBar: AppBar(
-        automaticallyImplyLeading: false,
+        automaticallyImplyLeading: true,
         backgroundColor: Colors.green,
         title: Text(
           ' Animais',

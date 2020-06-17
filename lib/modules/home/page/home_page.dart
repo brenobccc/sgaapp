@@ -114,15 +114,9 @@ class _HomePageState extends State<HomePage> {
     ),
     CardHome(
       titulo: "Controle de Animais",
-      rota: "ListDeCards",
+      rota: "AnimalControll",
       descricao: "Enbaixador",
-      args: {
-        'listaCards': [
-          Cards(),
-          Cards(),
-          Cards(),
-        ]
-      },
+      
     ),
     CardHome(
       titulo: "Financeiro",
