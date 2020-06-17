@@ -17,81 +17,68 @@ class _AlgodaoMenuState extends State<AlgodaoMenu> {
         body: Form(
           child: Container(
             child: Column(children: <Widget>[
-              
               SizedBox(
-                  height: 44.0,
-                  child: RaisedButton(
-                    elevation: 6.0,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30.0)),
-                    child: Text(
-                      "Pragas",
-                      style: TextStyle(
-                        fontSize: 20,
-                      ),
+                height: 44.0,
+                child: RaisedButton(
+                  elevation: 6.0,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30.0)),
+                  child: Text(
+                    "Pragas",
+                    style: TextStyle(
+                      fontSize: 20,
                     ),
-                    textColor: Colors.white,
-                    color: Color(0xFFE59730),
-                    onPressed: () {
-
-                      Navigator.of(context).push(MaterialPageRoute(
+                  ),
+                  textColor: Colors.white,
+                  color: Color(0xFFE59730),
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => Pragas_Algodao()));
-                     
-                      
-                    },
-                  ),
+                  },
                 ),
-
-                SizedBox(
-                  height: 44.0,
-                  child: RaisedButton(
-                    elevation: 6.0,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30.0)),
-                    child: Text(
-                      "Doenças",
-                      style: TextStyle(
-                        fontSize: 20,
-                      ),
+              ),
+              SizedBox(
+                height: 44.0,
+                child: RaisedButton(
+                  elevation: 6.0,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30.0)),
+                  child: Text(
+                    "Doenças",
+                    style: TextStyle(
+                      fontSize: 20,
                     ),
-                    textColor: Colors.white,
-                    color: Color(0xFFE59730),
-                    onPressed: () {
-                     
-                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => Daninhas_Algodao())); 
-                    },
                   ),
+                  textColor: Colors.white,
+                  color: Color(0xFFE59730),
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => Doencas_algodao()));
+                  },
                 ),
-
-                SizedBox(
-                  height: 44.0,
-                  child: RaisedButton(
-                    elevation: 6.0,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30.0)),
-                    child: Text(
-                      "Daninhas",
-                      style: TextStyle(
-                        fontSize: 20,
-                      ),
+              ),
+              SizedBox(
+                height: 44.0,
+                child: RaisedButton(
+                  elevation: 6.0,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30.0)),
+                  child: Text(
+                    "Daninhas",
+                    style: TextStyle(
+                      fontSize: 20,
                     ),
-                    textColor: Colors.white,
-                    color: Color(0xFFE59730),
-                    onPressed: () {
-
-                      
-                      
-                    },
                   ),
+                  textColor: Colors.white,
+                  color: Color(0xFFE59730),
+                  onPressed: () {},
                 ),
+              ),
             ]),
           ),
         ));
   }
 }
-
-
 
 //TELA DAS PRAGAS DO ALGODÃO
 class Pragas_Algodao extends StatefulWidget {
@@ -126,7 +113,7 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                   borderRadius: BorderRadius.circular(13),
                   child: Container(
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.green[50],
                       boxShadow: [
                         BoxShadow(
                           offset: Offset(0, 17),
@@ -145,7 +132,7 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                           child: Column(
                             children: <Widget>[
                               Image.asset(
-                                'assets/bicudo_algo.jpg',
+                                'assets/bicudo_algodoeiro.png',
                               ),
                               Text(
                                 '\nBicudo do algodoeiro\n(Anthonomus grandis)',
@@ -178,7 +165,7 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                       ],
                     ),
                     child: Material(
-                      color: Colors.transparent,
+                      color: Colors.green[50],
                       child: InkWell(
                         onTap: () {},
                         child: Padding(
@@ -186,10 +173,10 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                           child: Column(
                             children: <Widget>[
                               Image.asset(
-                                'assets/broca_algo.jpg',
+                                'assets/broca_da_raiz.png',
                               ),
                               Text(
-                                '\nBroca da raiz (Eutinobothrus brasiliensis)',
+                                'Broca da raiz (Eutinobothrus brasiliensis)',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
@@ -207,7 +194,7 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                   child: Container(
                     // padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.green[50],
                       boxShadow: [
                         BoxShadow(
                           offset: Offset(0, 17),
@@ -226,7 +213,7 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                           child: Column(
                             children: <Widget>[
                               Image.asset(
-                                'assets/mosca_branca.jpg',
+                                'assets/mosca_branca.png',
                               ),
                               Text(
                                 '\nMosca branca (Bemisia tabaci biótipo B)',
@@ -247,7 +234,7 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                   child: Container(
                     // padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.green[50],
                     ),
                     child: Material(
                       color: Colors.transparent,
@@ -258,7 +245,7 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                           child: Column(
                             children: <Widget>[
                               Image.asset(
-                                'assets/pulgao.jpg',
+                                'assets/pulgao_do_algodoeiro.png',
                               ),
                               Text(
                                 '\nPulgão do algodoeiro (Aphis gossypii)',
@@ -279,7 +266,7 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                   child: Container(
                     // padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.green[50],
                       boxShadow: [
                         BoxShadow(
                           offset: Offset(0, 17),
@@ -297,10 +284,10 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                           child: Column(
                             children: <Widget>[
                               Image.asset(
-                                'assets/perc_cast.jpg',
+                                'assets/percevejo_castanho.png',
                               ),
                               Text(
-                                '\nPercevejo castanho da raiz (Scaptocoris castanea)',
+                                'Percevejo castanho da raiz (Scaptocoris castanea)',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
@@ -318,7 +305,7 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                   child: Container(
                     // padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.green[50],
                       boxShadow: [
                         BoxShadow(
                           offset: Offset(0, 17),
@@ -337,10 +324,10 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                           child: Column(
                             children: <Widget>[
                               Image.asset(
-                                'assets/complexo1.jpg',
+                                'assets/nezara_pecevejo1and2.png',
                               ),
                               Text(
-                                '\nPercevejo verde. \nFede fede (Nezara viridula)',
+                                'Percevejo verde (Nezara viridula)',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
@@ -358,7 +345,7 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                   child: Container(
                     // padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.green[50],
                       boxShadow: [
                         BoxShadow(
                           offset: Offset(0, 17),
@@ -377,10 +364,10 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                           child: Column(
                             children: <Widget>[
                               Image.asset(
-                                'assets/complexo2.jpg',
+                                'assets/nezara_pecevejo1and2.png',
                               ),
                               Text(
-                                '\nPercevejo marrom.\nPercevejo da soja (Euschistus heros)',
+                                'Percevejo marrom.Percevejo da soja (Euschistus heros)',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
@@ -398,7 +385,7 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                   child: Container(
                     // padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.green[50],
                       boxShadow: [
                         BoxShadow(
                           offset: Offset(0, 17),
@@ -417,10 +404,10 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                           child: Column(
                             children: <Widget>[
                               Image.asset(
-                                'assets/complexo3.jpg',
+                                'assets/nezara_pecevejo1and2.png',
                               ),
                               Text(
-                                '\nPercevejo Verde Pequeno Piezodorus Guildinii',
+                                'Percevejo Verde Pequeno Piezodorus Guildinii',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
@@ -438,7 +425,7 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                   child: Container(
                     // padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.green[50],
                       boxShadow: [
                         BoxShadow(
                           offset: Offset(0, 17),
@@ -457,7 +444,7 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                           child: Column(
                             children: <Widget>[
                               Image.asset(
-                                'assets/lagarta.jpg',
+                                'assets/lagarta_rosada.png',
                               ),
                               Text(
                                 '\n\nCuruquerê do algodoeiro (Alabama argilacea)',
@@ -478,7 +465,7 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                   child: Container(
                     // padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.green[50],
                       boxShadow: [
                         BoxShadow(
                           offset: Offset(0, 17),
@@ -497,7 +484,7 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                           child: Column(
                             children: <Widget>[
                               Image.asset(
-                                'assets/lg_falsa.png',
+                                'assets/lagarta_rosada.png',
                               ),
                               Text(
                                 '\nLagarta falsa-medideira (Chrysodeixis includens)',
@@ -518,7 +505,7 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                   child: Container(
                     // padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.green[50],
                       boxShadow: [
                         BoxShadow(
                           offset: Offset(0, 17),
@@ -537,7 +524,7 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                           child: Column(
                             children: <Widget>[
                               Image.asset(
-                                'assets/lagar3.jpg',
+                                'assets/lagarta_rosada.png',
                               ),
                               Text(
                                 '\nLagarta da maçã (Heliothis virescens)',
@@ -558,7 +545,7 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                   child: Container(
                     // padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.green[50],
                       boxShadow: [
                         BoxShadow(
                           offset: Offset(0, 17),
@@ -577,10 +564,10 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                           child: Column(
                             children: <Widget>[
                               Image.asset(
-                                'assets/helico.jpg',
+                                'assets/lagarta_rosada.png',
                               ),
                               Text(
-                                '\n Helicoverpa armigera (lagarta-do-velho-mundo).',
+                                ' Helicoverpa armigera (lagarta-do-velho-mundo).',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
@@ -598,7 +585,7 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                   child: Container(
                     // padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.green[50],
                       boxShadow: [
                         BoxShadow(
                           offset: Offset(0, 17),
@@ -617,7 +604,7 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                           child: Column(
                             children: <Widget>[
                               Image.asset(
-                                'assets/lagar_rosada.jpg',
+                                'assets/lagarta_rosada.png',
                               ),
                               Text(
                                 'Lagarta rosada (Pectinophora gossypiella)',
@@ -637,7 +624,7 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                   child: Container(
                     // padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.green[50],
                       borderRadius: BorderRadius.circular(13),
                       boxShadow: [
                         BoxShadow(
@@ -657,7 +644,7 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                           child: Column(
                             children: <Widget>[
                               Image.asset(
-                                'assets/acaro_rajado.jfif',
+                                'assets/acaros.png',
                               ),
                               Text(
                                 '\nÁcaro rajado (Tetranychus spp)',
@@ -677,7 +664,7 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                   child: Container(
                     // padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.green[50],
                       borderRadius: BorderRadius.circular(13),
                       boxShadow: [
                         BoxShadow(
@@ -697,7 +684,7 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                           child: Column(
                             children: <Widget>[
                               Image.asset(
-                                'assets/acaro_vermelho.jpg',
+                                'assets/acaros.png',
                               ),
                               Text(
                                 'Ácaro vermelho (Tetranychus ludeni)',
@@ -717,7 +704,7 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                   child: Container(
                     // padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.green[50],
                       borderRadius: BorderRadius.circular(13),
                       boxShadow: [
                         BoxShadow(
@@ -737,10 +724,10 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
                           child: Column(
                             children: <Widget>[
                               Image.asset(
-                                'assets/acaro_branco.jfif',
+                                'assets/acaros.png',
                               ),
                               Text(
-                                '\nÁcaro branco (Polyphagotarsonemus latus)',
+                                'Ácaro branco (Polyphagotarsonemus latus)',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
@@ -760,15 +747,13 @@ class _Pragas_AlgodaoState extends State<Pragas_Algodao> {
   }
 }
 
-
-
 //TELA DAS DANINHAS DO ALGODÃO
-class Daninhas_Algodao extends StatefulWidget {
+class Doencas_algodao extends StatefulWidget {
   @override
-  _Daninhas_AlgodaoState createState() => _Daninhas_AlgodaoState();
+  _Doencas_algodaoState createState() => _Doencas_algodaoState();
 }
 
-class _Daninhas_AlgodaoState extends State<Daninhas_Algodao> {
+class _Doencas_algodaoState extends State<Doencas_algodao> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -795,7 +780,7 @@ class _Daninhas_AlgodaoState extends State<Daninhas_Algodao> {
                   borderRadius: BorderRadius.circular(13),
                   child: Container(
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.green,
                       boxShadow: [
                         BoxShadow(
                           offset: Offset(0, 17),
@@ -814,10 +799,10 @@ class _Daninhas_AlgodaoState extends State<Daninhas_Algodao> {
                           child: Column(
                             children: <Widget>[
                               Image.asset(
-                                'assets/mancha_de_mularia.jfif',
+                                'assets/m_ramularia.png',
                               ),
-                              Text( 
-                                '\nMancha de Ramulária',
+                              Text(
+                                'Mancha de Ramulária',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
@@ -835,7 +820,7 @@ class _Daninhas_AlgodaoState extends State<Daninhas_Algodao> {
                   child: Container(
                     // padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.green[300],
                       borderRadius: BorderRadius.circular(13),
                       boxShadow: [
                         BoxShadow(
@@ -855,7 +840,7 @@ class _Daninhas_AlgodaoState extends State<Daninhas_Algodao> {
                           child: Column(
                             children: <Widget>[
                               Image.asset(
-                                'assets/ramulose.jpg',
+                                'assets/ramulose.png',
                               ),
                               Text(
                                 'Ramulose',
@@ -875,7 +860,7 @@ class _Daninhas_AlgodaoState extends State<Daninhas_Algodao> {
                   borderRadius: BorderRadius.circular(13),
                   child: Container(
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.orange,
                       boxShadow: [
                         BoxShadow(
                           offset: Offset(0, 17),
@@ -894,9 +879,9 @@ class _Daninhas_AlgodaoState extends State<Daninhas_Algodao> {
                           child: Column(
                             children: <Widget>[
                               Image.asset(
-                                'assets/murcha_de_furasium.png',
+                                'assets/fusarium.png',
                               ),
-                              Text( 
+                              Text(
                                 '\nMurcha de Fusarium',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
@@ -914,7 +899,7 @@ class _Daninhas_AlgodaoState extends State<Daninhas_Algodao> {
                   borderRadius: BorderRadius.circular(13),
                   child: Container(
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.lightBlue,
                       boxShadow: [
                         BoxShadow(
                           offset: Offset(0, 17),
@@ -933,10 +918,10 @@ class _Daninhas_AlgodaoState extends State<Daninhas_Algodao> {
                           child: Column(
                             children: <Widget>[
                               Image.asset(
-                                'assets/mosaico_comum.jpg',
+                                'assets/mosaico1.png',
                               ),
-                              Text( 
-                                '\nMurcha de Fusarium',
+                              Text(
+                                'Mosaico comum',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
@@ -953,7 +938,7 @@ class _Daninhas_AlgodaoState extends State<Daninhas_Algodao> {
                   borderRadius: BorderRadius.circular(13),
                   child: Container(
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.brown[300],
                       boxShadow: [
                         BoxShadow(
                           offset: Offset(0, 17),
@@ -972,10 +957,10 @@ class _Daninhas_AlgodaoState extends State<Daninhas_Algodao> {
                           child: Column(
                             children: <Widget>[
                               Image.asset(
-                                'assets/nervuras.jfif',
+                                'assets/mosaico_nervuras.png',
                               ),
-                              Text( 
-                                '\nMosaico das nervuras',
+                              Text(
+                                'Mosaico das nervuras',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
@@ -988,12 +973,11 @@ class _Daninhas_AlgodaoState extends State<Daninhas_Algodao> {
                     ),
                   ),
                 ),
-
                 ClipRRect(
                   borderRadius: BorderRadius.circular(13),
                   child: Container(
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.redAccent[100],
                       boxShadow: [
                         BoxShadow(
                           offset: Offset(0, 17),
@@ -1012,9 +996,9 @@ class _Daninhas_AlgodaoState extends State<Daninhas_Algodao> {
                           child: Column(
                             children: <Widget>[
                               Image.asset(
-                                'assets/vermelhao.jpg',
+                                'assets/vermelhao.png',
                               ),
-                              Text( 
+                              Text(
                                 'Vermelhão',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
@@ -1028,93 +1012,88 @@ class _Daninhas_AlgodaoState extends State<Daninhas_Algodao> {
                     ),
                   ),
                 ),
-
-                
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(13),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      boxShadow: [
-                        BoxShadow(
-                          offset: Offset(0, 17),
-                          blurRadius: 17,
-                          spreadRadius: -23,
-                          color: Colors.red,
-                        ),
-                      ],
-                    ),
-                    child: Material(
-                      color: Colors.transparent,
-                      child: InkWell(
-                        onTap: () {},
-                        child: Padding(
-                          padding: const EdgeInsets.all(1.0),
-                          child: Column(
-                            children: <Widget>[
-                              Image.asset(
-                                'assets/mancha_angular.jpg',
-                              ),
-                              Text( 
-                                '\nMancha Angular',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  fontStyle: FontStyle.italic,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-
-                
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(13),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      boxShadow: [
-                        BoxShadow(
-                          offset: Offset(0, 17),
-                          blurRadius: 17,
-                          spreadRadius: -23,
-                          color: Colors.red,
-                        ),
-                      ],
-                    ),
-                    child: Material(
-                      color: Colors.transparent,
-                      child: InkWell(
-                        onTap: () {},
-                        child: Padding(
-                          padding: const EdgeInsets.all(1.0),
-                          child: Column(
-                            children: <Widget>[
-                              Image.asset(
-                                'assets/nematoides.jfif',
-                              ),
-                              Text( 
-                                '\Nematoses',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  fontStyle: FontStyle.italic,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-             
+                //FALTA INSERIR ESTES DOIS ULTIMOS
+                // ClipRRect(
+                //   borderRadius: BorderRadius.circular(13),
+                //   child: Container(
+                //     decoration: BoxDecoration(
+                //       color: Colors.white,
+                //       boxShadow: [
+                //         BoxShadow(
+                //           offset: Offset(0, 17),
+                //           blurRadius: 17,
+                //           spreadRadius: -23,
+                //           color: Colors.red,
+                //         ),
+                //       ],
+                //     ),
+                //     child: Material(
+                //       color: Colors.transparent,
+                //       child: InkWell(
+                //         onTap: () {},
+                //         child: Padding(
+                //           padding: const EdgeInsets.all(1.0),
+                //           child: Column(
+                //             children: <Widget>[
+                //               Image.asset(
+                //                 'assets/mancha_angular.jpg',
+                //               ),
+                //               Text(
+                //                 '\nMancha Angular',
+                //                 textAlign: TextAlign.center,
+                //                 style: TextStyle(
+                //                   fontStyle: FontStyle.italic,
+                //                 ),
+                //               )
+                //             ],
+                //           ),
+                //         ),
+                //       ),
+                //     ),
+                //   ),
+                // ),
+                // ClipRRect(
+                //   borderRadius: BorderRadius.circular(13),
+                //   child: Container(
+                //     decoration: BoxDecoration(
+                //       color: Colors.white,
+                //       boxShadow: [
+                //         BoxShadow(
+                //           offset: Offset(0, 17),
+                //           blurRadius: 17,
+                //           spreadRadius: -23,
+                //           color: Colors.red,
+                //         ),
+                //       ],
+                //     ),
+                //     child: Material(
+                //       color: Colors.transparent,
+                //       child: InkWell(
+                //         onTap: () {},
+                //         child: Padding(
+                //           padding: const EdgeInsets.all(1.0),
+                //           child: Column(
+                //             children: <Widget>[
+                //               Image.asset(
+                //                 'assets/nematoides.jfif',
+                //               ),
+                //               Text(
+                //                 '\Nematoses',
+                //                 textAlign: TextAlign.center,
+                //                 style: TextStyle(
+                //                   fontStyle: FontStyle.italic,
+                //                 ),
+                //               )
+                //             ],
+                //           ),
+                //         ),
+                //       ),
+                //     ),
+                //   ),
+                // ),
               ],
             ))
           ],
         ));
   }
 }
-
