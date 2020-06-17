@@ -4,9 +4,9 @@ import 'package:flutter/services.dart';
 import 'package:flutter_masked_text/flutter_masked_text.dart';
 import 'package:get_it/get_it.dart';
 import 'package:sgaapp/db/database.dart';
-
 import 'package:sgaapp/entitys/todo_entity.dart';
-import 'package:sgaapp/modules/animal_controller/page/components/text_field_animal_controller_widget.dart';
+import '../components/text_field_animal_controller_widget.dart';
+import '../utils/my_text_format_data.dart';
 
 class AddAnimal extends StatefulWidget {
   AddAnimal({Key key, this.todo}) : super(key: key);
@@ -115,14 +115,15 @@ class _AddAnimalState extends State<AddAnimal> {
             ),
             MyTextFieldAnimalControllerWidget(
               showLength: false,
-              maxLength: 3,
-              errorText: verifyTextFieldFun(_idadeController),
+              maxLength: 10,
               controller: _idadeController,
-              hintText: 'Idade...',
-              title: 'Idade',
+              hintText: 'dd/mm/aaaa...',
+              title: 'Data de nascimento',
               keyboardType: TextInputType.number,
+              // onChanged: formatDataNasc,
               inputFormatters: [
                 WhitelistingTextInputFormatter.digitsOnly,
+                MyTextInputFormatterData(),
               ],
             ),
             SizedBox(
@@ -151,9 +152,20 @@ class _AddAnimalState extends State<AddAnimal> {
     return null;
   }
 
+  //De Data de nascimento para a class DateTime.
+  //Caso queira usar para algo.
+  //Por enquanto nao esta sendo usado
+  DateTime dataNascToDateTime(String data) {
+    var dataSplit = data.split('/');
+    var year = int.parse(dataSplit[2]);
+    var month = int.parse(dataSplit[1]);
+    var day = int.parse(dataSplit[0]);
+
+    return DateTime(year, month, day);
+  }
+
   void saveButtom() {
     if (_animalController.text.isNotEmpty &&
-        _idadeController.text.isNotEmpty &&
         _pesoController.text.isNotEmpty &&
         _pesoController.text != 'Kg 0,00') {
       var todo = TodoEntity(
@@ -205,3 +217,24 @@ class _AddAnimalState extends State<AddAnimal> {
     );
   }
 }
+
+// void formatDataNasc(String data) {
+//   if (data.length > 8) {
+//     return;
+//   }
+
+//   print('offset: ${_idadeController.value.selection.baseOffset}');
+//   print('extent: ${_idadeController.value.selection.extentOffset}');
+
+//   if (data.length > 2) {
+//     var list = data.split('');
+//     list.insert(2, '/');
+//     data = list.reduce((value, element) => value + element);
+//   }
+
+//   if (data.length > 5) {
+//     var list = data.split('');
+//     list.insert(5, '/');
+//     data = list.reduce((value, element) => value + element);
+//   }
+// }

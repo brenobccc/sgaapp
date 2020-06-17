@@ -95,16 +95,14 @@ class _AnimalControllerPageState extends State<AnimalControllerPage> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                'idade: ${snapshot.data[index].idade} '
-                                '${double.parse(snapshot.data[index].idade) > 1 ? "anos" : "ano"}',
-                              ),
-                              Text(
-                                'peso: ${snapshot.data[index].peso.substring(2)} Kg',
-                              ),
+                                  'peso: ${snapshot.data[index].peso.substring(2)} Kg'),
+                              snapshot.data[index].idade.isNotEmpty
+                                  ? Text(
+                                      'Nascimento: ${snapshot.data[index].idade}')
+                                  : Container(),
                               snapshot.data[index].descricao.isNotEmpty
                                   ? Text(
-                                      'Descrição: ${snapshot.data[index].descricao}',
-                                    )
+                                      'Descrição: ${snapshot.data[index].descricao}')
                                   : Container(),
                             ],
                           ),
