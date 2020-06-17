@@ -42,7 +42,7 @@ class _CardHomeState extends State<CardHome> {
                   child: Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: Image.asset(
-                      "assets/algodaoo.png",
+                      "assets/home/agronomia.png",
                       fit: BoxFit.contain,
                       filterQuality: FilterQuality.high,
                     ),
