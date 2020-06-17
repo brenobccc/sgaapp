@@ -69,13 +69,8 @@ class CustomDrawer extends StatelessWidget {
               ),
               Divider(),
               DrawerTile(Icons.home, "Inicio", pageController, 0),
-              DrawerTile(Icons.control_point, "Controle de Animais",
-                  pageController, 1),
-              DrawerTile(Icons.location_on, "Pecuária", pageController, 2),
-              DrawerTile(
-                  Icons.playlist_add_check, "Apicultura", pageController, 3),
-              DrawerTile(Icons.help, "Sobre", pageController, 4),
-              DrawerTile(Icons.keyboard_backspace, "Dicas", pageController, 5),
+              DrawerTile(Icons.help, "Dicas", pageController, 1),
+              DrawerTile(Icons.keyboard_backspace, "Sobre", pageController, 2),
             ],
           )
         ],

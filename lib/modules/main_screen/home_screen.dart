@@ -31,11 +31,75 @@ class HomeScreen extends StatelessWidget {
           body: HomePage(),
           drawer: CustomDrawer(_pageController),
         ),
+        // Scaffold(
+        //   appBar: AppBar(
+        //     backgroundColor: Colors.green,
+        //     title: Text(
+        //       'Controle de animais',
+        //       style: TextStyle(
+        //         fontSize: 28.0,
+        //         fontWeight: FontWeight.bold,
+        //         color: Colors.white,
+        //       ),
+        //     ),
+        //     centerTitle: true,
+        //     elevation: 0.0,
+        //   ),
+        //   body: AnimalControllerPage(),
+        //   drawer: CustomDrawer(_pageController),
+        // ),
+        // Scaffold(
+        //   appBar: AppBar(
+        //     backgroundColor: Colors.green,
+        //     title: Text(
+        //       'Pecuaria',
+        //       style: TextStyle(
+        //         fontSize: 28.0,
+        //         fontWeight: FontWeight.bold,
+        //         color: Colors.white,
+        //       ),
+        //     ),
+        //     centerTitle: true,
+        //     elevation: 0.0,
+        //   ),
+        //   drawer: CustomDrawer(_pageController),
+        //   body: PecuariaPage(),
+        // ),
+        // Scaffold(
+        //   appBar: AppBar(
+        //     backgroundColor: Colors.green,
+        //     title: Row(
+        //       mainAxisAlignment: MainAxisAlignment.center,
+        //       children: [
+        //         Image.asset(
+        //           'assets/bee.png',
+        //           fit: BoxFit.contain,
+        //           height: 50,
+        //         ),
+        //         Container(
+        //           padding: const EdgeInsets.all(15.0),
+        //           child: Text(
+        //             "Apicultura",
+        //             style: TextStyle(
+        //               fontSize: 28.0,
+        //               fontWeight: FontWeight.bold,
+        //               color: Colors.white,
+        //             ),
+        //           ),
+        //         )
+        //       ],
+        //     ),
+        //     centerTitle: true,
+        //     elevation: 0.0,
+        //   ),
+        //   drawer: CustomDrawer(_pageController),
+        //   body: ApiculturaPage(),
+        // ),
         Scaffold(
           appBar: AppBar(
-            backgroundColor: Colors.green,
+            backgroundColor: Colors.orange[200],
             title: Text(
-              'Controle de animais',
+              'Dicas',
               style: TextStyle(
                 fontSize: 28.0,
                 fontWeight: FontWeight.bold,
@@ -45,57 +109,12 @@ class HomeScreen extends StatelessWidget {
             centerTitle: true,
             elevation: 0.0,
           ),
-          body: AnimalControllerPage(),
           drawer: CustomDrawer(_pageController),
+          body: Dicas(),
         ),
-        Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.green,
-            title: Text(
-              'Pecuaria',
-              style: TextStyle(
-                fontSize: 28.0,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-              ),
-            ),
-            centerTitle: true,
-            elevation: 0.0,
-          ),
-          drawer: CustomDrawer(_pageController),
-          body: PecuariaPage(),
-        ),
-        Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.green,
-            title: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset(
-                  'assets/bee.png',
-                  fit: BoxFit.contain,
-                  height: 50,
-                ),
-                Container(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Text(
-                    "Apicultura",
-                    style: TextStyle(
-                      fontSize: 28.0,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
-                )
-              ],
-            ),
-            centerTitle: true,
-            elevation: 0.0,
-          ),
-          drawer: CustomDrawer(_pageController),
-          body: ApiculturaPage(),
-        ),
-        Scaffold(
+
+
+         Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.orange[200],
             title: Text(
@@ -110,7 +129,9 @@ class HomeScreen extends StatelessWidget {
             elevation: 0.0,
           ),
           drawer: CustomDrawer(_pageController),
-          body: Dicas(),
+          body: Container(
+             child: Text('Nothing for while')
+          )
         ),
       ],
     );

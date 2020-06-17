@@ -3,6 +3,7 @@ import 'package:get_it/get_it.dart';
 import 'package:sgaapp/components/tela_de_erro.dart';
 import 'package:sgaapp/modules/animal_controller/page/add_animal.dart';
 import 'package:sgaapp/modules/animal_controller/page/animal_controller_page.dart';
+import 'package:sgaapp/modules/apicultura/page/apicultura.dart';
 
 import 'package:sgaapp/modules/content/page/content.dart';
 
@@ -30,6 +31,8 @@ class RouteGenerator {
           MaterialPageRoute(builder: (_) => AnimalControllerPage()),
       'ListDeCardsTabs':
           MaterialPageRoute(builder: (_) => ListDeCarsTabs(argumentos: args)),
+      'Apicultura': 
+          MaterialPageRoute(builder: (_) => ApiculturaPage()),
       'home': MaterialPageRoute(builder: (_) => HomePage()),
       'Content': MaterialPageRoute(builder: (_) => Content()),
       'Algodao_menu': MaterialPageRoute(builder: (_) => AlgodaoMenu()),

@@ -10,73 +10,66 @@ class _AlgodaoMenuState extends State<AlgodaoMenu> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.white,
-          elevation: 0.0,
-        ),
-        body: Form(
-          child: Container(
-            child: Column(children: <Widget>[
-              SizedBox(
-                height: 44.0,
-                child: RaisedButton(
-                  elevation: 6.0,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.0)),
-                  child: Text(
-                    "Pragas",
-                    style: TextStyle(
-                      fontSize: 20,
-                    ),
-                  ),
-                  textColor: Colors.white,
-                  color: Color(0xFFE59730),
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => Pragas_Algodao()));
-                  },
-                ),
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0.0,
+      ),
+      body: ListView(padding: EdgeInsets.all(16.0), children: <Widget>[
+        SizedBox(
+          height: 44.0,
+          child: RaisedButton(
+            elevation: 6.0,
+            child: Text(
+              "Pragas",
+              style: TextStyle(
+                fontSize: 20,
               ),
-              SizedBox(
-                height: 44.0,
-                child: RaisedButton(
-                  elevation: 6.0,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.0)),
-                  child: Text(
-                    "Doenças",
-                    style: TextStyle(
-                      fontSize: 20,
-                    ),
-                  ),
-                  textColor: Colors.white,
-                  color: Color(0xFFE59730),
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => Doencas_algodao()));
-                  },
-                ),
-              ),
-              SizedBox(
-                height: 44.0,
-                child: RaisedButton(
-                  elevation: 6.0,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.0)),
-                  child: Text(
-                    "Daninhas",
-                    style: TextStyle(
-                      fontSize: 20,
-                    ),
-                  ),
-                  textColor: Colors.white,
-                  color: Color(0xFFE59730),
-                  onPressed: () {},
-                ),
-              ),
-            ]),
+            ),
+            textColor: Colors.white,
+            color: Color(0xFFE59730),
+            onPressed: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => Pragas_Algodao()));
+            },
           ),
-        ));
+        ),
+        SizedBox(height: 16.0),
+        SizedBox(
+          height: 44.0,
+          child: RaisedButton(
+            elevation: 6.0,
+            child: Text(
+              "Doenças",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+            textColor: Colors.white,
+            color: Color(0xFFE59730),
+            onPressed: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => Doencas_algodao()));
+            },
+          ),
+        ),
+        SizedBox(height: 16.0),
+        SizedBox(
+          height: 44.0,
+          child: RaisedButton(
+            elevation: 6.0,
+            child: Text(
+              "Daninhas",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+            textColor: Colors.white,
+            color: Color(0xFFE59730),
+            onPressed: () {},
+          ),
+        ),
+      ]),
+    );
   }
 }
 

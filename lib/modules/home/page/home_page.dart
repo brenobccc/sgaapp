@@ -103,14 +103,7 @@ class _HomePageState extends State<HomePage> {
     }),
     CardHome(
       titulo: "Apicultura",
-      rota: "ListDeCards",
-      args: {
-        'listaCards': [
-          Cards(),
-          Cards(),
-          Cards(),
-        ]
-      },
+      rota: "Apicultura",
     ),
     CardHome(
       titulo: "Controle de Animais",
@@ -129,16 +122,7 @@ class _HomePageState extends State<HomePage> {
         ]
       },
     ),
-    CardHome(
-      rota: "ListDeCards",
-      args: {
-        'listaCards': [
-          Cards(),
-          Cards(),
-          Cards(),
-        ]
-      },
-    ),
+    
   ];
 
   @override
