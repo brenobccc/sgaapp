@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Cards extends StatelessWidget {
+class SubCard extends StatelessWidget {
   final border = Radius.circular(20);
   final String descricao;
   final Function onPressed;
@@ -8,7 +8,7 @@ class Cards extends StatelessWidget {
   final Map<dynamic, dynamic> args;
   final String imagem;
 
-  Cards(
+  SubCard(
       {Key key,
       this.descricao,
       this.onPressed,

@@ -1,7 +1,7 @@
 //tesye
 import 'package:flutter/material.dart';
 import 'package:sgaapp/components/my_text_field_widget.dart';
-import 'package:sgaapp/modules/lista_de_cards/componets/cards.dart';
+import 'package:sgaapp/components/sub_cards.dart';
 
 class InformacionalTabs extends StatefulWidget {
   final Map argumentos;
@@ -26,7 +26,7 @@ class _InformacionalTabsState extends State<InformacionalTabs> {
       padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
       itemCount: 10,
       itemBuilder: (context, index) {
-        return Cards();
+        return SubCard();
       },
     );
   }

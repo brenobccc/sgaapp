@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:sgaapp/components/sub_cards.dart';
 import 'package:sgaapp/components/tela_fundo.dart';
 import 'package:sgaapp/modules/home/componets/card_bottom.dart';
 import 'package:sgaapp/modules/home/componets/card_home.dart';
-import 'package:sgaapp/modules/lista_de_cards/componets/cards.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -19,67 +19,67 @@ class _HomePageState extends State<HomePage> {
         {
           'titulo': 'Plantio',
           'lista': [
-            Cards(
+            SubCard(
               descricao: "Algodão",
               rota: 'InformacionalTabs',
               imagem: "assets/agronomia/algodao.png",
             ),
-            Cards(
+            SubCard(
               descricao: "Amendoim",
               rota: 'InformacionalTabs',
               imagem: "assets/agronomia/amendoin.png",
             ),
-            Cards(
+            SubCard(
               descricao: "Arroz",
               rota: 'InformacionalTabs',
               imagem: "assets/agronomia/arroz.png",
             ),
-            Cards(
+            SubCard(
               descricao: "Batata",
               rota: 'InformacionalTabs',
               imagem: "assets/agronomia/batata.png",
             ),
-            Cards(
+            SubCard(
               descricao: "Café",
               rota: 'InformacionalTabs',
               imagem: "assets/agronomia/cafe.png",
             ),
-            Cards(
+            SubCard(
               descricao: "Cana-de-Açucar",
               rota: 'InformacionalTabs',
               imagem: "assets/agronomia/cacuca.png",
             ),
-            Cards(
+            SubCard(
               descricao: "Feijão",
               rota: 'InformacionalTabs',
               imagem: "assets/agronomia/feijao.png",
             ),
-            Cards(
+            SubCard(
               descricao: "Milho",
               rota: 'InformacionalTabs',
               imagem: "assets/agronomia/milho.png",
             ),
-            Cards(
+            SubCard(
               descricao: "Soja",
               rota: 'InformacionalTabs',
               imagem: "assets/agronomia/algodao.png",
             ),
-            Cards(
+            SubCard(
               descricao: "Sorgo",
               rota: 'InformacionalTabs',
               imagem: "assets/agronomia/algodao.png",
             ),
-            Cards(
+            SubCard(
               descricao: "Tomate",
               rota: 'InformacionalTabs',
               imagem: "assets/agronomia/algodao.png",
             ),
-            Cards(
+            SubCard(
               descricao: "Trigo",
               rota: 'InformacionalTabs',
               imagem: "assets/agronomia/algodao.png",
             ),
-            Cards(
+            SubCard(
               descricao: "Uva",
               rota: 'InformacionalTabs',
               imagem: "assets/agronomia/algodao.png",
@@ -89,23 +89,23 @@ class _HomePageState extends State<HomePage> {
         {
           'titulo': 'Equipamentos agrícula',
           'lista': [
-            Cards(
+            SubCard(
               descricao: "1",
               rota: 'Content',
             ),
-            Cards(
+            SubCard(
               descricao: "2",
               rota: 'Content',
             ),
-            Cards(
+            SubCard(
               descricao: "3",
               rota: 'Content',
             ),
-            Cards(
+            SubCard(
               descricao: "4",
               rota: 'Content',
             ),
-            Cards(
+            SubCard(
               descricao: "5",
               rota: 'Content',
             ),
@@ -127,9 +127,9 @@ class _HomePageState extends State<HomePage> {
       rota: "ListDeCards",
       args: {
         'listaCards': [
-          Cards(),
-          Cards(),
-          Cards(),
+          SubCard(),
+          SubCard(),
+          SubCard(),
         ]
       },
     ),
@@ -144,6 +144,7 @@ class _HomePageState extends State<HomePage> {
         tela: AspectRatio(
           aspectRatio: 1.3,
           child: ListView.builder(
+            physics:BouncingScrollPhysics(),
             controller: controller,
             itemCount: _pages.length,
             scrollDirection: Axis.horizontal,
