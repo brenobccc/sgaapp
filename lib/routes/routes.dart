@@ -8,10 +8,10 @@ import 'package:sgaapp/modules/content/page/content.dart';
 import 'package:sgaapp/modules/home/page/home_page.dart';
 import 'package:sgaapp/modules/lista_de_cards/agronomia/plantios/algodao/menu_algodao.dart';
 import 'package:sgaapp/modules/lista_de_cards/agronomia/plantios/amendoim/menu_amendoim.dart';
-import 'package:sgaapp/modules/lista_de_cards/lista_de_cards.dart';
-import 'package:sgaapp/modules/lista_de_cards_tab/lista_de_cards_tabs.dart';
+import 'package:sgaapp/modules/lista_de_cards/pages/lista_de_cards.dart';
+import 'package:sgaapp/modules/lista_de_cards_tab/pages/lista_de_cards_tabs.dart';
 import 'package:sgaapp/modules/login/page/login_screen.dart';
-import 'package:sgaapp/modules/main_screen/home_screen.dart';
+import 'package:sgaapp/modules/main_screen/page/home_screen.dart';
 import '../db/database.dart';
 
 class RouteGenerator {

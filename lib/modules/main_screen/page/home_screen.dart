@@ -7,10 +7,10 @@ import 'package:sgaapp/modules/apicultura/page/apicultura.dart';
 import 'package:sgaapp/modules/dicas/page/dicas.dart';
 
 import 'package:sgaapp/modules/home/page/home_page.dart';
+import 'package:sgaapp/modules/main_screen/components/custom_drawer.dart';
 
 import 'package:sgaapp/modules/pecuaria/page/pecuaria_page.dart';
 
-import 'components/custom_drawer.dart';
 
 class HomeScreen extends StatelessWidget {
   final _pageController = PageController();
