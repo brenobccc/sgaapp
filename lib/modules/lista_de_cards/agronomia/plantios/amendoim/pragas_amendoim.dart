@@ -52,11 +52,11 @@ class _Pragas_amendoimState extends State<Pragas_amendoim> {
                           padding: const EdgeInsets.all(1.0),
                           child: Column(
                             children: <Widget>[
-                              Image.asset(
-                                'assets/bicudo_algodoeiro.png',
-                              ),
+                              // Image.asset(
+                              //   'assets/agronomia/amendoim/pragas/tripes.png',
+                              // ),
                               Text(
-                                '\nBicudo do algodoeiro\n(Anthonomus grandis)',
+                                'Tripes-do-prateamento',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
@@ -97,7 +97,7 @@ class _Pragas_amendoimState extends State<Pragas_amendoim> {
                                 'assets/broca_da_raiz.png',
                               ),
                               Text(
-                                'Broca da raiz (Eutinobothrus brasiliensis)',
+                                'Lagarta-do-pescoço-vermelho',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
@@ -137,7 +137,7 @@ class _Pragas_amendoimState extends State<Pragas_amendoim> {
                                 'assets/mosca_branca.png',
                               ),
                               Text(
-                                '\nMosca branca (Bemisia tabaci biótipo B)',
+                                'Lagarta-da-soja',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
@@ -169,7 +169,7 @@ class _Pragas_amendoimState extends State<Pragas_amendoim> {
                                 'assets/pulgao_do_algodoeiro.png',
                               ),
                               Text(
-                                '\nPulgão do algodoeiro (Aphis gossypii)',
+                                'Percevejo-preto',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
@@ -208,7 +208,7 @@ class _Pragas_amendoimState extends State<Pragas_amendoim> {
                                 'assets/percevejo_castanho.png',
                               ),
                               Text(
-                                'Percevejo castanho da raiz (Scaptocoris castanea)',
+                                'Percevejo-castanho',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
@@ -248,7 +248,7 @@ class _Pragas_amendoimState extends State<Pragas_amendoim> {
                                 'assets/nezara_pecevejo1and2.png',
                               ),
                               Text(
-                                'Percevejo verde (Nezara viridula)',
+                                'Larva-alfinete',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
@@ -288,7 +288,7 @@ class _Pragas_amendoimState extends State<Pragas_amendoim> {
                                 'assets/nezara_pecevejo1and2.png',
                               ),
                               Text(
-                                'Percevejo marrom.Percevejo da soja (Euschistus heros)',
+                                'Lagarta-rosca',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
@@ -328,7 +328,7 @@ class _Pragas_amendoimState extends State<Pragas_amendoim> {
                                 'assets/nezara_pecevejo1and2.png',
                               ),
                               Text(
-                                'Percevejo Verde Pequeno Piezodorus Guildinii',
+                                'Lagarta-elasmo',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
@@ -368,7 +368,7 @@ class _Pragas_amendoimState extends State<Pragas_amendoim> {
                                 'assets/lagarta_rosada.png',
                               ),
                               Text(
-                                '\n\nCuruquerê do algodoeiro (Alabama argilacea)',
+                                'Gafanhoto-do-nordeste',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
@@ -408,7 +408,7 @@ class _Pragas_amendoimState extends State<Pragas_amendoim> {
                                 'assets/lagarta_rosada.png',
                               ),
                               Text(
-                                '\nLagarta falsa-medideira (Chrysodeixis includens)',
+                                'Curuquerê-dos-capinzais',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
@@ -448,7 +448,7 @@ class _Pragas_amendoimState extends State<Pragas_amendoim> {
                                 'assets/lagarta_rosada.png',
                               ),
                               Text(
-                                '\nLagarta da maçã (Heliothis virescens)',
+                                'Lagarta-da-teia',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
@@ -488,7 +488,7 @@ class _Pragas_amendoimState extends State<Pragas_amendoim> {
                                 'assets/lagarta_rosada.png',
                               ),
                               Text(
-                                ' Helicoverpa armigera (lagarta-do-velho-mundo).',
+                                'Ácaro-rajado',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
@@ -528,7 +528,7 @@ class _Pragas_amendoimState extends State<Pragas_amendoim> {
                                 'assets/lagarta_rosada.png',
                               ),
                               Text(
-                                'Lagarta rosada (Pectinophora gossypiella)',
+                                'Ácaro-vermelho',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
@@ -568,7 +568,7 @@ class _Pragas_amendoimState extends State<Pragas_amendoim> {
                                 'assets/acaros.png',
                               ),
                               Text(
-                                '\nÁcaro rajado (Tetranychus spp)',
+                                'Traça-das-vagens',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
@@ -608,7 +608,7 @@ class _Pragas_amendoimState extends State<Pragas_amendoim> {
                                 'assets/acaros.png',
                               ),
                               Text(
-                                'Ácaro vermelho (Tetranychus ludeni)',
+                                'Gorgulho',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
@@ -648,7 +648,7 @@ class _Pragas_amendoimState extends State<Pragas_amendoim> {
                                 'assets/acaros.png',
                               ),
                               Text(
-                                'Ácaro branco (Polyphagotarsonemus latus)',
+                                'Cascudinho',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
