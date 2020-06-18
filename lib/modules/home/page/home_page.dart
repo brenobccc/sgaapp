@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
             ),
             Cards(
               descricao: "Amendoim",
-              rota: 'Content',
+              rota: 'Amendoim_Menu',
             ),
             Cards(
               descricao: "Arroz",
