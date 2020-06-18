@@ -1,0 +1,16 @@
+PADÃO DE NOMES DAS IMAGES
+
+
+tabs:
+    praga
+    daninha
+    doenca
+
+
+exemplo
+
+[nome do plantio]_[nome da tab]_nameimagem.png
+
+algodao_praga_bicudoalgodoeiro.png
+
+
