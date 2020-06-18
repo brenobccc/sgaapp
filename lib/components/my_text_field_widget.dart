@@ -10,6 +10,7 @@ class MyTextFieldWidget extends StatelessWidget {
   final String errorText;
   final int maxLength;
   final bool showLength;
+  final bool withPadding;
   final void Function(String) onChanged;
 
   const MyTextFieldWidget({
@@ -23,11 +24,15 @@ class MyTextFieldWidget extends StatelessWidget {
     this.maxLength,
     this.showLength = true,
     this.onChanged,
+    this.withPadding = false,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: withPadding
+          ? EdgeInsets.symmetric(horizontal: 20, vertical: 13)
+          : EdgeInsets.zero,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
             bottomRight: Radius.circular(10), bottomLeft: Radius.circular(10)),

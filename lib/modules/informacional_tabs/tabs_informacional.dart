@@ -1,5 +1,6 @@
 //tesye
 import 'package:flutter/material.dart';
+import 'package:sgaapp/components/my_text_field_widget.dart';
 import 'package:sgaapp/modules/lista_de_cards/componets/cards.dart';
 
 class TabsInformacional extends StatefulWidget {
@@ -59,27 +60,10 @@ class _TabsInformacionalState extends State<TabsInformacional> {
         body: SafeArea(
           child: Column(
             children: <Widget>[
-              Container(
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                      bottomRight: Radius.circular(10),
-                      bottomLeft: Radius.circular(10)),
-                  color: Colors.transparent,
-                ),
-                child: TextField(
-                  keyboardType: TextInputType.text,
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20),
-                      borderSide: BorderSide(
-                        width: 20,
-                        color: Colors.black,
-                      ),
-                    ),
-                    hintText: "Pesquise aqui",
-                  ),
-                ),
+              MyTextFieldWidget(
+                withPadding: true,
+                keyboardType: TextInputType.text,
+                hintText: "Pesquise aqui",
               ),
               Expanded(
                 child: TabBarView(children: <Widget>[

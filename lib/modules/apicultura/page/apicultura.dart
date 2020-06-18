@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sgaapp/components/my_text_field_widget.dart';
 import 'package:sgaapp/components/poligono.dart';
 
 class ApiculturaPage extends StatelessWidget {
@@ -12,9 +13,9 @@ class ApiculturaPage extends StatelessWidget {
         childAspectRatio: 0.8,
       ),
       padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
-      itemCount:  10,
+      itemCount: 10,
       itemBuilder: (context, index) {
-        return  Poligono(heroTag: index.toString());
+        return Poligono(heroTag: index.toString());
       },
     );
   }
@@ -33,29 +34,12 @@ class ApiculturaPage extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: <Widget>[
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                    bottomRight: Radius.circular(10),
-                    bottomLeft: Radius.circular(10)),
-                color: Colors.transparent,
-              ),
-              child: TextField(
-                keyboardType: TextInputType.text,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
-                    borderSide: BorderSide(
-                      width: 20,
-                      color: Colors.black,
-                    ),
-                  ),
-                  hintText: "Pesquise aqui",
-                ),
-              ),
+            MyTextFieldWidget(
+              withPadding: true,
+              keyboardType: TextInputType.text,
+              hintText: "Pesquise aqui",
             ),
-            Expanded(child: createGrid(context,[])),
+            Expanded(child: createGrid(context, [])),
           ],
         ),
       ),
