@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:sgaapp/components/my_text_field_widget.dart';
 import 'package:sgaapp/modules/lista_de_cards/componets/cards.dart';
 
-class TabsInformacional extends StatefulWidget {
+class InformacionalTabs extends StatefulWidget {
   final Map argumentos;
 
-  const TabsInformacional({Key key, this.argumentos}) : super(key: key);
+  const InformacionalTabs({Key key, this.argumentos}) : super(key: key);
   @override
-  _TabsInformacionalState createState() => _TabsInformacionalState();
+  _InformacionalTabsState createState() => _InformacionalTabsState();
 }
 
-class _TabsInformacionalState extends State<TabsInformacional> {
+class _InformacionalTabsState extends State<InformacionalTabs> {
   var controller = TextEditingController();
 
   createGrid(BuildContext context, List lista) {

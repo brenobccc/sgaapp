@@ -21,67 +21,67 @@ class _HomePageState extends State<HomePage> {
           'lista': [
             Cards(
               descricao: "Algodão",
-              rota: 'Algodao_menu',
+              rota: 'InformacionalTabs',
               imagem: "assets/agronomia/algodao.png",
             ),
             Cards(
               descricao: "Amendoim",
-              rota: 'Amendoim_Menu',
+              rota: 'InformacionalTabs',
               imagem: "assets/agronomia/amendoin.png",
             ),
             Cards(
               descricao: "Arroz",
-              rota: 'Content',
+              rota: 'InformacionalTabs',
               imagem: "assets/agronomia/arroz.png",
             ),
             Cards(
               descricao: "Batata",
-              rota: 'Content',
+              rota: 'InformacionalTabs',
               imagem: "assets/agronomia/batata.png",
             ),
             Cards(
               descricao: "Café",
-              rota: 'Content',
+              rota: 'InformacionalTabs',
               imagem: "assets/agronomia/cafe.png",
             ),
             Cards(
               descricao: "Cana-de-Açucar",
-              rota: 'Content',
+              rota: 'InformacionalTabs',
               imagem: "assets/agronomia/cacuca.png",
             ),
             Cards(
               descricao: "Feijão",
-              rota: 'Content',
+              rota: 'InformacionalTabs',
               imagem: "assets/agronomia/feijao.png",
             ),
             Cards(
               descricao: "Milho",
-              rota: 'Content',
+              rota: 'InformacionalTabs',
               imagem: "assets/agronomia/milho.png",
             ),
             Cards(
               descricao: "Soja",
-              rota: 'Content',
+              rota: 'InformacionalTabs',
               imagem: "assets/agronomia/algodao.png",
             ),
             Cards(
               descricao: "Sorgo",
-              rota: 'Content',
+              rota: 'InformacionalTabs',
               imagem: "assets/agronomia/algodao.png",
             ),
             Cards(
               descricao: "Tomate",
-              rota: 'Content',
+              rota: 'InformacionalTabs',
               imagem: "assets/agronomia/algodao.png",
             ),
             Cards(
               descricao: "Trigo",
-              rota: 'Content',
+              rota: 'InformacionalTabs',
               imagem: "assets/agronomia/algodao.png",
             ),
             Cards(
               descricao: "Uva",
-              rota: 'Content',
+              rota: 'InformacionalTabs',
               imagem: "assets/agronomia/algodao.png",
             ),
           ]
