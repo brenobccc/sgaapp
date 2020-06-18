@@ -38,6 +38,7 @@ dependencies:
   url_launcher: ^5.4.5
   flutter_masked_text: ^0.8.0
   weather: ^1.1.1
+  polygon_clipper: ^1.0.2
 
 dev_dependencies:
   floor_generator: ^0.13.0

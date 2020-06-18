@@ -1,104 +1,135 @@
 import 'package:flutter/material.dart';
+import 'package:sgaapp/components/poligono.dart';
 
 class ApiculturaPage extends StatelessWidget {
+  createGrid(BuildContext context, List<Widget> lista) {
+    return GridView.builder(
+      physics: BouncingScrollPhysics(),
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+        mainAxisSpacing: 25.0,
+        crossAxisSpacing: 25.0,
+        childAspectRatio: 0.8,
+      ),
+      padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+      itemCount:  10,
+      itemBuilder: (context, index) {
+        return  Poligono(heroTag: index.toString());
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-            backgroundColor: Colors.green,
-            title: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset(
-                  'assets/bee.png',
-                  fit: BoxFit.contain,
-                  height: 50,
-                ),
-                Container(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Text(
-                    "Apicultura",
-                    style: TextStyle(
-                      fontSize: 28.0,
-                      fontWeight: FontWeight.bold,
+        leading: IconButton(
+            icon: Icon(Icons.arrow_back_ios),
+            onPressed: () => Navigator.pop(context)),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: Column(
+          children: <Widget>[
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    bottomRight: Radius.circular(10),
+                    bottomLeft: Radius.circular(10)),
+                color: Colors.transparent,
+              ),
+              child: TextField(
+                keyboardType: TextInputType.text,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    borderSide: BorderSide(
+                      width: 20,
                       color: Colors.black,
                     ),
                   ),
-                )
-              ],
+                  hintText: "Pesquise aqui",
+                ),
+              ),
             ),
-            centerTitle: true,
-            elevation: 2.0,
-          ),
-      body: Stack(
-        children: <Widget>[
-          GridView.count(
-            primary: false,
-            padding: const EdgeInsets.all(20),
-            crossAxisSpacing: 10,
-            mainAxisSpacing: 4,
-            crossAxisCount: 2,
-            children: <Widget>[
-              Container(
-                  child: ConstrainedBox(
-                      constraints: BoxConstraints.expand(),
-                      child: FlatButton(
-                        onPressed: () {},
-                        child: Image.asset('assets/map.png'),
-                        color: Colors.transparent,
-                      ))),
-              Container(
-                  child: ConstrainedBox(
-                      constraints: BoxConstraints.expand(),
-                      child: FlatButton(
-                        onPressed: () {},
-                        child: Image.asset('assets/col.png'),
-                        color: Colors.transparent,
-                      ))),
-              Container(
-                  child: ConstrainedBox(
-                      constraints: BoxConstraints.expand(),
-                      child: FlatButton(
-                        onPressed: () {},
-                        child: Image.asset('assets/pro.png'),
-                        color: Colors.transparent,
-                      ))),
-              Container(
-                  child: ConstrainedBox(
-                      constraints: BoxConstraints.expand(),
-                      child: FlatButton(
-                        onPressed: () {},
-                        child: Image.asset('assets/quest.png'),
-                        color: Colors.transparent,
-                      ))),
-              Container(
-                  child: ConstrainedBox(
-                      constraints: BoxConstraints.expand(),
-                      child: FlatButton(
-                        onPressed: () {},
-                        child: Image.asset('assets/colm.png'),
-                        color: Colors.transparent,
-                      ))),
-              Container(
-                  child: ConstrainedBox(
-                      constraints: BoxConstraints.expand(),
-                      child: FlatButton(
-                        onPressed: () {},
-                        child: Image.asset('assets/prod.png'),
-                        color: Colors.transparent,
-                      ))),
-              Container(
-                  child: ConstrainedBox(
-                      constraints: BoxConstraints.expand(),
-                      child: FlatButton(
-                        onPressed: () {},
-                        child: Image.asset('assets/grup.png'),
-                        color: Colors.transparent,
-                      ))),
-            ],
-          )
-        ],
+            Expanded(child: createGrid(context,[])),
+          ],
+        ),
       ),
     );
+
+    // Stack(
+    //   children: <Widget>[
+    //     GridView.count(
+    //       primary: false,
+    //       padding: const EdgeInsets.all(20),
+    //       crossAxisSpacing: 10,
+    //       mainAxisSpacing: 4,
+    //       crossAxisCount: 2,
+    //       children: <Widget>[
+    //         Container(
+    //             child: ConstrainedBox(
+    //                 constraints: BoxConstraints.expand(),
+    //                 child: FlatButton(
+    //                   onPressed: () {},
+    //                   child: Image.asset('assets/map.png'),
+    //                   color: Colors.transparent,
+    //                 ))),
+    //         Container(
+    //             child: ConstrainedBox(
+    //                 constraints: BoxConstraints.expand(),
+    //                 child: FlatButton(
+    //                   onPressed: () {},
+    //                   child: Image.asset('assets/col.png'),
+    //                   color: Colors.transparent,
+    //                 ))),
+    //         Container(
+    //             child: ConstrainedBox(
+    //                 constraints: BoxConstraints.expand(),
+    //                 child: FlatButton(
+    //                   onPressed: () {},
+    //                   child: Image.asset('assets/pro.png'),
+    //                   color: Colors.transparent,
+    //                 ))),
+    //         Container(
+    //             child: ConstrainedBox(
+    //                 constraints: BoxConstraints.expand(),
+    //                 child: FlatButton(
+    //                   onPressed: () {},
+    //                   child: Image.asset('assets/quest.png'),
+    //                   color: Colors.transparent,
+    //                 ))),
+    //         Container(
+    //             child: ConstrainedBox(
+    //                 constraints: BoxConstraints.expand(),
+    //                 child: FlatButton(
+    //                   onPressed: () {},
+    //                   child: Image.asset('assets/colm.png'),
+    //                   color: Colors.transparent,
+    //                 ))),
+    //         Container(
+    //             child: ConstrainedBox(
+    //                 constraints: BoxConstraints.expand(),
+    //                 child: FlatButton(
+    //                   onPressed: () {},
+    //                   child: Image.asset('assets/prod.png'),
+    //                   color: Colors.transparent,
+    //                 ))),
+    //         Container(
+    //             child: ConstrainedBox(
+    //                 constraints: BoxConstraints.expand(),
+    //                 child: FlatButton(
+    //                   onPressed: () {},
+    //                   child: Image.asset('assets/grup.png'),
+    //                   color: Colors.transparent,
+    //                 ))),
+    //       ],
+    //     )
+    //   ],
+    // ),
+    // );
   }
 }
