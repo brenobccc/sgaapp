@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:sgaapp/components/tela_fundo.dart';
 import 'package:sgaapp/modules/home/componets/card_bottom.dart';
 import 'package:sgaapp/modules/home/componets/card_home.dart';
-import 'package:sgaapp/modules/home/componets/circule.dart';
 import 'package:sgaapp/modules/lista_de_cards/componets/cards.dart';
 
 class HomePage extends StatefulWidget {
