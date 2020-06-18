@@ -6,8 +6,15 @@ class Cards extends StatelessWidget {
   final Function onPressed;
   final String rota;
   final Map<dynamic, dynamic> args;
+  final String imagem;
 
-  Cards({Key key, this.descricao, this.onPressed, this.rota, this.args})
+  Cards(
+      {Key key,
+      this.descricao,
+      this.onPressed,
+      this.rota,
+      this.args,
+      this.imagem})
       : super(key: key);
 
   @override
@@ -40,11 +47,14 @@ class Cards extends StatelessWidget {
                       BorderRadius.only(topLeft: border, topRight: border),
                   color: Colors.green,
                 ),
-                child: Center(
-                    child: Text(
-                  descricao ?? "sem descrição",
-                  style: TextStyle(fontSize: 20),
-                ))),
+                child: Center(child: Image.asset(imagem ?? "assets/bee.png")
+
+                    //      Text(
+                    //   descricao ?? "sem descrição",
+                    //   style: TextStyle(fontSize: 20),
+                    // )
+
+                    )),
             Container(
               child: Text(descricao ?? "sem descrição"),
             ),

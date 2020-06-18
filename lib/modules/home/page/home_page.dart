@@ -23,54 +23,67 @@ class _HomePageState extends State<HomePage> {
             Cards(
               descricao: "Algodão",
               rota: 'Algodao_menu',
+              imagem: "assets/agronomia/algodao.png",
             ),
             Cards(
               descricao: "Amendoim",
               rota: 'Amendoim_Menu',
+              imagem: "assets/agronomia/amendoin.png",
             ),
             Cards(
               descricao: "Arroz",
               rota: 'Content',
+              imagem: "assets/agronomia/arroz.png",
             ),
             Cards(
               descricao: "Batata",
               rota: 'Content',
+              imagem: "assets/agronomia/batata.png",
             ),
             Cards(
               descricao: "Café",
               rota: 'Content',
+              imagem: "assets/agronomia/cafe.png",
             ),
             Cards(
               descricao: "Cana-de-Açucar",
               rota: 'Content',
+              imagem: "assets/agronomia/cacuca.png",
             ),
             Cards(
               descricao: "Feijão",
               rota: 'Content',
+              imagem: "assets/agronomia/feijao.png",
             ),
             Cards(
               descricao: "Milho",
               rota: 'Content',
+              imagem: "assets/agronomia/milho.png",
             ),
             Cards(
               descricao: "Soja",
               rota: 'Content',
+              imagem: "assets/agronomia/algodao.png",
             ),
             Cards(
               descricao: "Sorgo",
               rota: 'Content',
+              imagem: "assets/agronomia/algodao.png",
             ),
             Cards(
               descricao: "Tomate",
               rota: 'Content',
+              imagem: "assets/agronomia/algodao.png",
             ),
             Cards(
               descricao: "Trigo",
               rota: 'Content',
+              imagem: "assets/agronomia/algodao.png",
             ),
             Cards(
               descricao: "Uva",
               rota: 'Content',
+              imagem: "assets/agronomia/algodao.png",
             ),
           ]
         },
@@ -109,7 +122,6 @@ class _HomePageState extends State<HomePage> {
       titulo: "Controle de Animais",
       rota: "AnimalControll",
       descricao: "Enbaixador",
-      
     ),
     CardHome(
       titulo: "Financeiro",
@@ -122,7 +134,6 @@ class _HomePageState extends State<HomePage> {
         ]
       },
     ),
-    
   ];
 
   @override
