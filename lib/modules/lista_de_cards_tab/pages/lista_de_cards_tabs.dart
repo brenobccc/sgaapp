@@ -64,7 +64,9 @@ class _ListDeCarsTabsState extends State<ListDeCarsTabs> {
                 hintText: "Pesquise aqui",
               ),
               Expanded(
-                child: TabBarView(children: <Widget>[
+                child: TabBarView(
+                  physics: BouncingScrollPhysics(),
+                  children: <Widget>[
                   createGrid(
                     context,
                     widget.argumentos['listaCards'][0]['lista'],

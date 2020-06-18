@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
     CardHome(titulo: "Agronomia", rota: "ListDeCardsTabs", args: {
       'listaCards': [
         {
-          'titulo': 'Plantio',
+          'titulo': 'Plantios',
           'lista': [
             SubCard(
               descricao: "Algodão",
@@ -87,7 +87,7 @@ class _HomePageState extends State<HomePage> {
           ]
         },
         {
-          'titulo': 'Equipamentos agrícula',
+          'titulo': 'Equipamentos',
           'lista': [
             SubCard(
               descricao: "1",
@@ -141,6 +141,7 @@ class _HomePageState extends State<HomePage> {
       resizeToAvoidBottomPadding: false,
       backgroundColor: Colors.grey[100],
       body: TelaDeFundo(
+     //   indicador: indicadores(),
         tela: AspectRatio(
           aspectRatio: 1.3,
           child: ListView.builder(

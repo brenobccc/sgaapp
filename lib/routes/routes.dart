@@ -20,28 +20,98 @@ class RouteGenerator {
     final AppDatabase db = GetIt.I.get<AppDatabase>();
     final args = settings.arguments;
 
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)
+        animationRota() {
+      return (context, animation, secondaryAnimation, child) {
+        var begin = Offset(0.0, 1.0);
+        var end = Offset.zero;
+        var curve = Curves.ease;
+
+        var tween =
+            Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+        return SlideTransition(
+          position: animation.drive(tween),
+          child: child,
+        );
+      };
+    }
+
     final Map<String, dynamic> routes = {
-      '/HomePage': MaterialPageRoute(builder: (_) => LoginScreen(db: db)),
+      '/HomePage':
+          //MaterialPageRoute(builder: (_) => LoginScreen(db: db)),
+          PageRouteBuilder(
+              pageBuilder: (context, animation, secondaryAnimation) =>
+                  LoginScreen(db: db),
+              transitionsBuilder: animationRota()),
       '/HomePagePrincipal':
-          MaterialPageRoute(builder: (_) => HomeScreen(db: db)),
+          //MaterialPageRoute(builder: (_) => HomeScreen(db: db)),
+          PageRouteBuilder(
+              pageBuilder: (context, animation, secondaryAnimation) =>
+                  HomeScreen(db: db),
+              transitionsBuilder: animationRota()),
       'ListDeCards':
-          MaterialPageRoute(builder: (_) => ListDeCards(argumentos: args)),
+          // MaterialPageRoute(builder: (_) => ListDeCards(argumentos: args)),
+          PageRouteBuilder(
+              pageBuilder: (context, animation, secondaryAnimation) =>
+                  ListDeCards(argumentos: args),
+              transitionsBuilder: animationRota()),
       'AnimalControll':
-          MaterialPageRoute(builder: (_) => AnimalControllerPage()),
+          //MaterialPageRoute(builder: (_) => AnimalControllerPage()),
+          PageRouteBuilder(
+              pageBuilder: (context, animation, secondaryAnimation) =>
+                  AnimalControllerPage(),
+              transitionsBuilder: animationRota()),
       'ListDeCardsTabs':
-          MaterialPageRoute(builder: (_) => ListDeCarsTabs(argumentos: args)),
-      'Apicultura': MaterialPageRoute(builder: (_) => ApiculturaPage()),
-      'home': MaterialPageRoute(builder: (_) => HomePage()),
-      'Content': MaterialPageRoute(builder: (_) => Content()),
-      'Algodao_menu': MaterialPageRoute(builder: (_) => AlgodaoMenu()),
-      'Amendoim_Menu': MaterialPageRoute(builder: (_) => AmendoimMenu()),
-      'addanimal': MaterialPageRoute(
-        builder: (_) => AddAnimal(
-          todo: args,
-        ),
-      ),
+          // MaterialPageRoute(builder: (_) => ListDeCarsTabs(argumentos: args)),
+          PageRouteBuilder(
+              pageBuilder: (context, animation, secondaryAnimation) =>
+                  ListDeCarsTabs(argumentos: args),
+              transitionsBuilder: animationRota()),
+      'Apicultura':
+          //MaterialPageRoute(builder: (_) => ApiculturaPage()),
+          PageRouteBuilder(
+              pageBuilder: (context, animation, secondaryAnimation) =>
+                  ApiculturaPage(),
+              transitionsBuilder: animationRota()),
+      'home':
+          //MaterialPageRoute(builder: (_) => HomePage()),
+          PageRouteBuilder(
+              pageBuilder: (context, animation, secondaryAnimation) =>
+                  HomePage(),
+              transitionsBuilder: animationRota()),
+      'Content':
+          // MaterialPageRoute(builder: (_) => Content()),
+          PageRouteBuilder(
+              pageBuilder: (context, animation, secondaryAnimation) =>
+                  Content(),
+              transitionsBuilder: animationRota()),
+      'Algodao_menu':
+          //MaterialPageRoute(builder: (_) => AlgodaoMenu()),
+          PageRouteBuilder(
+              pageBuilder: (context, animation, secondaryAnimation) =>
+                  AlgodaoMenu(),
+              transitionsBuilder: animationRota()),
+      'Amendoim_Menu':
+          //MaterialPageRoute(builder: (_) => AmendoimMenu()),
+          PageRouteBuilder(
+              pageBuilder: (context, animation, secondaryAnimation) =>
+                  AmendoimMenu(),
+              transitionsBuilder: animationRota()),
+      'addanimal':
+          // MaterialPageRoute(
+          //   builder: (_) => AddAnimal(todo: args))
+          PageRouteBuilder(
+              pageBuilder: (context, animation, secondaryAnimation) =>
+                  AddAnimal(todo: args),
+              transitionsBuilder: animationRota()),
       'InformacionalTabs':
-          MaterialPageRoute(builder: (_) => InformacionalTabs()),
+          //MaterialPageRoute(builder: (_) => InformacionalTabs()),
+          PageRouteBuilder(
+              pageBuilder: (context, animation, secondaryAnimation) =>
+                  InformacionalTabs(),
+              transitionsBuilder: animationRota()),
+              
       'alertaErro': MaterialPageRoute(builder: (_) => TelaDeErro()),
     };
 
