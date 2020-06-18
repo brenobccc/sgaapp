@@ -4,14 +4,11 @@ import 'package:sgaapp/components/tela_de_erro.dart';
 import 'package:sgaapp/modules/animal_controller/page/add_animal.dart';
 import 'package:sgaapp/modules/animal_controller/page/animal_controller_page.dart';
 import 'package:sgaapp/modules/apicultura/page/apicultura.dart';
-
 import 'package:sgaapp/modules/content/page/content.dart';
-
 import 'package:sgaapp/modules/home/page/home_page.dart';
+import 'package:sgaapp/modules/lista_de_cards/agronomia/plantios/algodao/menu_algodao.dart';
 import 'package:sgaapp/modules/lista_de_cards/lista_de_cards.dart';
-import 'package:sgaapp/modules/lista_de_cards/plantio/plantio_teste.dart';
 import 'package:sgaapp/modules/lista_de_cards_tab/lista_de_cards_tabs.dart';
-
 import 'package:sgaapp/modules/login/page/login_screen.dart';
 import 'package:sgaapp/modules/main_screen/home_screen.dart';
 import '../db/database.dart';
@@ -27,12 +24,11 @@ class RouteGenerator {
           MaterialPageRoute(builder: (_) => HomeScreen(db: db)),
       'ListDeCards':
           MaterialPageRoute(builder: (_) => ListDeCards(argumentos: args)),
-                'AnimalControll':
+      'AnimalControll':
           MaterialPageRoute(builder: (_) => AnimalControllerPage()),
       'ListDeCardsTabs':
           MaterialPageRoute(builder: (_) => ListDeCarsTabs(argumentos: args)),
-      'Apicultura': 
-          MaterialPageRoute(builder: (_) => ApiculturaPage()),
+      'Apicultura': MaterialPageRoute(builder: (_) => ApiculturaPage()),
       'home': MaterialPageRoute(builder: (_) => HomePage()),
       'Content': MaterialPageRoute(builder: (_) => Content()),
       'Algodao_menu': MaterialPageRoute(builder: (_) => AlgodaoMenu()),
