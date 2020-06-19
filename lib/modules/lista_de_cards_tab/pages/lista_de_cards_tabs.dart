@@ -1,5 +1,6 @@
 //tesye
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:sgaapp/components/my_text_field_widget.dart';
 import 'package:sgaapp/components/sub_cards.dart';
 
@@ -15,20 +16,30 @@ class _ListDeCarsTabsState extends State<ListDeCarsTabs> {
   var controller = TextEditingController();
 
   createGrid(BuildContext context, List lista) {
-    return GridView.builder(
-      //shrinkWrap: true,
-      physics: BouncingScrollPhysics(),
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        mainAxisSpacing: 25.0,
-        crossAxisSpacing: 25.0,
-        childAspectRatio: 0.8,
+    return AnimationLimiter(
+      child: GridView.builder(
+        physics: BouncingScrollPhysics(),
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          mainAxisSpacing: 25.0,
+          crossAxisSpacing: 25.0,
+          childAspectRatio: 0.8,
+        ),
+        padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+        itemCount: lista.length ?? 10,
+        itemBuilder: (context, index) {
+          return AnimationConfiguration.staggeredList(
+            position: index,
+            duration: const Duration(milliseconds: 375),
+            child: SlideAnimation(
+              verticalOffset: 50.0,
+              child: FadeInAnimation(
+                child: lista[index] ?? SubCard(),
+              ),
+            ),
+          );
+        },
       ),
-      padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
-      itemCount: lista.length ?? 10,
-      itemBuilder: (context, index) {
-        return lista[index] ?? SubCard();
-      },
     );
   }
 
@@ -58,24 +69,24 @@ class _ListDeCarsTabsState extends State<ListDeCarsTabs> {
         body: SafeArea(
           child: Column(
             children: <Widget>[
-            MyTextFieldWidget(
+              MyTextFieldWidget(
                 withPadding: true,
                 keyboardType: TextInputType.text,
                 hintText: "Pesquise aqui",
               ),
               Expanded(
                 child: TabBarView(
-                  physics: BouncingScrollPhysics(),
-                  children: <Widget>[
-                  createGrid(
-                    context,
-                    widget.argumentos['listaCards'][0]['lista'],
-                  ),
-                  createGrid(
-                    context,
-                    widget.argumentos['listaCards'][1]['lista'],
-                  ),
-                ]),
+                    physics: BouncingScrollPhysics(),
+                    children: <Widget>[
+                      createGrid(
+                        context,
+                        widget.argumentos['listaCards'][0]['lista'],
+                      ),
+                      createGrid(
+                        context,
+                        widget.argumentos['listaCards'][1]['lista'],
+                      ),
+                    ]),
               ),
             ],
           ),

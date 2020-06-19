@@ -1,24 +1,38 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:sgaapp/components/my_text_field_widget.dart';
 import 'package:sgaapp/components/poligono.dart';
 
 class ApiculturaPage extends StatelessWidget {
-  createGrid(BuildContext context, List<Widget> lista) {
-    return GridView.builder(
-      physics: BouncingScrollPhysics(),
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        mainAxisSpacing: 25.0,
-        crossAxisSpacing: 25.0,
-        childAspectRatio: 0.8,
+  createGrid(BuildContext context, List lista) {
+    return AnimationLimiter(
+      child: GridView.builder(
+        physics: BouncingScrollPhysics(),
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          mainAxisSpacing: 25.0,
+          crossAxisSpacing: 25.0,
+          childAspectRatio: 0.8,
+        ),
+        padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+        itemCount:  10,
+        itemBuilder: (context, index) {
+          return AnimationConfiguration.staggeredList(
+            position: index,
+            duration: const Duration(milliseconds: 375),
+            child: SlideAnimation(
+              verticalOffset: 50.0,
+              child: FadeInAnimation(
+                child: Poligono(heroTag: index.toString()),
+              ),
+            ),
+          );
+        },
       ),
-      padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
-      itemCount: 10,
-      itemBuilder: (context, index) {
-        return Poligono(heroTag: index.toString());
-      },
     );
   }
+
+  // );
 
   @override
   Widget build(BuildContext context) {

@@ -122,17 +122,19 @@ class _HomePageState extends State<HomePage> {
       rota: "AnimalControll",
       descricao: "Enbaixador",
     ),
-    CardHome(
-      titulo: "Financeiro",
-      rota: "ListDeCards",
-      args: {
-        'listaCards': [
-          SubCard(),
-          SubCard(),
-          SubCard(),
-        ]
-      },
-    ),
+    
+    // CardHome(
+    //   titulo: "Financeiro",
+    //   rota: "ListDeCards",
+    //   args: {
+    //     'listaCards': [
+    //       SubCard(),
+    //       SubCard(),
+    //       SubCard(),
+    //     ]
+    //   },
+    // ),
+  
   ];
 
   @override
@@ -140,9 +142,9 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       resizeToAvoidBottomPadding: false,
       backgroundColor: Colors.grey[100],
-      body: TelaDeFundo(
+      body: Center(
      //   indicador: indicadores(),
-        tela: AspectRatio(
+        child: AspectRatio(
           aspectRatio: 1.3,
           child: ListView.builder(
             physics:BouncingScrollPhysics(),
@@ -155,16 +157,16 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      bottomNavigationBar: Container(
-        constraints: BoxConstraints(
-            maxWidth: MediaQuery.of(context).size.width,
-            maxHeight: MediaQuery.of(context).size.height * 0.16),
-        child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemBuilder: (context, index) {
-              return CardBottom();
-            }),
-      ),
+      // bottomNavigationBar: Container(
+      //   constraints: BoxConstraints(
+      //       maxWidth: MediaQuery.of(context).size.width,
+      //       maxHeight: MediaQuery.of(context).size.height * 0.16),
+      //   child: ListView.builder(
+      //       scrollDirection: Axis.horizontal,
+      //       itemBuilder: (context, index) {
+      //         return CardBottom();
+      //       }),
+      // ),
     );
   }
 }
