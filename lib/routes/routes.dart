@@ -7,6 +7,7 @@ import 'package:sgaapp/modules/apicultura/page/apicultura.dart';
 import 'package:sgaapp/modules/content/page/content.dart';
 import 'package:sgaapp/modules/home/page/home_page.dart';
 import 'package:sgaapp/modules/informacional_tabs/page/Informacional_tabs.dart';
+
 import 'package:sgaapp/modules/lista_de_cards/agronomia/plantios/algodao/menu_algodao.dart';
 import 'package:sgaapp/modules/lista_de_cards/agronomia/plantios/amendoim/menu_amendoim.dart';
 import 'package:sgaapp/modules/lista_de_cards/pages/lista_de_cards.dart';
@@ -111,7 +112,6 @@ class RouteGenerator {
               pageBuilder: (context, animation, secondaryAnimation) =>
                   InformacionalTabs(),
               transitionsBuilder: animationRota()),
-              
       'alertaErro': MaterialPageRoute(builder: (_) => TelaDeErro()),
     };
 

@@ -2,19 +2,14 @@ import 'package:flutter/material.dart';
 
 class SubCard extends StatelessWidget {
   final border = Radius.circular(20);
-  final String descricao;
+  final String titulo;
   final Function onPressed;
   final String rota;
   final Map<dynamic, dynamic> args;
   final String imagem;
 
   SubCard(
-      {Key key,
-      this.descricao,
-      this.onPressed,
-      this.rota,
-      this.args,
-      this.imagem})
+      {Key key, this.titulo, this.onPressed, this.rota, this.args, this.imagem})
       : super(key: key);
 
   @override
@@ -50,13 +45,13 @@ class SubCard extends StatelessWidget {
                 child: Center(child: Image.asset(imagem ?? "assets/bee.png")
 
                     //      Text(
-                    //   descricao ?? "sem descrição",
+                    //   titulo ?? "sem descrição",
                     //   style: TextStyle(fontSize: 20),
                     // )
 
                     )),
             Container(
-              child: Text(descricao ?? "sem descrição"),
+              child: Text(titulo ?? "sem descrição"),
             ),
           ],
         ),

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:sgaapp/components/sub_cards.dart';
 import 'package:sgaapp/components/tela_fundo.dart';
-import 'package:sgaapp/modules/home/componets/card_bottom.dart';
+
 import 'package:sgaapp/modules/home/componets/card_home.dart';
 
 class HomePage extends StatefulWidget {
@@ -21,67 +21,67 @@ class _HomePageState extends State<HomePage> {
           'titulo': 'Plantios',
           'lista': [
             SubCard(
-              descricao: "Algodão",
+              titulo: "Algodão",
               rota: 'InformacionalTabs',
               imagem: "assets/agronomia/algodao.png",
             ),
             SubCard(
-              descricao: "Amendoim",
+              titulo: "Amendoim",
               rota: 'InformacionalTabs',
               imagem: "assets/agronomia/amendoin.png",
             ),
             SubCard(
-              descricao: "Arroz",
+              titulo: "Arroz",
               rota: 'InformacionalTabs',
               imagem: "assets/agronomia/arroz.png",
             ),
             SubCard(
-              descricao: "Batata",
+              titulo: "Batata",
               rota: 'InformacionalTabs',
               imagem: "assets/agronomia/batata.png",
             ),
             SubCard(
-              descricao: "Café",
+              titulo: "Café",
               rota: 'InformacionalTabs',
               imagem: "assets/agronomia/cafe.png",
             ),
             SubCard(
-              descricao: "Cana-de-Açucar",
+              titulo: "Cana-de-Açucar",
               rota: 'InformacionalTabs',
               imagem: "assets/agronomia/cacuca.png",
             ),
             SubCard(
-              descricao: "Feijão",
+              titulo: "Feijão",
               rota: 'InformacionalTabs',
               imagem: "assets/agronomia/feijao.png",
             ),
             SubCard(
-              descricao: "Milho",
+              titulo: "Milho",
               rota: 'InformacionalTabs',
               imagem: "assets/agronomia/milho.png",
             ),
             SubCard(
-              descricao: "Soja",
+              titulo: "Soja",
               rota: 'InformacionalTabs',
               imagem: "assets/agronomia/algodao.png",
             ),
             SubCard(
-              descricao: "Sorgo",
+              titulo: "Sorgo",
               rota: 'InformacionalTabs',
               imagem: "assets/agronomia/algodao.png",
             ),
             SubCard(
-              descricao: "Tomate",
+              titulo: "Tomate",
               rota: 'InformacionalTabs',
               imagem: "assets/agronomia/algodao.png",
             ),
             SubCard(
-              descricao: "Trigo",
+              titulo: "Trigo",
               rota: 'InformacionalTabs',
               imagem: "assets/agronomia/algodao.png",
             ),
             SubCard(
-              descricao: "Uva",
+              titulo: "Uva",
               rota: 'InformacionalTabs',
               imagem: "assets/agronomia/algodao.png",
             ),
@@ -91,23 +91,23 @@ class _HomePageState extends State<HomePage> {
           'titulo': 'Equipamentos',
           'lista': [
             SubCard(
-              descricao: "1",
+              titulo: "1",
               rota: 'Content',
             ),
             SubCard(
-              descricao: "2",
+              titulo: "2",
               rota: 'Content',
             ),
             SubCard(
-              descricao: "3",
+              titulo: "3",
               rota: 'Content',
             ),
             SubCard(
-              descricao: "4",
+              titulo: "4",
               rota: 'Content',
             ),
             SubCard(
-              descricao: "5",
+              titulo: "5",
               rota: 'Content',
             ),
           ]
@@ -121,7 +121,6 @@ class _HomePageState extends State<HomePage> {
     CardHome(
       titulo: "Controle de Animais",
       rota: "AnimalControll",
-      descricao: "Enbaixador",
     ),
 
     // CardHome(

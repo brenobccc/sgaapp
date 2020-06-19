@@ -3,11 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:sgaapp/components/my_text_field_widget.dart';
 import 'package:sgaapp/components/sub_cards.dart';
+import 'package:sgaapp/modules/lista_de_cards_tab/mock/mock_list_tabs.dart';
+import '../model/lista_de_cards_tab_model.dart';
 
 class ListDeCarsTabs extends StatefulWidget {
   final Map argumentos;
+  final List<ListCardsTabModel> model = MockListTabs.listMock;
 
-  const ListDeCarsTabs({Key key, this.argumentos}) : super(key: key);
+  ListDeCarsTabs({
+    Key key,
+    this.argumentos,
+    // this.model = MockListTabs.listMock,
+  }) : super(key: key);
   @override
   _ListDeCarsTabsState createState() => _ListDeCarsTabsState();
 }
@@ -15,7 +22,7 @@ class ListDeCarsTabs extends StatefulWidget {
 class _ListDeCarsTabsState extends State<ListDeCarsTabs> {
   var controller = TextEditingController();
 
-  createGrid(BuildContext context, List lista) {
+  Widget createGrid(BuildContext context, List<SubCard> lista) {
     return AnimationLimiter(
       child: GridView.builder(
         physics: BouncingScrollPhysics(),
@@ -26,7 +33,7 @@ class _ListDeCarsTabsState extends State<ListDeCarsTabs> {
           childAspectRatio: 0.8,
         ),
         padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
-        itemCount: lista.length ?? 10,
+        itemCount: lista.length,
         itemBuilder: (context, index) {
           return AnimationConfiguration.staggeredList(
             position: index,
@@ -34,7 +41,7 @@ class _ListDeCarsTabsState extends State<ListDeCarsTabs> {
             child: SlideAnimation(
               verticalOffset: 50.0,
               child: ScaleAnimation(
-                child: lista[index] ?? SubCard(),
+                child: lista[index],
               ),
             ),
           );
@@ -46,7 +53,7 @@ class _ListDeCarsTabsState extends State<ListDeCarsTabs> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 2,
+      length: widget.model.length,
       child: Scaffold(
         appBar: AppBar(
           leading: IconButton(
@@ -55,14 +62,7 @@ class _ListDeCarsTabsState extends State<ListDeCarsTabs> {
           backgroundColor: Colors.transparent,
           elevation: 0,
           bottom: TabBar(
-            tabs: <Widget>[
-              Tab(
-                child: Text(widget.argumentos['listaCards'][0]['titulo']),
-              ),
-              Tab(
-                child: Text(widget.argumentos['listaCards'][1]['titulo']),
-              )
-            ],
+            tabs: widget.model.map((e) => Text(e.title)).toList(),
           ),
         ),
         backgroundColor: Colors.white,
@@ -76,17 +76,14 @@ class _ListDeCarsTabsState extends State<ListDeCarsTabs> {
               ),
               Expanded(
                 child: TabBarView(
-                    physics: BouncingScrollPhysics(),
-                    children: <Widget>[
-                      createGrid(
-                        context,
-                        widget.argumentos['listaCards'][0]['lista'],
-                      ),
-                      createGrid(
-                        context,
-                        widget.argumentos['listaCards'][1]['lista'],
-                      ),
-                    ]),
+                  physics: BouncingScrollPhysics(),
+                  children: widget.model.map((e) {
+                    return createGrid(
+                      context,
+                      e.listSubCards,
+                    );
+                  }).toList(),
+                ),
               ),
             ],
           ),
