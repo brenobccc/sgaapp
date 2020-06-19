@@ -8,7 +8,7 @@ class AmendoimMenu extends StatefulWidget {
 }
 
 class _AmendoimMenuState extends State<AmendoimMenu> {
-   @override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -30,7 +30,7 @@ class _AmendoimMenuState extends State<AmendoimMenu> {
             color: Color(0xFFE59730),
             onPressed: () {
               Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => Pragas_amendoim()));
+                  MaterialPageRoute(builder: (context) => PragasAmendoim()));
             },
           ),
         ),
@@ -49,7 +49,7 @@ class _AmendoimMenuState extends State<AmendoimMenu> {
             color: Color(0xFFE59730),
             onPressed: () {
               Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => Doencas_amendoim()));
+                  MaterialPageRoute(builder: (context) => DoencasAmendoim()));
             },
           ),
         ),

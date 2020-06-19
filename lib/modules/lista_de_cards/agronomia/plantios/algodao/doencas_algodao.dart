@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
-
 //TELA DAS DANINHAS DO ALGODÃO
-class Doencas_algodao extends StatefulWidget {
+class DoencaAlgodao extends StatefulWidget {
   @override
-  _Doencas_algodaoState createState() => _Doencas_algodaoState();
+  _DoencaAlgodaoState createState() => _DoencaAlgodaoState();
 }
 
-class _Doencas_algodaoState extends State<Doencas_algodao> {
+class _DoencaAlgodaoState extends State<DoencaAlgodao> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,16 +1,8 @@
 import 'package:flutter/material.dart';
-
 import 'package:sgaapp/db/database.dart';
-import 'package:sgaapp/modules/animal_controller/page/animal_controller_page.dart';
-
-import 'package:sgaapp/modules/apicultura/page/apicultura.dart';
 import 'package:sgaapp/modules/dicas/page/dicas.dart';
-
 import 'package:sgaapp/modules/home/page/home_page.dart';
 import 'package:sgaapp/modules/main_screen/components/custom_drawer.dart';
-
-import 'package:sgaapp/modules/pecuaria/page/pecuaria_page.dart';
-
 
 class HomeScreen extends StatelessWidget {
   final _pageController = PageController();
@@ -113,26 +105,22 @@ class HomeScreen extends StatelessWidget {
           body: Dicas(),
         ),
 
-
-         Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.orange[200],
-            title: Text(
-              'Sobre',
-              style: TextStyle(
-                fontSize: 28.0,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
+        Scaffold(
+            appBar: AppBar(
+              backgroundColor: Colors.orange[200],
+              title: Text(
+                'Sobre',
+                style: TextStyle(
+                  fontSize: 28.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
               ),
+              centerTitle: true,
+              elevation: 0.0,
             ),
-            centerTitle: true,
-            elevation: 0.0,
-          ),
-          drawer: CustomDrawer(_pageController),
-          body: Container(
-             child: Text('Nothing for while')
-          )
-        ),
+            drawer: CustomDrawer(_pageController),
+            body: Container(child: Text('Nothing for while'))),
       ],
     );
   }

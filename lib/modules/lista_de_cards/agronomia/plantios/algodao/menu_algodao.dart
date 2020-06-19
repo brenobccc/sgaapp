@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'doencas_algodao.dart';
 import 'pragas_algodao.dart';
+
 class AlgodaoMenu extends StatefulWidget {
   @override
   _AlgodaoMenuState createState() => _AlgodaoMenuState();
@@ -30,7 +31,7 @@ class _AlgodaoMenuState extends State<AlgodaoMenu> {
             color: Color(0xFFE59730),
             onPressed: () {
               Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => Pragas_Algodao()));
+                  MaterialPageRoute(builder: (context) => PragasAlgodao()));
             },
           ),
         ),
@@ -49,7 +50,7 @@ class _AlgodaoMenuState extends State<AlgodaoMenu> {
             color: Color(0xFFE59730),
             onPressed: () {
               Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => Doencas_algodao()));
+                  MaterialPageRoute(builder: (context) => DoencaAlgodao()));
             },
           ),
         ),

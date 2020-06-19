@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 //TELA DAS PRAGAS DO ALGODÃO
 
-class Pragas_amendoim extends StatefulWidget {
+class PragasAmendoim extends StatefulWidget {
   @override
-  _Pragas_amendoimState createState() => _Pragas_amendoimState();
+  _PragasAmendoimState createState() => _PragasAmendoimState();
 }
 
-class _Pragas_amendoimState extends State<Pragas_amendoim> {
+class _PragasAmendoimState extends State<PragasAmendoim> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
