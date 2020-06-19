@@ -82,7 +82,7 @@ class _AnimalControllerPageState extends State<AnimalControllerPage> {
                           duration: const Duration(milliseconds: 375),
                           child: SlideAnimation(
                             verticalOffset: 50.0,
-                            child: FadeInAnimation(
+                            child: ScaleAnimation(
                               child: Card(
                                 child: ListTile(
                                   onTap: () async {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:sgaapp/components/sub_cards.dart';
 import 'package:sgaapp/components/tela_fundo.dart';
 import 'package:sgaapp/modules/home/componets/card_bottom.dart';
@@ -122,7 +123,7 @@ class _HomePageState extends State<HomePage> {
       rota: "AnimalControll",
       descricao: "Enbaixador",
     ),
-    
+
     // CardHome(
     //   titulo: "Financeiro",
     //   rota: "ListDeCards",
@@ -134,39 +135,43 @@ class _HomePageState extends State<HomePage> {
     //     ]
     //   },
     // ),
-  
   ];
+
+  createGrid(BuildContext context, List lista) {
+    return AspectRatio(
+      aspectRatio: 1.3,
+      child: AnimationLimiter(
+        child: ListView.builder(
+          physics: BouncingScrollPhysics(),
+          controller: controller,
+          itemCount: lista.length,
+          scrollDirection: Axis.horizontal,
+          itemBuilder: (context, index) {
+            return AnimationConfiguration.staggeredList(
+              position: index,
+              duration: const Duration(milliseconds: 375),
+              child: SlideAnimation(
+                verticalOffset: 50.0,
+                child: ScaleAnimation(
+                  child: lista[index],
+                ),
+              ),
+            );
+          },
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomPadding: false,
       backgroundColor: Colors.grey[100],
-      body: Center(
-     //   indicador: indicadores(),
-        child: AspectRatio(
-          aspectRatio: 1.3,
-          child: ListView.builder(
-            physics:BouncingScrollPhysics(),
-            controller: controller,
-            itemCount: _pages.length,
-            scrollDirection: Axis.horizontal,
-            itemBuilder: (context, index) {
-              return _pages[index];
-            },
-          ),
-        ),
+      body: TelaDeFundo(
+        //   indicador: indicadores(),
+        tela: createGrid(context, _pages),
       ),
-      // bottomNavigationBar: Container(
-      //   constraints: BoxConstraints(
-      //       maxWidth: MediaQuery.of(context).size.width,
-      //       maxHeight: MediaQuery.of(context).size.height * 0.16),
-      //   child: ListView.builder(
-      //       scrollDirection: Axis.horizontal,
-      //       itemBuilder: (context, index) {
-      //         return CardBottom();
-      //       }),
-      // ),
     );
   }
 }
