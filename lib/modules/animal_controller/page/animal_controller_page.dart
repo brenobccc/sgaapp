@@ -72,7 +72,7 @@ class _AnimalControllerPageState extends State<AnimalControllerPage> {
               );
             }
 
-            return snapshot.hasData
+            return snapshot.data.isNotEmpty
                 ? AnimationLimiter(
                     child: ListView.builder(
                       itemCount: snapshot.data.length,
@@ -101,7 +101,8 @@ class _AnimalControllerPageState extends State<AnimalControllerPage> {
                                   },
                                   title: Text(snapshot.data[index].animal),
                                   subtitle: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: <Widget>[
                                       Text(
                                           'peso: ${snapshot.data[index].peso.substring(2)} Kg'),
