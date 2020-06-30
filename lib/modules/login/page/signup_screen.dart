@@ -14,21 +14,10 @@ class SignUpScreen extends StatefulWidget {
 class _SignUpScreenState extends State<SignUpScreen> {
   final _nameController = TextEditingController();
 
-  final _cpfController = TextEditingController();
-
-  final _infoController = TextEditingController();
-
-  final _phoneController = TextEditingController();
-
-  final _cepController = TextEditingController();
-
   final _passController = TextEditingController();
-
-  final _ufController = TextEditingController();
 
   final _emailController = TextEditingController();
 
-  final _cidadeController = TextEditingController();
 
   //final _addressController = TextEditingController();
 
@@ -71,15 +60,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     return null;
                   },
                 ),
-                SizedBox(height: 16.0),
-                TextFormField(
-                  controller: _cpfController,
-                  decoration: InputDecoration(hintText: "Cpf"),
-                  validator: (text) {
-                    if (text.isEmpty || text.length < 8) return "Cpf Inválido!";
-                    return null;
-                  },
-                ),
+                
                 SizedBox(height: 16.0),
                 TextFormField(
                   controller: _passController,
@@ -92,52 +73,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   },
                 ),
                 SizedBox(height: 16.0),
-                TextFormField(
-                  controller: _phoneController,
-                  decoration: InputDecoration(hintText: "Telefone"),
-                  validator: (text) {
-                    if (text.isEmpty || text.length < 6)
-                      return "Telefone Inválido!";
-                    return null;
-                  },
-                ),
-                SizedBox(height: 16.0),
-                TextFormField(
-                  controller: _infoController,
-                  decoration: InputDecoration(hintText: "Você é um"),
-                  validator: (text) {
-                    if (text.isEmpty) return "campo Inválido!";
-                    return null;
-                  },
-                ),
-                SizedBox(height: 16.0),
-                TextFormField(
-                  controller: _cepController,
-                  decoration: InputDecoration(hintText: "CEP"),
-                  validator: (text) {
-                    if (text.isEmpty || text.length < 8) return "CEP Inválido!";
-                    return null;
-                  },
-                ),
-                SizedBox(height: 16.0),
-                TextFormField(
-                  controller: _ufController,
-                  decoration: InputDecoration(hintText: "UF"),
-                  validator: (text) {
-                    if (text.isEmpty || text.length < 2) return "UF Inválido!";
-                    return null;
-                  },
-                ),
-                SizedBox(height: 16.0),
-                TextFormField(
-                  controller: _cidadeController,
-                  decoration: InputDecoration(hintText: "Cidade"),
-                  validator: (text) {
-                    if (text.isEmpty || text.length < 2)
-                      return "Cidade Inválido!";
-                    return null;
-                  },
-                ),
+                
                 SizedBox(height: 30.0),
                 SizedBox(
                   height: 44.0,
@@ -158,12 +94,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         Map<String, dynamic> userData = {
                           "name": _nameController.text,
                           "email": _emailController.text,
-                          "cpf": _cpfController.text,
-                          "telefone": _phoneController.text,
-                          "você é um": _infoController.text,
-                          "cep": _cepController.text,
-                          "uf": _ufController.text,
-                          "cidade": _cidadeController.text,
                         };
 
                         model.signUp(
