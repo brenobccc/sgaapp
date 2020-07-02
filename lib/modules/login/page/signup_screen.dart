@@ -39,7 +39,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             child: ListView(
               padding: EdgeInsets.all(16.0),
               children: <Widget>[
-                Image(image: AssetImage('assets/bee.png')),
+                Image(image: AssetImage('assets/logo_login.png')),
                 SizedBox(height: 16.0),
                 TextFormField(
                   controller: _nameController,
@@ -88,7 +88,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ),
                     ),
                     textColor: Colors.white,
-                    color: Color(0xFFE59730),
+                    color: Color(0xFFFACF48),
                     onPressed: () {
                       if (_formKey.currentState.validate()) {
                         Map<String, dynamic> userData = {

@@ -38,7 +38,7 @@ class _LoginScreenState extends State<LoginScreen> {
           child: ListView(
             padding: EdgeInsets.all(16.0),
             children: <Widget>[
-              Image(image: AssetImage('assets/bee.png')),
+              Image(image: AssetImage('assets/logo_login.png'),),
               TextFormField(
                 style: TextStyle(color: Colors.black),
                 controller: _emailController,
@@ -128,7 +128,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                     textColor: Colors.white,
-                    color: Color(0xFFE59730),
+                    color: Color(0xFFFACF48),
                     onPressed: () {
                       if (_formKey.currentState.validate()) {
                         model.signIn(
@@ -156,7 +156,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30.0)),
                   textColor: Colors.white,
-                  color: Color(0xFFE59730),
+                  color: Color(0xFFFACF48),
                   onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => SignUpScreen()));
