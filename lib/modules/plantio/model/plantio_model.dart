@@ -1,8 +1,8 @@
 import 'package:sgaapp/components/sub_cards.dart';
 
-class ListCardsTabModel {
+class ListCardsModel {
   String title;
   List<SubCard> listSubCards;
 
-  ListCardsTabModel({this.title, this.listSubCards});
+  ListCardsModel({this.title, this.listSubCards});
 }
