@@ -11,9 +11,9 @@ import 'package:sgaapp/modules/informacional_tabs/page/Informacional_tabs.dart';
 import 'package:sgaapp/modules/lista_de_cards/agronomia/plantios/algodao/menu_algodao.dart';
 import 'package:sgaapp/modules/lista_de_cards/agronomia/plantios/amendoim/menu_amendoim.dart';
 import 'package:sgaapp/modules/lista_de_cards/pages/lista_de_cards.dart';
-import 'package:sgaapp/modules/lista_de_cards_tab/pages/lista_de_cards_tabs.dart';
 import 'package:sgaapp/modules/login/page/login_screen.dart';
 import 'package:sgaapp/modules/main_screen/page/home_screen.dart';
+import 'package:sgaapp/modules/plantio/pages/plantio.dart';
 import '../db/database.dart';
 
 class RouteGenerator {
@@ -63,11 +63,11 @@ class RouteGenerator {
               pageBuilder: (context, animation, secondaryAnimation) =>
                   AnimalControllerPage(),
               transitionsBuilder: animationRota()),
-      'ListDeCardsTabs':
+      'Plantio':
           // MaterialPageRoute(builder: (_) => ListDeCarsTabs(argumentos: args)),
           PageRouteBuilder(
               pageBuilder: (context, animation, secondaryAnimation) =>
-                  ListDeCarsTabs(argumentos: args),
+                  Plantio(),
               transitionsBuilder: animationRota()),
       'Apicultura':
           //MaterialPageRoute(builder: (_) => ApiculturaPage()),
