@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:sgaapp/models/user_model.dart';
-import 'package:sgaapp/modules/menu_principal/menu_principal.dart';
 import 'package:sgaapp/routes/routes.dart';
-
 import 'db/database.dart';
 import 'modules/splash/splash_screen.dart';
 
@@ -29,7 +27,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
             primarySwatch: Colors.purple, primaryColor: Colors.orange[200]),
         debugShowCheckedModeBanner: false,
-        home: MenuPrincpal(),
+        home: SplashPage(),
         onGenerateRoute: RouteGenerator.generateRoute,
       ),
     );
