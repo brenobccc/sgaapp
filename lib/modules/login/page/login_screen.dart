@@ -4,6 +4,7 @@ import 'package:scoped_model/scoped_model.dart';
 import 'package:sgaapp/db/database.dart';
 import 'package:sgaapp/models/user_model.dart';
 import 'package:sgaapp/modules/main_screen/page/home_screen.dart';
+import 'package:sgaapp/modules/menu_principal/menu_principal.dart';
 import 'package:sgaapp/modules/plantio/pages/plantio.dart';
 
 import 'signup_screen.dart';
@@ -113,7 +114,7 @@ class _LoginScreenState extends State<LoginScreen> {
               //LEMBRA DE REMOVERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
               InkWell(
                 onLongPress: () {
-                  Navigator.pushNamed(context, "Plantio",
+                  Navigator.pushNamed(context, "MenuPrincpal",
                       arguments: GetIt.I.get<AppDatabase>());
                 },
                 child: SizedBox(
@@ -176,7 +177,7 @@ class _LoginScreenState extends State<LoginScreen> {
     Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-            builder: (context) =>Plantio()));
+            builder: (context) =>MenuPrincpal()));
   }
 
   void _onFail() {

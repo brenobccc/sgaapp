@@ -36,7 +36,7 @@ class _AnimalControllerPageState extends State<AnimalControllerPage> {
               },
             ),
           );
-          if (result) {
+          if (result != null) {
             setState(() {});
           }
         },
