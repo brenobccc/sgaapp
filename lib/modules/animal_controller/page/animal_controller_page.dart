@@ -53,15 +53,15 @@ class _AnimalControllerPageState extends State<AnimalControllerPage> {
         foregroundColor: Colors.white,
         backgroundColor: Colors.orangeAccent,
       ),
-      appBar: AppBar(
-        automaticallyImplyLeading: true,
-        backgroundColor: Colors.green,
-        title: Text(
-          ' Animais',
-          style: TextStyle(color: Colors.white),
-        ),
-        elevation: 5,
-      ),
+      // appBar: AppBar(
+      //   automaticallyImplyLeading: true,
+      //   backgroundColor: Colors.green,
+      //   title: Text(
+      //     ' Animais',
+      //     style: TextStyle(color: Colors.white),
+      //   ),
+      //   elevation: 5,
+      // ),
       body: SafeArea(
         child: FutureBuilder<List<TodoEntity>>(
           future: GetIt.I.get<AppDatabase>().todoRepositoryDao.getAll(),

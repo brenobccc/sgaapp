@@ -7,6 +7,7 @@ import 'package:sgaapp/routes/routes.dart';
 
 import 'db/database.dart';
 import 'modules/splash/splash_screen.dart';
+import 'modules/splash/splash_screen.dart';
 
 //import 'package:sgaapp/screens/signup_screen.dart';
 
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
             primarySwatch: Colors.purple, primaryColor: Colors.orange[200]),
         debugShowCheckedModeBanner: false,
-        home: MenuPrincpal(),
+        home: SplashPage(),
         onGenerateRoute: RouteGenerator.generateRoute,
       ),
     );

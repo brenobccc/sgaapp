@@ -3,6 +3,7 @@ import 'package:sgaapp/db/database.dart';
 import 'package:sgaapp/modules/dicas/page/dicas.dart';
 import 'package:sgaapp/modules/home/page/home_page.dart';
 import 'package:sgaapp/modules/main_screen/components/custom_drawer.dart';
+import 'package:sgaapp/modules/menu_principal/menu_principal.dart';
 
 class HomeScreen extends StatelessWidget {
   final _pageController = PageController();
@@ -20,7 +21,7 @@ class HomeScreen extends StatelessWidget {
             backgroundColor: Colors.orange[300],
             elevation: 0,
           ),
-          body: HomePage(),
+          body: MenuPrincpal(),
           drawer: CustomDrawer(_pageController),
         ),
         // Scaffold(

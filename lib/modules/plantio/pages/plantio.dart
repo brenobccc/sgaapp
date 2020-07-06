@@ -49,13 +49,13 @@ class _PlantioState extends State<Plantio> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-            icon: Icon(Icons.arrow_back_ios),
-            onPressed: () => Navigator.pop(context)),
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-      ),
+      // appBar: AppBar(
+      //   leading: IconButton(
+      //       icon: Icon(Icons.arrow_back_ios),
+      //       onPressed: () => Navigator.pop(context)),
+      //   backgroundColor: Colors.transparent,
+      //   elevation: 0,
+      // ),
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
