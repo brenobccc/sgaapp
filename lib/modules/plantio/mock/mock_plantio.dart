@@ -8,27 +8,27 @@ class MockListTabs {
       listSubCards: [
         SubCard(
           titulo: "Algodão",
-          rota: 'InformacionalTabs',
+          rota: 'ConteudoPlantio',
           imagem: "assets/agronomia/algodao.png",
         ),
         SubCard(
           titulo: "Amendoim",
-          rota: 'InformacionalTabs',
+          rota: 'ConteudoPlantio',
           imagem: "assets/agronomia/amendoin.png",
         ),
         SubCard(
           titulo: "Arroz",
-          rota: 'InformacionalTabs',
+          rota: 'ConteudoPlantio',
           imagem: "assets/agronomia/arroz.png",
         ),
         SubCard(
           titulo: "Batata",
-          rota: 'InformacionalTabs',
+          rota: 'ConteudoPlantio',
           imagem: "assets/agronomia/batata.png",
         ),
         SubCard(
           titulo: "Café",
-          rota: 'InformacionalTabs',
+          rota: 'ConteudoPlantio',
           imagem: "assets/agronomia/cafe.png",
         ),
        ] 

@@ -5,8 +5,8 @@ import 'package:sgaapp/modules/animal_controller/page/add_animal.dart';
 import 'package:sgaapp/modules/animal_controller/page/animal_controller_page.dart';
 import 'package:sgaapp/modules/apicultura/page/apicultura.dart';
 import 'package:sgaapp/modules/content/page/content.dart';
+import 'package:sgaapp/modules/conteudo_plantio/page/conteudo_plantio.dart';
 import 'package:sgaapp/modules/home/page/home_page.dart';
-import 'package:sgaapp/modules/informacional_tabs/page/Informacional_tabs.dart';
 
 import 'package:sgaapp/modules/lista_de_cards/agronomia/plantios/algodao/menu_algodao.dart';
 import 'package:sgaapp/modules/lista_de_cards/agronomia/plantios/amendoim/menu_amendoim.dart';
@@ -106,11 +106,11 @@ class RouteGenerator {
               pageBuilder: (context, animation, secondaryAnimation) =>
                   AddAnimal(todo: args),
               transitionsBuilder: animationRota()),
-      'InformacionalTabs':
+      'ConteudoPlantio':
           //MaterialPageRoute(builder: (_) => InformacionalTabs()),
           PageRouteBuilder(
               pageBuilder: (context, animation, secondaryAnimation) =>
-                  InformacionalTabs(),
+                  ConteudoPlantio(),
               transitionsBuilder: animationRota()),
       'alertaErro': MaterialPageRoute(builder: (_) => TelaDeErro()),
     };
