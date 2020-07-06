@@ -40,7 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
           child: ListView(
             padding: EdgeInsets.all(16.0),
             children: <Widget>[
-              Image(image: AssetImage('assets/bee.png')),
+              Image(image: AssetImage('assets/logo_login.png')),
               TextFormField(
                 style: TextStyle(color: Colors.black),
                 controller: _emailController,
