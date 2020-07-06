@@ -48,7 +48,6 @@ class ConteudoPlantio extends StatelessWidget {
       appBar: AppBar(),
       body: SingleChildScrollView(
         child: Container(
-         
           child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -67,28 +66,37 @@ class ConteudoPlantio extends StatelessWidget {
                 Row(
                   children: <Widget>[
                     Expanded(child: Container()),
-                    FlatButton(
-                      onPressed: () {},
-                      child: Container(
-                        height: 50,
-                        width: 100,
-                        decoration: BoxDecoration(
-                            color: Colors.green,
-                            borderRadius: BorderRadius.circular(15)),
+                    InkWell(
+                      child: Material(
+                        color: Colors.yellow,
+                        borderRadius: BorderRadius.circular(15),
+                        child: Container(
+                            height: 50,
+                            width: 90,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15)),
+                            child: Center(child: Text("Pragas"))),
                       ),
                     ),
-                    FlatButton(
-                      onPressed: () {},
-                      child: Container(
-                        height: 50,
-                        width: 100,
-                        decoration: BoxDecoration(
-                            color: Colors.green,
-                            borderRadius: BorderRadius.circular(15)),
+                    SizedBox(width: 
+                    20,),
+                      InkWell(
+                      child: Material(
+                        color: Colors.yellow,
+                        borderRadius: BorderRadius.circular(15),
+                        child: Container(
+                            height: 50,
+                            width: 90,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15)),
+                            child: Center(child: Text("Pragas"))),
                       ),
                     ),
                     Expanded(child: Container()),
                   ],
+                ),
+                SizedBox(
+                  height: 15,
                 ),
               ]),
         ),
