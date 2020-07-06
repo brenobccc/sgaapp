@@ -13,6 +13,7 @@ import 'package:sgaapp/modules/lista_de_cards/agronomia/plantios/amendoim/menu_a
 import 'package:sgaapp/modules/lista_de_cards/pages/lista_de_cards.dart';
 import 'package:sgaapp/modules/login/page/login_screen.dart';
 import 'package:sgaapp/modules/main_screen/page/home_screen.dart';
+import 'package:sgaapp/modules/menu_principal/menu_principal.dart';
 import 'package:sgaapp/modules/plantio/pages/plantio.dart';
 import '../db/database.dart';
 
@@ -111,6 +112,12 @@ class RouteGenerator {
           PageRouteBuilder(
               pageBuilder: (context, animation, secondaryAnimation) =>
                   ConteudoPlantio(),
+              transitionsBuilder: animationRota()),
+      'MenuPrincpal':
+          //MaterialPageRoute(builder: (_) => InformacionalTabs()),
+          PageRouteBuilder(
+              pageBuilder: (context, animation, secondaryAnimation) =>
+                  MenuPrincpal(),
               transitionsBuilder: animationRota()),
       'alertaErro': MaterialPageRoute(builder: (_) => TelaDeErro()),
     };

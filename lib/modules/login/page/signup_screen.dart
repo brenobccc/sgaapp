@@ -4,6 +4,7 @@ import 'package:sgaapp/models/user_model.dart';
 import 'dart:async';
 
 import 'package:sgaapp/modules/main_screen/page/home_screen.dart';
+import 'package:sgaapp/modules/menu_principal/menu_principal.dart';
 
 
 class SignUpScreen extends StatefulWidget {
@@ -120,7 +121,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
     ));
     Future.delayed(Duration(seconds: 2)).then((_) {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => HomeScreen()));
+          context, MaterialPageRoute(builder: (context) => MenuPrincpal()));
     });
   }
 
