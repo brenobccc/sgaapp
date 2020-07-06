@@ -1,30 +1,39 @@
 import 'package:flutter/material.dart';
+import 'package:sgaapp/components/sub_cards.dart';
 import 'package:sgaapp/modules/conteudo_plantio/components/carrocel.dart';
 
 class ConteudoPlantio extends StatelessWidget {
   List<Widget> circleImage = [
-    Center(
+    Padding(
+      padding: EdgeInsets.symmetric(horizontal: 5),
       child: Container(
-          width: 180.0,
-          height: 180.0,
           decoration: BoxDecoration(
-              shape: BoxShape.circle,
+              borderRadius: BorderRadius.circular(15),
               image: DecorationImage(
                   fit: BoxFit.fill,
                   image: NetworkImage(
                       "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ-pdb-vffsduKqDy0iLt_c3c7dsdbdhtBf4A&usqp=CAU")))),
     ),
-    Center(
+    Padding(
+      padding: EdgeInsets.symmetric(horizontal: 5),
       child: Container(
-          width: 180.0,
-          height: 180.0,
           decoration: BoxDecoration(
-              shape: BoxShape.circle,
+              borderRadius: BorderRadius.circular(15),
               image: DecorationImage(
                   fit: BoxFit.fill,
                   image: NetworkImage(
-                      "https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg")))),
-    )
+                      "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ-pdb-vffsduKqDy0iLt_c3c7dsdbdhtBf4A&usqp=CAU")))),
+    ),
+    Padding(
+      padding: EdgeInsets.symmetric(horizontal: 5),
+      child: Container(
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
+              image: DecorationImage(
+                  fit: BoxFit.fill,
+                  image: NetworkImage(
+                      "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ-pdb-vffsduKqDy0iLt_c3c7dsdbdhtBf4A&usqp=CAU")))),
+    ),
   ];
 
   carrousel() => Center(
@@ -33,7 +42,7 @@ class ConteudoPlantio extends StatelessWidget {
           autoPlay: true,
           pauseAutoPlayOnTouch: Duration(seconds: 4),
           pagination: true,
-          aspectRatio: 1.5,
+          aspectRatio: 2,
           enlargeMainPage: true,
           pagerSize: 20,
           // viewportFraction: 1.0,
@@ -53,69 +62,62 @@ class ConteudoPlantio extends StatelessWidget {
             icon: Icon(Icons.arrow_back_ios),
             onPressed: () => Navigator.pop(context)),
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                SizedBox(
-                  height: 15,
-                ),
-                carrousel(),
-                SizedBox(
-                  height: 15,
-                ),
-                Text(
-                    "fjgslçkjfgr gfrkgope gnlerçg leçr ngrejhger bulacha fklew jrgirwelfjgslçkjfgr gfrkgope gnlerçg leçr ngrejhger bulacha fklew jrgirwel fjgslçkjfgr gfrkgope gnlerçg leçr ngrejhger bulacha fklew jrgirwel fjgslçkjfgr gfrkgope gnlerçg leçr ngrejhger bulacha fklew jrgirwel fjgslçkjfgr gfrkgope gnlerçg leçr ngrejhger bulacha fklew jrgirwel fjgslçkjfgr gfrkgope gnlerçg leçr ngrejhger bulacha fklew jrgirwel"),
-                SizedBox(
-                  height: 15,
-                ),
-                Row(
-                  children: <Widget>[
-                    Expanded(child: Container()),
-                    InkWell(
-                      onTap: () {
-                        Navigator.pushNamed(context, "ListDeCards",
-                            arguments: {});
-                      },
-                      child: Material(
-                        color: Colors.green,
-                        borderRadius: BorderRadius.circular(15),
-                        child: Container(
-                            height: 50,
-                            width: 90,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15)),
-                            child: Center(child: Text("Doenças"))),
-                      ),
+      body: Container(
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              carrousel(),
+              Text(
+                  "fjgslçkjfgr gfgfdg fddgfdg fg fgf fg fg f gfgf gfgfgfgfgf g gfrkgope gnlerçg leçr ngrejhger bulacha fklew jrgirwelfjgslçkjfgr gfrkgope gnlerçg leçr ngrejhger bulacha fklew jrgirwel fjgslçkjfgr gfrkgope gnlerçg leçr ngrejhger bulacha fklew jrgirwel fjgslçkjfgr gfrkgope gnlerçg leçr ngrejhger bulacha fklew jrgirwel fjgslçkjfgr gfrkgope gnlerçg leçr ngrejhger bulacha fklew jrgirwel fjgslçkjfgr gfrkgope gnlerçg leçr ngrejhger bulacha fklew jrgirwel"),
+              Row(
+                children: <Widget>[
+                  Expanded(child: Container()),
+                  FloatingActionButton.extended(
+                    heroTag: "0",
+
+                    onPressed: () async {
+                      Navigator.pushNamed(context, "ListDeCards",
+                          arguments: {});
+                    },
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(15))),
+                    // icon: Icon(
+                    //   Icons.add,
+                    //   size: 15,
+                    // ),
+                    label: Text(
+                      'Doenças',
+                      style: TextStyle(fontSize: 15),
                     ),
-                    SizedBox(
-                      width: 20,
+                    foregroundColor: Colors.white,
+                    backgroundColor: Colors.green,
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  FloatingActionButton.extended(
+                    heroTag: "1",
+                    onPressed: () async {
+                      Navigator.pushNamed(context, "ListDeCards",
+                          arguments: {});
+                    },
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(15))),
+                    // icon: Icon(
+                    //   Icons.add,
+                    //   size: 15,
+                    // ),
+                    label: Text(
+                      'Pragas',
+                      style: TextStyle(fontSize: 15),
                     ),
-                    InkWell(
-                      onTap: () {
-                        Navigator.pushNamed(context, "ListDeCards",
-                            arguments: {});
-                      },
-                      child: Material(
-                        color: Colors.green,
-                        borderRadius: BorderRadius.circular(15),
-                        child: Container(
-                            height: 50,
-                            width: 90,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15)),
-                            child: Center(child: Text("Pragas"))),
-                      ),
-                    ),
-                    Expanded(child: Container()),
-                  ],
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-              ]),
-        ),
+                    foregroundColor: Colors.white,
+                    backgroundColor: Colors.green,
+                  ),
+                  Expanded(child: Container()),
+                ],
+              ),
+            ]),
       ),
     );
   }

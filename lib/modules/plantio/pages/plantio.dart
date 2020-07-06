@@ -20,28 +20,30 @@ class _PlantioState extends State<Plantio> {
 
   Widget createGrid(BuildContext context, List<SubCard> lista) {
     return AnimationLimiter(
-      child: GridView.builder(
-        physics: BouncingScrollPhysics(),
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          mainAxisSpacing: 25.0,
-          crossAxisSpacing: 25.0,
-          childAspectRatio: 0.8,
-        ),
-        padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
-        itemCount: lista.length,
-        itemBuilder: (context, index) {
-          return AnimationConfiguration.staggeredList(
-            position: index,
-            duration: const Duration(milliseconds: 375),
-            child: SlideAnimation(
-              verticalOffset: 50.0,
-              child: ScaleAnimation(
-                child: lista[index],
+      child: Scrollbar(
+        child: GridView.builder(
+          physics: BouncingScrollPhysics(),
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            mainAxisSpacing: 25.0,
+            crossAxisSpacing: 25.0,
+            childAspectRatio: 0.8,
+          ),
+          padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+          itemCount: lista.length,
+          itemBuilder: (context, index) {
+            return AnimationConfiguration.staggeredList(
+              position: index,
+              duration: const Duration(milliseconds: 375),
+              child: SlideAnimation(
+                verticalOffset: 50.0,
+                child: ScaleAnimation(
+                  child: lista[index],
+                ),
               ),
-            ),
-          );
-        },
+            );
+          },
+        ),
       ),
     );
   }
