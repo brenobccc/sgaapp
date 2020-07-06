@@ -14,7 +14,7 @@ class ListDeCards extends StatefulWidget {
 class _ListDeCardsState extends State<ListDeCards> {
   var controller = TextEditingController();
 
-  createGrid(BuildContext context, List lista) {
+  createGrid(BuildContext contex) {
     return GridView.builder(
       physics: BouncingScrollPhysics(),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -24,9 +24,9 @@ class _ListDeCardsState extends State<ListDeCards> {
         childAspectRatio: 0.8,
       ),
       padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
-      itemCount: lista.length ?? 10,
+      itemCount: 10,
       itemBuilder: (context, index) {
-        return lista[index] ?? SubCard();
+        return SubCard();
       },
     );
   }
@@ -46,14 +46,15 @@ class _ListDeCardsState extends State<ListDeCards> {
         child: Column(
           children: <Widget>[
             MyTextFieldWidget(
-                withPadding: true,
-                keyboardType: TextInputType.text,
-                hintText: "Pesquise aqui",
-              ),
+              withPadding: true,
+              keyboardType: TextInputType.text,
+              hintText: "Pesquise aqui",
+            ),
             Expanded(
               child: createGrid(
                 context,
-                widget.argumentos['listaCards'],
+
+                /// widget.argumentos['listaCards'],
               ),
             ),
           ],

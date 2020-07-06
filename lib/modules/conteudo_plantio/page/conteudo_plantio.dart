@@ -67,6 +67,13 @@ class ConteudoPlantio extends StatelessWidget {
                   children: <Widget>[
                     Expanded(child: Container()),
                     InkWell(
+                      onDoubleTap: () {
+                        Navigator.pushNamed(
+                          context,
+                          "ListDeCards",
+                          arguments: {}
+                        );
+                      },
                       child: Material(
                         color: Colors.yellow,
                         borderRadius: BorderRadius.circular(15),
@@ -78,9 +85,10 @@ class ConteudoPlantio extends StatelessWidget {
                             child: Center(child: Text("Pragas"))),
                       ),
                     ),
-                    SizedBox(width: 
-                    20,),
-                      InkWell(
+                    SizedBox(
+                      width: 20,
+                    ),
+                    InkWell(
                       child: Material(
                         color: Colors.yellow,
                         borderRadius: BorderRadius.circular(15),
