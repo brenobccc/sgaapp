@@ -3,9 +3,7 @@ import 'package:get_it/get_it.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:sgaapp/db/database.dart';
 import 'package:sgaapp/models/user_model.dart';
-import 'package:sgaapp/modules/main_screen/page/home_screen.dart';
 import 'package:sgaapp/modules/menu_principal/menu_principal.dart';
-import 'package:sgaapp/modules/plantio/pages/plantio.dart';
 
 import 'signup_screen.dart';
 

@@ -45,7 +45,14 @@ class ConteudoPlantio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text("título"),
+        centerTitle: true,
+        backgroundColor: Colors.green,
+        leading: IconButton(
+            icon: Icon(Icons.arrow_back_ios),
+            onPressed: () => Navigator.pop(context)),
+      ),
       body: SingleChildScrollView(
         child: Container(
           child: Column(
@@ -67,30 +74,31 @@ class ConteudoPlantio extends StatelessWidget {
                   children: <Widget>[
                     Expanded(child: Container()),
                     InkWell(
-                      onDoubleTap: () {
-                        Navigator.pushNamed(
-                          context,
-                          "ListDeCards",
-                          arguments: {}
-                        );
+                      onTap: () {
+                        Navigator.pushNamed(context, "ListDeCards",
+                            arguments: {});
                       },
                       child: Material(
-                        color: Colors.yellow,
+                        color: Colors.green,
                         borderRadius: BorderRadius.circular(15),
                         child: Container(
                             height: 50,
                             width: 90,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(15)),
-                            child: Center(child: Text("Pragas"))),
+                            child: Center(child: Text("Doenças"))),
                       ),
                     ),
                     SizedBox(
                       width: 20,
                     ),
                     InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, "ListDeCards",
+                            arguments: {});
+                      },
                       child: Material(
-                        color: Colors.yellow,
+                        color: Colors.green,
                         borderRadius: BorderRadius.circular(15),
                         child: Container(
                             height: 50,

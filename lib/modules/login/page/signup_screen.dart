@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:sgaapp/models/user_model.dart';
 import 'dart:async';
-
-import 'package:sgaapp/modules/main_screen/page/home_screen.dart';
 import 'package:sgaapp/modules/menu_principal/menu_principal.dart';
 
 

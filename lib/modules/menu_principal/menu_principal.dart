@@ -14,35 +14,50 @@ class _MenuPrincpalState extends State<MenuPrincpal> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.green,
+        elevation: 0,
+      ),
       drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-              child: Text('Drawer Header'),
-              decoration: BoxDecoration(
-                color: Colors.blue,
+        child: Container(
+          color: Colors.green,
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: <Widget>[
+              SizedBox(
+                height: 100,
               ),
-            ),
-            GestureDetector(
-              child: Text(
-                "Sair",
-                style: TextStyle(
-                    color: Theme.of(context).primaryColor,
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.bold),
+              ListTile(
+                title: Text("Alterar nome"),
+                onTap: () {
+                  model.signOut();
+                  Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (context) => LoginScreen()));
+                },
               ),
-              onTap: () {
-                model.signOut();
-                Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => LoginScreen()));
-              },
-            ),
-          ],
+              ListTile(
+                title: Text("Alterar senha"),
+                onTap: () {
+                  model.signOut();
+                  Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (context) => LoginScreen()));
+                },
+              ),
+              ListTile(
+                title: Text("Sair"),
+                onTap: () {
+                  model.signOut();
+                  Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (context) => LoginScreen()));
+                },
+              ),
+            ],
+          ),
         ),
       ),
       body: TELAS[indice],
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.green,
         currentIndex: indice,
         onTap: (valor) {
           setState(() {
@@ -51,12 +66,20 @@ class _MenuPrincpalState extends State<MenuPrincpal> {
         },
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            title: Text('Plantios'),
+            icon: Icon(
+              Icons.home,
+            ),
+            title: Text('Plantios',
+                style: TextStyle(color: Colors.white, fontSize: 19)),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.mail),
-            title: Text('Animais'),
+            icon: Icon(
+              Icons.mail,
+            ),
+            title: Text(
+              'Animais',
+              style: TextStyle(color: Colors.white, fontSize: 19),
+            ),
           ),
         ],
       ),

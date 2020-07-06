@@ -6,13 +6,11 @@ import 'package:sgaapp/modules/animal_controller/page/animal_controller_page.dar
 import 'package:sgaapp/modules/apicultura/page/apicultura.dart';
 import 'package:sgaapp/modules/content/page/content.dart';
 import 'package:sgaapp/modules/conteudo_plantio/page/conteudo_plantio.dart';
-import 'package:sgaapp/modules/home/page/home_page.dart';
 
 import 'package:sgaapp/modules/lista_de_cards/agronomia/plantios/algodao/menu_algodao.dart';
 import 'package:sgaapp/modules/lista_de_cards/agronomia/plantios/amendoim/menu_amendoim.dart';
 import 'package:sgaapp/modules/lista_de_cards/pages/lista_de_cards.dart';
 import 'package:sgaapp/modules/login/page/login_screen.dart';
-import 'package:sgaapp/modules/main_screen/page/home_screen.dart';
 import 'package:sgaapp/modules/menu_principal/menu_principal.dart';
 import 'package:sgaapp/modules/plantio/pages/plantio.dart';
 import '../db/database.dart';
@@ -46,12 +44,6 @@ class RouteGenerator {
               pageBuilder: (context, animation, secondaryAnimation) =>
                   LoginScreen(db: db),
               transitionsBuilder: animationRota()),
-      '/HomePagePrincipal':
-          //MaterialPageRoute(builder: (_) => HomeScreen(db: db)),
-          PageRouteBuilder(
-              pageBuilder: (context, animation, secondaryAnimation) =>
-                  HomeScreen(db: db),
-              transitionsBuilder: animationRota()),
       'ListDeCards':
           // MaterialPageRoute(builder: (_) => ListDeCards(argumentos: args)),
           PageRouteBuilder(
@@ -75,12 +67,6 @@ class RouteGenerator {
           PageRouteBuilder(
               pageBuilder: (context, animation, secondaryAnimation) =>
                   ApiculturaPage(),
-              transitionsBuilder: animationRota()),
-      'home':
-          //MaterialPageRoute(builder: (_) => HomePage()),
-          PageRouteBuilder(
-              pageBuilder: (context, animation, secondaryAnimation) =>
-                  HomePage(),
               transitionsBuilder: animationRota()),
       'Content':
           // MaterialPageRoute(builder: (_) => Content()),

@@ -24,9 +24,11 @@ class _ListDeCardsState extends State<ListDeCards> {
         childAspectRatio: 0.8,
       ),
       padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
-      itemCount: 10,
+      itemCount: 5,
       itemBuilder: (context, index) {
-        return SubCard();
+        return SubCard(
+          rota: "Content",
+        );
       },
     );
   }
