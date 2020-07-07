@@ -24,12 +24,10 @@ class MockListTabs {
                 rota: 'Content',
                 imagem: "assets/agronomia/amendoin.png",
                 args: {
-                  "dados": {
-                    ConteudosModel(
-                        imagens: "assets/agronomia/amendoin.png",
-                        conteudo: "kdskglfskglokfsgç",
-                        titulo: "fkjsdjf")
-                  }
+                  "dados": ConteudosModel(
+                      imagem: "assets/agronomia/amendoin.png",
+                      conteudo: "kdskglfskglokfsgç",
+                      titulo: "fkjsdjf")
                 },
               ),
               SubCard(
@@ -37,12 +35,10 @@ class MockListTabs {
                 rota: 'Content',
                 imagem: "assets/agronomia/amendoin.png",
                 args: {
-                  "dados": {
-                    ConteudosModel(
-                        imagens: "assets/agronomia/amendoin.png",
-                        conteudo: "kdskglfskglokfsgç",
-                        titulo: "fkjsdjf")
-                  }
+                  "dados": ConteudosModel(
+                      imagem: "assets/agronomia/amendoin.png",
+                      conteudo: "kdskglfskglokfsgç",
+                      titulo: "fkjsdjf")
                 },
               ),
             ],
@@ -54,7 +50,7 @@ class MockListTabs {
                 args: {
                   "dados": {
                     ConteudosModel(
-                        imagens: "assets/agronomia/amendoin.png",
+                        imagem: "assets/agronomia/amendoin.png",
                         conteudo: "kdskglfskglokfsgç",
                         titulo: "fkjsdjf")
                   }
@@ -65,16 +61,14 @@ class MockListTabs {
                 rota: 'Content',
                 imagem: "assets/agronomia/amendoin.png",
                 args: {
-                  "dados": {
-                    ConteudosModel(
-                        imagens: "assets/agronomia/amendoin.png",
-                        conteudo: "kdskglfskglokfsgç",
-                        titulo: "fkjsdjf")
-                  }
+                  "dados": ConteudosModel(
+                      imagem: "assets/agronomia/amendoin.png",
+                      conteudo: "kdskglfskglokfsgç",
+                      titulo: "fkjsdjf")
                 },
               ),
             ])
       },
     ),
-    ]);
+  ]);
 }

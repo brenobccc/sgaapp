@@ -17,7 +17,7 @@ class SubCard extends StatelessWidget {
     double height = MediaQuery.of(context).size.height;
     return InkWell(
       onTap: () {
-        print(args);
+        //print(args["dados"].imagem);
         Navigator.pushNamed(context, rota, arguments: args);
       },
       child: Material(

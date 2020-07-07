@@ -13,7 +13,7 @@ class _ContentState extends State<Content> {
   @override
   void initState() {
 
-    print(widget.argumentos[0].imagens);
+    print(widget.argumentos["dados"].imagem);
     // TODO: implement initState
     super.initState();
   }
@@ -41,7 +41,7 @@ class _ContentState extends State<Content> {
                         borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(40),
                             bottomRight: Radius.circular(40))),
-                    child: Image.asset(widget.argumentos["dados"].imagens),
+                    child: Image.asset(widget.argumentos["dados"].imagem,),
                   ),
                 ),
                 Text("\n${widget.argumentos["dados"].titulo}",
