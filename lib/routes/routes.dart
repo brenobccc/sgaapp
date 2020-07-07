@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-import 'package:sgaapp/components/tela_de_erro.dart';
 import 'package:sgaapp/modules/animal_controller/page/add_animal.dart';
 import 'package:sgaapp/modules/animal_controller/page/animal_controller_page.dart';
-import 'package:sgaapp/modules/apicultura/page/apicultura.dart';
 import 'package:sgaapp/modules/content/page/content.dart';
 import 'package:sgaapp/modules/conteudo_plantio/page/conteudo_plantio.dart';
-
 import 'package:sgaapp/modules/lista_de_cards/agronomia/plantios/algodao/menu_algodao.dart';
 import 'package:sgaapp/modules/lista_de_cards/agronomia/plantios/amendoim/menu_amendoim.dart';
 import 'package:sgaapp/modules/lista_de_cards/pages/lista_de_cards.dart';
@@ -62,12 +59,6 @@ class RouteGenerator {
               pageBuilder: (context, animation, secondaryAnimation) =>
                   Plantio(),
               transitionsBuilder: animationRota()),
-      'Apicultura':
-          //MaterialPageRoute(builder: (_) => ApiculturaPage()),
-          PageRouteBuilder(
-              pageBuilder: (context, animation, secondaryAnimation) =>
-                  ApiculturaPage(),
-              transitionsBuilder: animationRota()),
       'Content':
           // MaterialPageRoute(builder: (_) => Content()),
           PageRouteBuilder(
@@ -105,7 +96,6 @@ class RouteGenerator {
               pageBuilder: (context, animation, secondaryAnimation) =>
                   MenuPrincpal(),
               transitionsBuilder: animationRota()),
-      'alertaErro': MaterialPageRoute(builder: (_) => TelaDeErro()),
     };
 
     if (routes.containsKey(settings.name)) {

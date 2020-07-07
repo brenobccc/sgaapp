@@ -21,7 +21,11 @@ class Content extends StatelessWidget {
                   aspectRatio: 16 / 9,
                   child: Container(
                     padding: EdgeInsets.only(bottom: 20),
-                    color: Colors.green,
+                    decoration: BoxDecoration(
+                        color: Colors.green,
+                        borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(40),
+                            bottomRight: Radius.circular(40))),
                     child: Image.asset(
                         "assets/agronomia/algodao/pragas/doencas/algodao_doencas_mancharamularia.png"),
                   ),
