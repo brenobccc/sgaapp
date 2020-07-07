@@ -16,7 +16,7 @@ class _MenuPrincpalState extends State<MenuPrincpal> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFFffdb58),
+        backgroundColor: Color(0xFFffdb58), 
         elevation: 0,
       ),
       drawer: Drawer(
@@ -89,6 +89,7 @@ class _MenuPrincpalState extends State<MenuPrincpal> {
                     return Container(
                       color: Colors.white,
                       child: ListTile(
+                        leading: Icon(Icons.arrow_back),
                         title: Text(
                           "Sair",
                           style: TextStyle(
