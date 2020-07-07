@@ -63,7 +63,7 @@ class RouteGenerator {
           // MaterialPageRoute(builder: (_) => Content()),
           PageRouteBuilder(
               pageBuilder: (context, animation, secondaryAnimation) =>
-                  Content(),
+                  Content(argumentos: args,),
               transitionsBuilder: animationRota()),
       'Algodao_menu':
           //MaterialPageRoute(builder: (_) => AlgodaoMenu()),
@@ -88,7 +88,7 @@ class RouteGenerator {
           //MaterialPageRoute(builder: (_) => InformacionalTabs()),
           PageRouteBuilder(
               pageBuilder: (context, animation, secondaryAnimation) =>
-                  ConteudoPlantio(),
+                  ConteudoPlantio(dados: args,),
               transitionsBuilder: animationRota()),
       'MenuPrincpal':
           //MaterialPageRoute(builder: (_) => InformacionalTabs()),

@@ -5,7 +5,7 @@ import 'package:sgaapp/components/my_text_field_widget.dart';
 import 'package:sgaapp/components/sub_cards.dart';
 
 class ListDeCards extends StatefulWidget {
-  final Map argumentos;
+  final dynamic argumentos;
 
   const ListDeCards({Key key, this.argumentos}) : super(key: key);
   @override
@@ -16,7 +16,7 @@ class _ListDeCardsState extends State<ListDeCards> {
   var controller = TextEditingController();
 
   
-  Widget createGrid(BuildContext context) {
+  Widget createGrid(BuildContext context, List lista) {
     return AnimationLimiter(
       child: Scrollbar(
         child: GridView.builder(
@@ -28,7 +28,7 @@ class _ListDeCardsState extends State<ListDeCards> {
             childAspectRatio: 0.8,
           ),
           padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
-          itemCount: 5,
+          itemCount: lista.length,
           itemBuilder: (context, index) {
             return AnimationConfiguration.staggeredList(
               position: index,
@@ -36,9 +36,7 @@ class _ListDeCardsState extends State<ListDeCards> {
               child: SlideAnimation(
                 verticalOffset: 50.0,
                 child: ScaleAnimation(
-                  child: SubCard(
-                    rota: "Content",
-                  ),
+                  child: lista[index]
                 ),
               ),
             );
@@ -70,9 +68,7 @@ class _ListDeCardsState extends State<ListDeCards> {
             Expanded(
               child: createGrid(
                 context,
-
-                /// widget.argumentos['listaCards'],
-              ),
+                widget.argumentos),
             ),
           ],
         ),

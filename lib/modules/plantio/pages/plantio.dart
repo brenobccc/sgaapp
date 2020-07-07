@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:sgaapp/components/my_text_field_widget.dart';
 import 'package:sgaapp/components/sub_cards.dart';
+import 'package:sgaapp/data/data_file.dart';
 import 'package:sgaapp/modules/plantio/mock/mock_plantio.dart';
 import 'package:sgaapp/modules/plantio/model/plantio_model.dart';
 
@@ -51,13 +52,7 @@ class _PlantioState extends State<Plantio> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   leading: IconButton(
-      //       icon: Icon(Icons.arrow_back_ios),
-      //       onPressed: () => Navigator.pop(context)),
-      //   backgroundColor: Colors.transparent,
-      //   elevation: 0,
-      // ),
+
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(

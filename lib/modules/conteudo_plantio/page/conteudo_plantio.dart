@@ -2,39 +2,31 @@ import 'package:flutter/material.dart';
 import 'package:sgaapp/components/sub_cards.dart';
 import 'package:sgaapp/modules/conteudo_plantio/components/carrocel.dart';
 
-class ConteudoPlantio extends StatelessWidget {
-  List<Widget> circleImage = [
-    Padding(
-      padding: EdgeInsets.symmetric(horizontal: 5),
-      child: Container(
+class ConteudoPlantio extends StatefulWidget {
+  final Map dados;
+
+  ConteudoPlantio({Key key, this.dados}) : super(key: key);
+
+  @override
+  _ConteudoPlantioState createState() => _ConteudoPlantioState();
+}
+
+class _ConteudoPlantioState extends State<ConteudoPlantio> {
+  List<Widget> imagens = [];
+
+  criarImagens() {
+    imagens = (widget.dados["dados"].imagens as List).map((e) {
+      return Padding(
+        padding: EdgeInsets.symmetric(horizontal: 5),
+        child: Container(
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15),
-              image: DecorationImage(
-                  fit: BoxFit.fill,
-                  image: NetworkImage(
-                      "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ-pdb-vffsduKqDy0iLt_c3c7dsdbdhtBf4A&usqp=CAU")))),
-    ),
-    Padding(
-      padding: EdgeInsets.symmetric(horizontal: 5),
-      child: Container(
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15),
-              image: DecorationImage(
-                  fit: BoxFit.fill,
-                  image: NetworkImage(
-                      "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ-pdb-vffsduKqDy0iLt_c3c7dsdbdhtBf4A&usqp=CAU")))),
-    ),
-    Padding(
-      padding: EdgeInsets.symmetric(horizontal: 5),
-      child: Container(
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15),
-              image: DecorationImage(
-                  fit: BoxFit.fill,
-                  image: NetworkImage(
-                      "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ-pdb-vffsduKqDy0iLt_c3c7dsdbdhtBf4A&usqp=CAU")))),
-    ),
-  ];
+            borderRadius: BorderRadius.circular(15),
+          ),
+          child: Image.asset(e),
+        ),
+      );
+    }).toList();
+  }
 
   carrousel() => Center(
         child: Carousel(
@@ -47,15 +39,24 @@ class ConteudoPlantio extends StatelessWidget {
           pagerSize: 20,
           // viewportFraction: 1.0,
           activeIndicator: Colors.green,
-          items: circleImage,
+          items: imagens,
         ),
       );
+
+  @override
+  void initState() {
+
+    setState(() {
+      criarImagens();
+    });
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("título"),
+        title: Text(widget.dados["dados"].titulo),
         centerTitle: true,
         backgroundColor: Colors.green,
         leading: IconButton(
@@ -67,17 +68,15 @@ class ConteudoPlantio extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               carrousel(),
-              Text(
-                  "fjgslçkjfgr gfgfdg fddgfdg fg fgf fg fg f gfgf gfgfgfgfgf g gfrkgope gnlerçg leçr ngrejhger bulacha fklew jrgirwelfjgslçkjfgr gfrkgope gnlerçg leçr ngrejhger bulacha fklew jrgirwel fjgslçkjfgr gfrkgope gnlerçg leçr ngrejhger bulacha fklew jrgirwel fjgslçkjfgr gfrkgope gnlerçg leçr ngrejhger bulacha fklew jrgirwel fjgslçkjfgr gfrkgope gnlerçg leçr ngrejhger bulacha fklew jrgirwel fjgslçkjfgr gfrkgope gnlerçg leçr ngrejhger bulacha fklew jrgirwel"),
+              Text(widget.dados["dados"].conteudo),
               Row(
                 children: <Widget>[
                   Expanded(child: Container()),
                   FloatingActionButton.extended(
                     heroTag: "0",
-
                     onPressed: () async {
                       Navigator.pushNamed(context, "ListDeCards",
-                          arguments: {});
+                          arguments: widget.dados["dados"].pragas);
                     },
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(15))),
@@ -99,7 +98,7 @@ class ConteudoPlantio extends StatelessWidget {
                     heroTag: "1",
                     onPressed: () async {
                       Navigator.pushNamed(context, "ListDeCards",
-                          arguments: {});
+                          arguments: widget.dados["dados"].pragas);
                     },
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(15))),

@@ -16,17 +16,10 @@ class SubCard extends StatelessWidget {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     return InkWell(
-      onTap: rota != null
-          ? () {
-              args == null
-                  ? Navigator.pushNamed(
-                      context,
-                      rota ?? "alertaErro",
-                    )
-                  : Navigator.pushNamed(context, rota ?? "alertaErro",
-                      arguments: args);
-            }
-          : onPressed,
+      onTap: () {
+        print(args);
+        Navigator.pushNamed(context, rota, arguments: args);
+      },
       child: Material(
         color: Colors.white,
         borderRadius: BorderRadius.circular(15),
