@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:scoped_model/scoped_model.dart';
 import 'package:sgaapp/models/user_model.dart';
 import 'package:sgaapp/modules/login/page/login_screen.dart';
 import 'package:sgaapp/modules/menu_principal/utils/telas.dart';
@@ -15,49 +16,143 @@ class _MenuPrincpalState extends State<MenuPrincpal> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green,
+        backgroundColor: Color(0xFFffdb58),
         elevation: 0,
       ),
       drawer: Drawer(
-        child: Container(
-          color: Colors.green,
-          child: ListView(
-            padding: EdgeInsets.zero,
-            children: <Widget>[
-              SizedBox(
-                height: 100,
-              ),
-              ListTile(
-                title: Text("Alterar nome"),
-                onTap: () {
-                  model.signOut();
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => LoginScreen()));
-                },
-              ),
-              ListTile(
-                title: Text("Alterar senha"),
-                onTap: () {
-                  model.signOut();
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => LoginScreen()));
-                },
-              ),
-              ListTile(
-                title: Text("Sair"),
-                onTap: () {
-                  model.signOut();
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => LoginScreen()));
-                },
-              ),
-            ],
-          ),
+        child: Stack(
+          children: <Widget>[
+            //      _buildDrawerBack(),
+            DrawerHeader(
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                      colors: <Color>[Colors.deepOrange, Colors.orangeAccent])),
+              child: null,
+            ),
+            ListView(
+              padding: EdgeInsets.only(left: 32.0, top: 16.0),
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.only(bottom: 8.0),
+                  padding: EdgeInsets.fromLTRB(0.0, 16.0, 16.0, 8.0),
+                  height: 170.0,
+                  child: Stack(
+                    children: <Widget>[
+                      Positioned(
+                          left: 0.0,
+                          bottom: 0.0,
+                          child: ScopedModelDescendant<UserModel>(
+                            builder: (context, child, model) {
+                              return Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Image(
+                                    image: AssetImage('assets/drawer.png'),
+                                    height: 100,
+                                    width: 100,
+                                  ),
+                                  Text(
+                                    "Olá , ${!model.isLoggedIn() ? "" : model.userData["name"]}",
+
+                                    //"Olá , ${!model.isLoggedIn() ? "" : model.userData["name"]}",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 20.0,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  // GestureDetector(
+                                  //   child: Text(
+                                  //     "Sair",
+                                  //     style: TextStyle(
+                                  //         color: Theme.of(context).primaryColor,
+                                  //         fontSize: 16.0,
+                                  //         fontWeight: FontWeight.bold),
+                                  //   ),
+                                  //   onTap: () {
+                                  //     model.signOut();
+                                  //     Navigator.of(context).pushReplacement(
+                                  //         MaterialPageRoute(
+                                  //             builder: (context) =>
+                                  //                 LoginScreen()));
+                                  //   },
+                                  // )
+                                ],
+                              );
+                            },
+                          )),
+                    ],
+                  ),
+                ),
+                Divider(),
+                ScopedModelDescendant<UserModel>(
+                  builder: (context, child, model) {
+                    return Container(
+                      color: Colors.white,
+                      child: ListTile(
+                        title: Text(
+                          "Sair",
+                          style: TextStyle(
+                              color: Theme.of(context).primaryColor,
+                              fontSize: 19.0,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        onTap: () {
+                          model.signOut();
+                          Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(
+                                  builder: (context) => LoginScreen()));
+                        },
+                      ),
+                    );
+                  },
+                ),
+              ],
+            )
+          ],
         ),
       ),
+      // Drawer(
+      //   child: Container(
+      //     color: Colors.green,
+      //     child: ListView(
+      //       padding: EdgeInsets.zero,
+      //       children: <Widget>[
+      //         SizedBox(
+      //           height: 100,
+      //         ),
+      //         ListTile(
+      //           title: Text("Alterar nome"),
+      //           onTap: () {
+      //             model.signOut();
+      //             Navigator.of(context).pushReplacement(
+      //                 MaterialPageRoute(builder: (context) => LoginScreen()));
+      //           },
+      //         ),
+      //         ListTile(
+      //           title: Text("Alterar senha"),
+      //           onTap: () {
+      //             model.signOut();
+      //             Navigator.of(context).pushReplacement(
+      //                 MaterialPageRoute(builder: (context) => LoginScreen()));
+      //           },
+      //         ),
+
+      //         ListTile(
+
+      //           title: Text("Sair"),
+      //           onTap: () {
+      //             model.signOut();
+      //             Navigator.of(context).pushReplacement(
+      //                 MaterialPageRoute(builder: (context) => LoginScreen()));
+      //           },
+      //         ),
+      //       ],
+      //     ),
+      //   ),
+      // ),
       body: TELAS[indice],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.green,
+        backgroundColor: Color(0xFFffdb58),
         currentIndex: indice,
         onTap: (valor) {
           setState(() {
