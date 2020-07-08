@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:sgaapp/models/user_model.dart';
 import 'package:sgaapp/modules/login/page/login_screen.dart';
@@ -16,7 +17,7 @@ class _MenuPrincpalState extends State<MenuPrincpal> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor:Color.fromRGBO(245, 207, 79,1), 
+        backgroundColor: Color.fromRGBO(245, 207, 79, 1),
         elevation: 0,
       ),
       drawer: Drawer(
@@ -25,8 +26,10 @@ class _MenuPrincpalState extends State<MenuPrincpal> {
             //      _buildDrawerBack(),
             DrawerHeader(
               decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                      colors: <Color>[Colors.deepOrange, Color.fromRGBO(245, 207, 79,1)])),
+                  gradient: LinearGradient(colors: <Color>[
+                Colors.deepOrange,
+                Color.fromRGBO(245, 207, 79, 1)
+              ])),
               child: null,
             ),
             ListView(
@@ -60,22 +63,6 @@ class _MenuPrincpalState extends State<MenuPrincpal> {
                                         fontSize: 20.0,
                                         fontWeight: FontWeight.bold),
                                   ),
-                                  // GestureDetector(
-                                  //   child: Text(
-                                  //     "Sair",
-                                  //     style: TextStyle(
-                                  //         color: Theme.of(context).primaryColor,
-                                  //         fontSize: 16.0,
-                                  //         fontWeight: FontWeight.bold),
-                                  //   ),
-                                  //   onTap: () {
-                                  //     model.signOut();
-                                  //     Navigator.of(context).pushReplacement(
-                                  //         MaterialPageRoute(
-                                  //             builder: (context) =>
-                                  //                 LoginScreen()));
-                                  //   },
-                                  // )
                                 ],
                               );
                             },
@@ -112,9 +99,9 @@ class _MenuPrincpalState extends State<MenuPrincpal> {
           ],
         ),
       ),
- 
       body: TELAS[indice],
       bottomNavigationBar: BottomNavigationBar(
+        elevation: 10,
         backgroundColor: Colors.white,
         currentIndex: indice,
         onTap: (valor) {
@@ -124,19 +111,25 @@ class _MenuPrincpalState extends State<MenuPrincpal> {
         },
         items: [
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home,
+            icon: SvgPicture.asset(
+              "assets/icones/icone_plantio.svg",
+              color: Color.fromRGBO(245, 207, 79, 1),
+              height: 23,
             ),
             title: Text('Plantios',
-                style: TextStyle(color:Color.fromRGBO(245, 207, 79,1), fontSize: 19)),
+                style: TextStyle(
+                    color: Color.fromRGBO(245, 207, 79, 1), fontSize: 19)),
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.mail,
+            icon: SvgPicture.asset(
+              "assets/icones/icone_animais.svg",
+              color: Color.fromRGBO(245, 207, 79, 1),
+              height: 23,
             ),
             title: Text(
               'Animais',
-              style: TextStyle(color:Color.fromRGBO(245, 207, 79,1), fontSize: 19),
+              style: TextStyle(
+                  color: Color.fromRGBO(245, 207, 79, 1), fontSize: 19),
             ),
           ),
         ],
