@@ -56,9 +56,9 @@ class _ConteudoPlantioState extends State<ConteudoPlantio> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.dados["dados"].titulo),
+        title: Text(widget.dados["dados"].titulo, style: TextStyle(color: Colors.white),),
         centerTitle: true,
-        backgroundColor: Colors.green,
+        backgroundColor: widget.dados["cor"],
         leading: IconButton(
             icon: Icon(Icons.arrow_back_ios),
             onPressed: () => Navigator.pop(context)),
@@ -89,7 +89,7 @@ class _ConteudoPlantioState extends State<ConteudoPlantio> {
                       style: TextStyle(fontSize: 15),
                     ),
                     foregroundColor: Colors.white,
-                    backgroundColor: Colors.green,
+                    backgroundColor: widget.dados["cor"],
                   ),
                   SizedBox(
                     width: 20,
@@ -111,7 +111,7 @@ class _ConteudoPlantioState extends State<ConteudoPlantio> {
                       style: TextStyle(fontSize: 15),
                     ),
                     foregroundColor: Colors.white,
-                    backgroundColor: Colors.green,
+                    backgroundColor: widget.dados["cor"],
                   ),
                   Expanded(child: Container()),
                 ],
