@@ -66,8 +66,11 @@ flutter:
     - assets/home/
     - assets/agronomia/
     - assets/agronomia/algodao/pragas/algodao_scroll/
+    - assets/agronomia/amendoim/amendoim_scroll/
     - assets/agronomia/algodao/pragas/pragas/
     - assets/agronomia/algodao/pragas/doencas/
+    - assets/agronomia/amendoim/pragas/
+    - assets/agronomia/amendoim/doencas/
     - assets/background_images/ 
     - assets/icones/
     
