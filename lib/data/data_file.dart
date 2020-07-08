@@ -312,5 +312,176 @@ class MockListTabs {
         "cor": Colors.brown
       },
     ),
+
+    SubCard(
+      color: Colors.grey,
+      titulo: "Arroz",
+      rota: 'ConteudoPlantio',
+      imagem: "assets/agronomia/arroz.png",
+      args: {
+        "dados": SubCardsModel(
+            // Cards da Tela  que tem o carrocel de fotos
+            titulo: "Arroz",
+            conteudo:
+                "O arroz (Oryza sativa) é uma planta da família das gramíneas. Durante muitos anos, os grãos dessas plantas constituíram a base alimentar de muitos povos em todo o mundo. Hoje em dia não é diferente, a cultura do arroz é a terceira maior do mundo. O arroz com feijão, por exemplo, é a base de alimentação do brasileiro.",
+            imagens: [
+              "assets/agronomia/arroz/arroz_scroll/arroz1.jpg",
+              "assets/agronomia/arroz/arroz_scroll/arroz2.jpg"
+            ],
+            pragas: [
+              SubCard(
+                // Cards da Tela  de pragas
+                titulo:
+                    "Broca do colo./lagarta elasmo(Elasmopalpus lignosellus)",
+                rota: 'Content',
+                imagem:
+                    "assets/agronomia/arroz/pragas/arroz_pragas_brocacolo.png",
+                args: {
+                  "dados": ConteudosModel(
+                    imagem:
+                        "assets/agronomia/arroz/pragas/arroz_pragas_brocacolo.png",
+                    conteudo:
+                        'Culturas Afetadas: Algodão, Amendoim, Arroz, Aveia, Centeio, Cevada, Feijão, Feijão-caupi, Gengibre, Girassol, Mamona, Milho, Soja, Sorgo, Trigo Seu aparecimento é esporádico, e está relacionado a secas em períodos, no qual favorece o intenso desenvolvimento da praga. Danos: Provocam murcha e a morte das folhas, mais conhecido como ”coração morto”\nControle:\nTratamento das sementes com inseticidas sistêmicos, em anos de seca, é recomendável o uso de produtos com ação de contato e profundidade associado ao tratamento das sementes.',
+                    titulo:
+                        "Broca do colo./lagarta elasmo(Elasmopalpus lignosellus)",
+                  )
+                },
+              ),
+              SubCard(
+                // Cards da Tela  de pragas
+                titulo: "Pulgão da raiz(Rhopalosiphum rufiabdominale)",
+                rota: 'Content',
+                imagem:
+                    "assets/agronomia/arroz/pragas/arroz_pragas_pulgaoraiz.png",
+                args: {
+                  "dados": ConteudosModel(
+                      imagem:
+                          "assets/agronomia/arroz/pragas/arroz_pragas_pulgaoraiz.png",
+                      conteudo:
+                          "Culturas Afetadas: Arroz, Arroz irrigado\nEles contém uma cor de cinza escuro, e formam colônias nas raízes das plantas\ndanos: eles sugam a seiva das raízes, injetam toxinas, fazendo elas ficarem amarelas a paralisando o crescimento. Controle: Pode ser feito de forma Biológica, Sendo efetuado o controle com patógenos, como o Entomophthora sp, também pode ser feito controle de forma Química, usando os inseticidas seletivos.",
+                      titulo: "Pulgão da raiz(Rhopalosiphum rufiabdominale)")
+                },
+              ),
+              SubCard(
+                // Cards da Tela  de pragas
+                titulo:
+                    "Cigarrinha das pastagens/Cigarrinha dos capinzais (Deois flavopicta)",
+                rota: 'Content',
+                imagem:
+                    "assets/agronomia/arroz/pragas/arroz_pragas_cigarrinhapastagens.png",
+                args: {
+                  "dados": ConteudosModel(
+                    imagem:
+                        "assets/agronomia/arroz/pragas/arroz_pragas_cigarrinhapastagens.png",
+                    conteudo:
+                        "Culturas Afetadas: Arroz, Milho, Pastagens, Todas as culturas com ocorrência do alvo biológico\nElas infestam áreas de pastagens. Danos: Ao picarem as folhas, elas mostram áreas cloróticas e com sinais de necrose, no qual pode se acarretar na morte da planta.\nControle: Tratando as sementes com inseticidas e realizar cultivo em lugares longes de pastagens.",
+                    titulo:
+                        "Cigarrinha das pastagens/Cigarrinha dos capinzais (Deois flavopicta)",
+                  )
+                },
+              ),
+              SubCard(
+                // Cards da Tela  de pragas
+                titulo: "Cascudo preto(Euetheola humilis)",
+                rota: 'Content',
+                imagem:
+                    "assets/agronomia/arroz/pragas/arroz_pragas_cascudopreto.png",
+                args: {
+                  "dados": ConteudosModel(
+                      imagem:
+                          "assets/agronomia/arroz/pragas/arroz_pragas_cascudopreto.png",
+                      conteudo:
+                          "Culturas Afetadas: Arroz, Cana-de-açúcar\n Danos: causam perfurações na planta de maneira agressiva, acarretando sérios prejuízos. Controle: Uso de inseticidas específicos registrados para as culturas.",
+                      titulo: "Cascudo preto(Euetheola humilis)")
+                },
+              ),
+              SubCard(
+                // Cards da Tela  de pragas
+                titulo:
+                    "Percevejo do arroz/Percevejo da panícula (Oebalus poecilus)",
+                rota: 'Content',
+                imagem:
+                    "assets/agronomia/arroz/pragas/arroz_pragas_percevejograo.png",
+                args: {
+                  "dados": ConteudosModel(
+                      imagem:
+                          "assets/agronomia/arroz/pragas/arroz_pragas_percevejograo.png",
+                      conteudo:
+                          "Culturas Afetadas: Arroz é um dos percevejos que causam danos a várias culturas, principalmente no arroz. Danos: Eles sugam a seiva das folhas e grãos leitosos, causando chochamento engessamento dos grãos.\nControle: Realizar o uso de inseticidas específicos.",
+                      titulo:
+                          "Percevejo do arroz/Percevejo da panícula (Oebalus poecilus)")
+                },
+              ),
+            ],
+            doencas: [
+              SubCard(
+                // Cards da Tela  de doenças
+                titulo: "Brusone(Pyricularia grisea)",
+                rota: 'Content',
+                imagem:
+                    "assets/agronomia/arroz/doencas/arroz_doencas_brusone.png",
+                args: {
+                  "dados": ConteudosModel(
+                      imagem:
+                          "assets/agronomia/arroz/doencas/arroz_doencas_brusone.png",
+                      conteudo:
+                          "Culturas Afetadas: Arroz, Arroz irrigado, Cevada, Gramados, Milheto, Tratamento de sementes, Trigo Ela é considerada a doença mais importante do arroz. As perdas são variáveis em função da variedade cultivada e dos fatores climáticos na área de cultivo.\nDanos: Ela pode ocorrer em todas as partes da planta, nas folhas os sintomas mais comuns se iniciam por pequenos pontos de coloração castanhas, e evoluem para manchas elípticas, quando a doença ocorre fortemente nos estágios iniciais dela, o impacto é tão grande que a queima das folhas leva a morte da planta.\nControle: Variedades resistentes, práticas culturas e aplicação de fungicida de maneira integrada.",
+                      titulo: "Brusone(Pyricularia grisea)")
+                },
+              ),
+              SubCard(
+                // Cards da Tela  de doenças
+                titulo:
+                    "Mancha parda/Helminthosporiose, mancha foliar (Bipolaris oryzae)",
+                rota: 'Content',
+                imagem:
+                    "assets/agronomia/arroz/doencas/arroz_doencas_manchaparda.png",
+                args: {
+                  "dados": ConteudosModel(
+                    imagem:
+                        "assets/agronomia/arroz/doencas/arroz_doencas_manchaparda.png",
+                    conteudo:
+                        "Culturas Afetadas: Arroz, Arroz irrigado\nA mancha parda normalmente ocorre tanto em coulturas instaladas sobb condições irrigadas como de sequeiro.\nDanos: Os sintomas são frequentemente encontrado nas folhas e nos grãos. Nos grãos, as manchas em ataques severos podem cobrir parcial ou totalmente a superfície do grão, podendo acarretar chochamento, redução de peso e gessamento do mesmo. Sementes severamente atacadas normalmente sofrem redução do seu poder germinativo e os coleóptilos podem morrer.\nControle: Utilização de pulverização com produtos químicos, rotação de cultura, e eliminação de gramíneas das proximidades da área cultivada.",
+                    titulo:
+                        "Mancha parda/Helminthosporiose, mancha foliar (Bipolaris oryzae)",
+                  )
+                },
+              ),
+              SubCard(
+                // Cards da Tela  de doenças
+                titulo: "Escaldadura(Rhynchosporium secalis).",
+                rota: 'Content',
+                imagem:
+                    "assets/agronomia/arroz/doencas/arroz_doencas_escaldadurafolha.png",
+                args: {
+                  "dados": ConteudosModel(
+                      imagem:
+                          "assets/agronomia/arroz/doencas/arroz_doencas_escaldadurafolha.png",
+                      conteudo:
+                          "Culturas Afetadas: Arroz\nSua ocorrência se dá em locais cuja estação de cultivo caracteriza -se por baixas temperaturas e umidades elevada.\nDanos: Com o desenvolvimento da doença, as manchas coalescem e secam, destruindo uma grande porção da áreas foliar.]\nControle; Realizar tratamento das sementes com fungicidas específicos,registrados pela cultura.",
+                      titulo: "Escaldadura(Rhynchosporium secalis)")
+                },
+              ),
+              SubCard(
+                // Cards da Tela  de doenças
+                titulo: "Mancha BarrentaQueima das glumelas(Phoma sorghina)",
+                rota: 'Content',
+                imagem:
+                    "assets/agronomia/arroz/doencas/arroz_doencas_queimaGlumelas.png",
+                args: {
+                  "dados": ConteudosModel(
+                    imagem:
+                        "assets/agronomia/arroz/doencas/arroz_doencas_queimaGlumelas.png",
+                    conteudo:
+                        "Culturas Afetadas: Arroz, Milho, Sorgo\nEsta doença é importante onde o florescimento e a maturação de grãos ocorrem em períodos chuvosos e de alta umidade relativa ao ar. \nControle:\nRealizar alteração na época de plantio, uso de cultivares resistentes, e em última instância,o tratamento químico de sementes.",
+                    titulo:
+                        "Mancha BarrentaQueima das glumelas(Phoma sorghina)",
+                  )
+                },
+              ),
+            ]),
+        "cor": Colors.grey
+      },
+    ),
   ]);
 }
