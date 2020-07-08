@@ -52,12 +52,12 @@ class _PlantioState extends State<Plantio> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
           children: <Widget>[
             MyTextFieldWidget(
+              withSeach: true,
               withPadding: true,
               keyboardType: TextInputType.text,
               hintText: "Pesquise aqui",

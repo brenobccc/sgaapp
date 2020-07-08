@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class MyTextFieldWidget extends StatelessWidget {
   final String hintText;
@@ -13,19 +14,22 @@ class MyTextFieldWidget extends StatelessWidget {
   final bool withPadding;
   final void Function(String) onChanged;
 
-  const MyTextFieldWidget({
-    Key key,
-    this.hintText,
-    this.controller,
-    this.keyboardType,
-    this.inputFormatters,
-    this.maxLines = 1,
-    this.errorText,
-    this.maxLength,
-    this.showLength = true,
-    this.onChanged,
-    this.withPadding = false,
-  }) : super(key: key);
+  final bool withSeach;
+
+  const MyTextFieldWidget(
+      {Key key,
+      this.hintText,
+      this.controller,
+      this.keyboardType,
+      this.inputFormatters,
+      this.maxLines = 1,
+      this.errorText,
+      this.maxLength,
+      this.showLength = true,
+      this.onChanged,
+      this.withPadding = false,
+      this.withSeach = false})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -46,8 +50,9 @@ class MyTextFieldWidget extends StatelessWidget {
         keyboardType: keyboardType,
         maxLines: maxLines,
         decoration: InputDecoration(
+          prefixIcon: withSeach? SvgPicture.asset("assets/icones/icone_lupa.svg"):null,
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(10),
             borderSide: BorderSide(
               width: 20,
               color: Colors.black,

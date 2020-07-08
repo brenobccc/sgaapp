@@ -13,14 +13,39 @@ class MenuPrincpal extends StatefulWidget {
 class _MenuPrincpalState extends State<MenuPrincpal> {
   int indice = 0;
   UserModel model;
+  final GlobalKey<ScaffoldState> _scaffoldKey =  GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(245, 207, 79, 1),
         elevation: 0,
+        automaticallyImplyLeading: false,
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 10),
+          child: IconButton(
+            icon: SvgPicture.asset(
+              "assets/icones/icone_logo.svg",
+              height: 25,
+            ),
+            onPressed: () {},
+          ),
+        ),
+        actions: <Widget>[
+          IconButton(
+            icon: SvgPicture.asset(
+              "assets/icones/icone_drawerconfg.svg",
+              height: 25,
+            ),
+            onPressed: () {
+              _scaffoldKey.currentState.openEndDrawer();
+            },
+          ),
+        ],
       ),
-      drawer: Drawer(
+      endDrawer: Drawer(
+        ///key: _scaffoldKey,
         child: Stack(
           children: <Widget>[
             //      _buildDrawerBack(),
