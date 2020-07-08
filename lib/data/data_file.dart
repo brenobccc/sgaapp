@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:sgaapp/components/sub_cards.dart';
 import 'package:sgaapp/modules/content/models/conteudos_model.dart';
 import 'package:sgaapp/modules/plantio/model/plantio_model.dart';
@@ -8,6 +9,7 @@ class MockListTabs {
     
     // Cards da Tela Principal
     SubCard(
+      color: Colors.blue,
       titulo: "Algodão",  
       rota: 'ConteudoPlantio',
       imagem: "assets/agronomia/algodao.png",  
@@ -119,6 +121,7 @@ class MockListTabs {
     ),
 
     SubCard(
+      color: Colors.brown,
       titulo: "Amendoim",  
       rota: 'ConteudoPlantio',
       imagem: "assets/agronomia/amendoin.png",  
