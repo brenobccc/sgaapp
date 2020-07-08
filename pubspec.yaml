@@ -64,9 +64,13 @@ flutter:
     - assets/
     - assets/home/
     - assets/agronomia/
-    - assets/background_images/
+    - assets/agronomia/algodao/pragas/algodao_scroll/
+    - assets/agronomia/algodao/pragas/pragas/
     - assets/agronomia/algodao/pragas/doencas/
-   
+    - assets/background_images/ 
+    
+    
+    
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -15,16 +15,16 @@ class MockListTabs {
         "dados": SubCardsModel(// Cards da Tela  que tem o carrocel de fotos
             titulo: "Algodão",  
             conteudo:  
-                "O algodão é uma fibra usada para fazer tecidos e outros produtos. E ele cresce em plantas semelhantes a arbustos",
+                " O algodão é uma fibra usada para fazer tecidos e outros produtos. E ele cresce em plantas semelhantes a arbustos",
             imagens: [  
-              "assets/agronomia/algodao/pragas/doencas/algodao_doencas_mancharamularia.png",
-              "assets/agronomia/algodao/pragas/doencas/algodao_doencas_mancharamularia.png"
+              "assets/agronomia/algodao/pragas/algodao_scroll/algodao1.jpg",
+              "assets/agronomia/algodao/pragas/algodao_scroll/algodao2.jpg"
             ],
             pragas: [
               SubCard(   // Cards da Tela  de pragas
-                titulo: "Amendoim",
+                titulo: "Bicudo do Algodoeiro (Anthonomus grandis)",
                 rota: 'Content',
-                imagem: "assets/agronomia/amendoin.png",
+                imagem: "assets/agronomia/pragas/pragas/algodao_pragas_bicudoalgodoeiro.png",
                 args: {
                   "dados": ConteudosModel(
                       imagem: "assets/agronomia/amendoin.png",
