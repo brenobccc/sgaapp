@@ -76,7 +76,7 @@ class _ConteudoPlantioState extends State<ConteudoPlantio> {
                     heroTag: "0",
                     onPressed: () async {
                       Navigator.pushNamed(context, "ListDeCards",
-                          arguments: widget.dados["dados"].pragas);
+                          arguments: widget.dados["dados"].doencas);
                     },
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(15))),
