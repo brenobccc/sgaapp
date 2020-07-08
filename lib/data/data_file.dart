@@ -117,6 +117,127 @@ class MockListTabs {
             ])
       },
     ),
+
+    SubCard(
+      titulo: "Amendoim",  
+      rota: 'ConteudoPlantio',
+      imagem: "assets/agronomia/amendoin.png",  
+      args: {
+        "dados": SubCardsModel(// Cards da Tela  que tem o carrocel de fotos
+            titulo: "Amendoim",  
+            conteudo:  
+                "O amendoim é uma leguminosa de origem vegetal, da família Fabaceae. É uma planta originária da América do Sul e é hoje um dos principais cultivos da África, onde faz parte de vários pratos da culinária.",
+            imagens: [  
+              "assets/agronomia/amendoim/amendoim_scroll/amendoin1.jpg",
+              "assets/agronomia/amendoim/amendoim_scroll/amendoin2.jpg"
+            ],
+            pragas: [
+              SubCard(   // Cards da Tela  de pragas
+                titulo: "Lagarta do pescoço vermelho(Stegasta bosquella)",
+                rota: 'Content',
+                imagem: "assets/agronomia/amendoim/pragas/amendoin_pragas_lagartacapin.png",
+                args: {
+                  "dados": ConteudosModel(
+                      imagem: "assets/agronomia/amendoim/pragas/amendoin_pragas_lagartacapin.png",
+                      conteudo: 'Culturas Afetadas: Alfafa, Algodão, Amendoim, Arroz, Batata, Brócolis, Cana-de-açúcar,Coco, Couve, Couve-flor, Fumo, Gengibre, Mandioca, Maracujá, Milho, Pastagens,Repolho, Seringueira (Floresta implantada), Soja, Trigo.Em alguns locais, pode ocorrer alta infestação da praga.Ela atua em diversas culturas de importância econômica.\nDanos:Inicia-se em capinzais localizados em tornos das lavouras, elas atacam as folhas, deixando somente a nervura central.  Controle: Controle químico localizado sobre área infestada. O inseticida pode ser aplicado tanto por pulverização convencional como via água de irrigação por aspersão. Usar produtos registrados para as culturas.',
+                      titulo: "Lagarta do pescoço vermelho(Stegasta bosquella)")
+                },
+              ),
+              SubCard(  // Cards da Tela  de pragas
+                titulo: "Lagarta dos capinzais(Mocis Lapites)",
+                rota: 'Content',
+                imagem: "assets/agronomia/amendoim/pragas/amendoin_pragas_lagartacapin.png",
+                args: {
+                  "dados": ConteudosModel(
+                      imagem: "assets/agronomia/amendoim/pragas/amendoin_pragas_lagartacapin.png",
+                      conteudo: " Culturas Afetadas: Alfafa, Algodão, Amendoim, Arroz, Batata, Brócolis, Cana-de-açúcar, Coco, Couve, Couve-flor, Fumo, Gengibre, Mandioca, Maracujá, Milho, Pastagens,Repolho, Seringueira (Floresta implantada), Soja, Trigo. Em alguns locais, pode ocorrer alta infestação da praga. Ela atua em diversas culturas de importância econômica. Danos: Inicia-se em capinzais localizados em tornos das lavouras, elas atacam as folhas, deixando somente a nervura central. Controle: Controle químico localizado sobre área infestada. O inseticida pode ser aplicado tanto por pulverização convencional como via água de irrigação por aspersão. Usar produtos registrados para as culturas.",
+                      titulo: "Lagarta dos capinzais(Mocis Lapites)")
+                },
+              ),
+              SubCard(  // Cards da Tela  de pragas
+                titulo: "Percevejo castanho(Scaptocoris castanea)",
+                rota: 'Content',
+                imagem: "assets/agronomia/amendoim/pragas/amendoin_pragas_percevejocastanho.png",
+                args: {
+                  "dados": ConteudosModel(
+                      imagem: "assets/agronomia/amendoim/pragas/amendoin_pragas_percevejocastanho.png",
+                      conteudo: "Culturas Afetadas: Algodão, Milho, Todas as culturas com ocorrência do alvo biológico\nA ocorrência deste inseto é incerta, o que dificulta no tratamento da mesma.\nDanos:\nEl0es se alimentam nas raízes e sugam a seiva, o ataque severo causa morte da planta, seus sintomas de ataque variam de acordo com a intensidade e época do ataque, e muitas vezes são confundidos por deficiência nutricional ou doença.\nControle:\nControle biológico com o fungo Metarhizium anisopliae.",
+                      titulo: "Percevejo castanho(Scaptocoris castanea)")
+                },
+              ),
+              SubCard(  // Cards da Tela  de pragas
+                titulo: "Cigarrinha verde(Empoasca kraemeri)",
+                rota: 'Content',
+                imagem: "assets/agronomia/amendoim/pragas/amendoin_pragas_cigarrinhaverde.png",
+                args: {
+                  "dados": ConteudosModel(
+                      imagem: "assets/agronomia/amendoim/pragas/amendoin_pragas_cigarrinhaverde.png",
+                      conteudo: "Culturas Afetadas: Algodão, Amendoim, Batata, Feijão, Feijão vagem, Mamão, Mandioca,Pinhão-manso Eles causam prejuízos por conta de suas picadas, com isso eles injetam toxinas na plantas atacadas. \nDanos:\n Podem ser como consequência da penetração do estilete no floema da planta, além disso, também há a injeção de substâncias toxicogênicas durante a alimentação. Controle: Controle químico das ninfas e adultos com inseticidas registrados para as culturas.",
+                      titulo: "Cigarrinha verde(Empoasca kraemeri)")
+                },
+              ),
+              SubCard(  // Cards da Tela  de pragas
+                titulo: "Traça (Corcyra cephalonica)",
+                rota: 'Content',
+                imagem: "assets/agronomia/amendoim/pragas/amendoin_pragas_traca.png",
+                args: {
+                  "dados": ConteudosModel(
+                      imagem:  "assets/agronomia/amendoim/pragas/amendoin_pragas_traca.png",
+                      conteudo: "Culturas Afetadas: Amendoim, Cacau, Soja Ela é considerada uma praga de superficie, atacando o embriâo dos grãos expostos.",
+                      titulo: "Traça (Corcyra cephalonica)")
+                },
+              ),
+            ],
+            doencas: [
+                 SubCard(  // Cards da Tela  de doenças
+                titulo: "Mancha castanha / Mancha foliar (Cercospora arachidicola)",
+                rota: 'Content',
+                imagem: "assets/agronomia/amendoim/doencas/amendoin_doencas_manchamcastanha.png",
+                args: {
+                  "dados": ConteudosModel(
+                      imagem: "assets/agronomia/amendoim/doencas/amendoin_doencas_manchamcastanha.png",
+                      conteudo: "Culturas Afetadas: Amendoim, Feijão-caupi\nEla é considerada uma das principais doenças foliar do amendoim, no qual impacta fortemente nas reduções dos rendimentos quando o nível de desfolhação é alto, A infecção começa nas folhas mais velhas e progride para as mais jovens, os folíolos severamente infectados caem com facilidade, provocando a desfolhação e a consequente redução dos rendimentos. controle: Realizar rotações de cultura com cultivos não hospedeiros, Retirar do campo os restos de culturas infectadas ou contaminados e queimá-los ou enterrá-los por aração profunda do próprio campo.",
+                      titulo: "Mancha preta(Pseudocercospora personata)")
+                },
+              ),
+              
+              SubCard(  // Cards da Tela  de doenças
+                titulo: "Mancha preta(Pseudocercospora personata)",
+                rota: 'Content',
+                imagem: "assets/agronomia/amendoim/doencas/amendoin_doencas_manchapreta.png",
+                args: {
+                  "dados": ConteudosModel(
+                      imagem: "assets/agronomia/amendoim/doencas/amendoin_doencas_manchapreta.png",
+                      conteudo: "Culturas Afetadas: Amendoim, Feijão-caupi\nEla é considerada uma das principais doenças foliar do amendoim, no qual impacta fortemente nas reduções dos rendimentos quando o nível de desfolhação é alto, A infecção começa nas folhas mais velhas e progride para as mais jovens, os folíolos severamente infectados caem com facilidade, provocando a desfolhação e a consequente redução dos rendimentos. controle: Realizar rotações de cultura com cultivos não hospedeiros, Retirar do campo os restos de culturas infectadas ou contaminados e queimá-los ou enterrá-los por aração profunda do próprio campo.",
+                      titulo: "Mancha preta(Pseudocercospora personata)")
+                },
+              ),
+              SubCard(  // Cards da Tela  de doenças
+                titulo: "Rhizoctoniose.",
+                rota: 'Content',
+                imagem: "assets/agronomia/amendoim/doencas/amendoin_doencas_rhizoctoniose.png",
+                args: {
+                  "dados": ConteudosModel(
+                      imagem: "assets/agronomia/amendoim/doencas/amendoin_doencas_rhizoctoniose.png",
+                      conteudo: "Esta é uma das doenças mais comuns, e que causa maiores prejuízos na plantas.\nSintomas:Os sintomas mais graves aparecem na primavera, pouco depois da plantação, ocorrendoalgo como Atraso no desenvolvimento da planta, e descoloração dos caules, necrose dotecido vascular, e pigmentações púrpuras nas folhas Controle: O tratamento da semente com fungicidas e as mesmas práticas culturais recomendadas para controle da mesma.",
+                      titulo: "Rhizoctoniose.")
+                },
+              ),
+              SubCard(  // Cards da Tela  de doenças
+                titulo: "Mancha Barrenta",
+                rota: 'Content',
+                imagem: "assets/agronomia/amendoim/doencas/amendoin_doencas_manchabarrenta.png",
+                args: {
+                  "dados": ConteudosModel(
+                      
+                imagem: "assets/agronomia/amendoim/doencas/amendoin_doencas_manchabarrenta.png",
+                      conteudo: "Culturas afetadas: Amendoim É uma doença de importância secundária,que ocorre no terço final do ciclo vegetativo do amendoim.\nSintomas: Inicia-se com pequenas manchas pardas, depois elas coalescem tomando grandes áreas foliares e tornando-se visíveis na superfície inferior. Controle: Realizar rotação de culturas, incorporação de restos de aração profunda e destruição de plantas voluntárias",
+                      titulo: "Mancha Barrente")
+                },
+              ),
+            ])
+      },
+    ),
  
   
   
