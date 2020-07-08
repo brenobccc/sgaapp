@@ -67,6 +67,9 @@ flutter:
     - assets/agronomia/
     - assets/agronomia/algodao/pragas/algodao_scroll/
     - assets/agronomia/amendoim/amendoim_scroll/
+    - assets/agronomia/arroz/arroz_scroll/
+    - assets/agronomia/arroz/pragas/
+    - assets/agronomia/arroz/doencas/
     - assets/agronomia/algodao/pragas/pragas/
     - assets/agronomia/algodao/pragas/doencas/
     - assets/agronomia/amendoim/pragas/
