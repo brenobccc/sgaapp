@@ -16,7 +16,7 @@ class _MenuPrincpalState extends State<MenuPrincpal> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFFffdb58), 
+        backgroundColor:Color.fromRGBO(245, 207, 79,1), 
         elevation: 0,
       ),
       drawer: Drawer(
@@ -26,7 +26,7 @@ class _MenuPrincpalState extends State<MenuPrincpal> {
             DrawerHeader(
               decoration: BoxDecoration(
                   gradient: LinearGradient(
-                      colors: <Color>[Colors.deepOrange, Colors.orangeAccent])),
+                      colors: <Color>[Colors.deepOrange, Color.fromRGBO(245, 207, 79,1)])),
               child: null,
             ),
             ListView(
@@ -112,48 +112,10 @@ class _MenuPrincpalState extends State<MenuPrincpal> {
           ],
         ),
       ),
-      // Drawer(
-      //   child: Container(
-      //     color: Colors.green,
-      //     child: ListView(
-      //       padding: EdgeInsets.zero,
-      //       children: <Widget>[
-      //         SizedBox(
-      //           height: 100,
-      //         ),
-      //         ListTile(
-      //           title: Text("Alterar nome"),
-      //           onTap: () {
-      //             model.signOut();
-      //             Navigator.of(context).pushReplacement(
-      //                 MaterialPageRoute(builder: (context) => LoginScreen()));
-      //           },
-      //         ),
-      //         ListTile(
-      //           title: Text("Alterar senha"),
-      //           onTap: () {
-      //             model.signOut();
-      //             Navigator.of(context).pushReplacement(
-      //                 MaterialPageRoute(builder: (context) => LoginScreen()));
-      //           },
-      //         ),
-
-      //         ListTile(
-
-      //           title: Text("Sair"),
-      //           onTap: () {
-      //             model.signOut();
-      //             Navigator.of(context).pushReplacement(
-      //                 MaterialPageRoute(builder: (context) => LoginScreen()));
-      //           },
-      //         ),
-      //       ],
-      //     ),
-      //   ),
-      // ),
+ 
       body: TELAS[indice],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color(0xFFffdb58),
+        backgroundColor: Colors.white,
         currentIndex: indice,
         onTap: (valor) {
           setState(() {
@@ -166,7 +128,7 @@ class _MenuPrincpalState extends State<MenuPrincpal> {
               Icons.home,
             ),
             title: Text('Plantios',
-                style: TextStyle(color: Colors.white, fontSize: 19)),
+                style: TextStyle(color:Color.fromRGBO(245, 207, 79,1), fontSize: 19)),
           ),
           BottomNavigationBarItem(
             icon: Icon(
@@ -174,7 +136,7 @@ class _MenuPrincpalState extends State<MenuPrincpal> {
             ),
             title: Text(
               'Animais',
-              style: TextStyle(color: Colors.white, fontSize: 19),
+              style: TextStyle(color:Color.fromRGBO(245, 207, 79,1), fontSize: 19),
             ),
           ),
         ],
