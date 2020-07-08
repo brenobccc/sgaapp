@@ -121,11 +121,11 @@ class MockListTabs {
                     "Ramulose(Colletotrichum gossypii var. cephalosporioides)",
                 rota: 'Content',
                 imagem:
-                    "assets/agronomia/algodao/pragas/doencas/algodao_doencas_mancharamularia.png",
+                    "assets/agronomia/algodao/pragas/doencas/algodao_doencas_ramulose.png",
                 args: {
                   "dados": ConteudosModel(
                       imagem:
-                          "assets/agronomia/algodao/pragas/doencas/algodao_doencas_mancharamularia.png",
+                          "assets/agronomia/algodao/pragas/doencas/algodao_doencas_ramulose.png",
                       conteudo:
                           "Ela foi encontrada pela primeira vez em Rancharia-SP(1936), e atualmente se encontra em todas as regiões do país onde há a cultiva do algodoeiro. Danos: A ramulose se manifesta em plantas de qualquer idade, Primeiramente, os sintomas aparecem nas folhas novas, na forma de manchas necróticas, meio circulares Ao afetar novas plantas, as gemas terminais dos ramos extranumerários poderão sofrer novas infecções, e podem estimular o desenvolvimento de novas gemas com sua morte.\nControle: A medida principal é a utilização de variedades com resistência ao patógeno. Há os seguintes tipos:\na) resistentes: EPAMIG 3, EPAMIG 4, PR 380/82, IAC 21, CS 50, Deltapine Acala 90;\nb) medianamente resistentes: CNPA Precoce 1, LAC 19, LAC 22 e LAC 20;\nc) suscetíveis: Nu-15-79/117, CNPA Acala 1, IAPAR 4 PR-1. Outro maneira de controlar, é com o uso de semente Sadias.",
                       titulo:
@@ -138,11 +138,11 @@ class MockListTabs {
                     "Fusariose/Murcha de Fusarium (Fusarium oxysporum f.sp.vasinfectum)",
                 rota: 'Content',
                 imagem:
-                    "assets/agronomia/algodao/pragas/doencas/algodao_doencas_mancharamularia.png",
+                    "assets/agronomia/algodao/pragas/doencas/algodao_doencas_murcharafusarium.png",
                 args: {
                   "dados": ConteudosModel(
                       imagem:
-                          "assets/agronomia/algodao/pragas/doencas/algodao_doencas_mancharamularia.png",
+                          "assets/agronomia/algodao/pragas/doencas/algodao_doencas_murcharafusarium.png",
                       conteudo:
                           "Culturas Afetadas: Algodão É a doença principal do algodoeiro de ciclo anual,E são cultivadas principalmente nos Estados de São Paulo e Paraná. Danos: O quadro sintomatológico de plantas doentes é bastante variável, dependendo das condições ambientais, e outros demais fatores. Alguns dos sintomas iniciais começam pelas basais, elas se amarelam e exibem crestamento do limbo e caem, A murcha das folhas e morte prematura ocorre em variedades suscetíveis. Controle: Uso de variedades resistentes.além de outras medidas como: ● Rotação de cultura. ● Tratamento das sementes com tíofanato ou tiabendazole ● plantio em áreas indenes ● plantios de variedades e híbridos resistentes.",
                       titulo:
