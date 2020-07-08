@@ -83,12 +83,12 @@ class MockListTabs {
                 rota: 'Content',
                 imagem: "assets/agronomia/algodao/pragas/doencas/algodao_doencas_mancharamularia.png",
                 args: {
-                  "dados": {
+                  "dados": 
                     ConteudosModel(
                         imagem: "assets/agronomia/algodao/pragas/doencas/algodao_doencas_mancharamularia.png",
                         conteudo: "A mancha de ramulária teve seu status alterado de doença secundária para uma das principais doenças da atualidade no algodoeiro.\nDanos:A mancha de ramulária atualmente é considerada a principal doença do algodoeiro no Brasil, e pode causar uma redução de até 35% na produtividade. Seus danos são relacionados à redução da área sadia das folhas, redução da fotossíntese, senescência antecipada, secamento foliar completo de desfolha precoce em situações de alta severidade. Controle: Os danos são mais expressivos entre o início do florescimento e a abertura dos primeiros capulhos.\nControle: Com a aplicação de fungicidas, se pode obter um controle da doença de forma eficaz, se forem iniciadas a partir dos primeiros sintomas. O atraso no início da primeira aplicação diminui a eficiência do controle e pode torná lo economicamente inviável. Outra forma e manejo da doença são os cultivares resistentes, por exemplo, o algodão BRS 371 RF, que possui resistência à ramulária e é tolerante ao herbicida glifosato.",
                         titulo: "Mancha de Ramulária(Ramularia Areola).")
-                   }
+                   
                 },
               ),
               SubCard(  // Cards da Tela  de doenças
