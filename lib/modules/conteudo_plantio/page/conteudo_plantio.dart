@@ -38,14 +38,13 @@ class _ConteudoPlantioState extends State<ConteudoPlantio> {
           enlargeMainPage: true,
           pagerSize: 20,
           // viewportFraction: 1.0,
-          activeIndicator: Colors.green,
+          activeIndicator:  Color.fromRGBO(245, 207, 79, 1),
           items: imagens,
         ),
       );
 
   @override
   void initState() {
-
     setState(() {
       criarImagens();
     });
@@ -56,10 +55,14 @@ class _ConteudoPlantioState extends State<ConteudoPlantio> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.dados["dados"].titulo, style: TextStyle(color: Colors.white),),
+        title: Text(
+          widget.dados["dados"].titulo,
+          style: TextStyle(color: Colors.white),
+        ),
         centerTitle: true,
-        backgroundColor: widget.dados["cor"],
+        backgroundColor: Color.fromRGBO(245, 207, 79, 1),
         leading: IconButton(
+          color: Colors.white,
             icon: Icon(Icons.arrow_back_ios),
             onPressed: () => Navigator.pop(context)),
       ),
@@ -68,7 +71,10 @@ class _ConteudoPlantioState extends State<ConteudoPlantio> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               carrousel(),
-              Text(widget.dados["dados"].conteudo),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Text(widget.dados["dados"].conteudo),
+              ),
               Row(
                 children: <Widget>[
                   Expanded(child: Container()),
@@ -89,7 +95,7 @@ class _ConteudoPlantioState extends State<ConteudoPlantio> {
                       style: TextStyle(fontSize: 15),
                     ),
                     foregroundColor: Colors.white,
-                    backgroundColor: widget.dados["cor"],
+                    backgroundColor:  Color.fromRGBO(245, 207, 79, 1),
                   ),
                   SizedBox(
                     width: 20,
@@ -111,7 +117,7 @@ class _ConteudoPlantioState extends State<ConteudoPlantio> {
                       style: TextStyle(fontSize: 15),
                     ),
                     foregroundColor: Colors.white,
-                    backgroundColor: widget.dados["cor"],
+                    backgroundColor:  Color.fromRGBO(245, 207, 79, 1),
                   ),
                   Expanded(child: Container()),
                 ],

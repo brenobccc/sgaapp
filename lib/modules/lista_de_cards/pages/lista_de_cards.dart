@@ -56,6 +56,7 @@ class _ListDeCardsState extends State<ListDeCards> {
     return Scaffold(
       resizeToAvoidBottomPadding: false,
       appBar: AppBar(
+        
         leading: IconButton(
             icon: Icon(Icons.arrow_back_ios),
             onPressed: () => Navigator.pop(context)),

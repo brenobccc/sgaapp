@@ -9,14 +9,13 @@ class Content extends StatefulWidget {
 }
 
 class _ContentState extends State<Content> {
-
   @override
   void initState() {
-
     print(widget.argumentos["dados"].imagem);
     // TODO: implement initState
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +24,7 @@ class _ContentState extends State<Content> {
           leading: IconButton(
               icon: Icon(Icons.arrow_back_ios),
               onPressed: () => Navigator.pop(context)),
-          backgroundColor: Colors.green,
+          backgroundColor: Color.fromRGBO(245, 207, 79, 1),
         ),
         resizeToAvoidBottomPadding: false,
         body: Scrollbar(
@@ -37,18 +36,26 @@ class _ContentState extends State<Content> {
                   child: Container(
                     padding: EdgeInsets.only(bottom: 20),
                     decoration: BoxDecoration(
-                        color: Colors.green,
+                        color: Color.fromRGBO(245, 207, 79, 1),
                         borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(40),
                             bottomRight: Radius.circular(40))),
-                    child: Image.asset(widget.argumentos["dados"].imagem,),
+                    child: Image.asset(
+                      widget.argumentos["dados"].imagem,
+                    ),
                   ),
                 ),
-                Text("\n${widget.argumentos["dados"].titulo}",
-                    style: TextStyle(fontSize: 30)),
-                Text(
-                  "\n${widget.argumentos["dados"].conteudo}",
-                  style: TextStyle(fontSize: 15),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Text("\n${widget.argumentos["dados"].titulo}",
+                      style: TextStyle(fontSize: 30)),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Text(
+                    "\n${widget.argumentos["dados"].conteudo}",
+                    style: TextStyle(fontSize: 15),
+                  ),
                 ),
               ],
             ),

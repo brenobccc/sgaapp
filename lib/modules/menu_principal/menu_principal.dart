@@ -13,7 +13,7 @@ class MenuPrincpal extends StatefulWidget {
 class _MenuPrincpalState extends State<MenuPrincpal> {
   int indice = 0;
   UserModel model;
-  final GlobalKey<ScaffoldState> _scaffoldKey =  GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,10 +74,10 @@ class _MenuPrincpalState extends State<MenuPrincpal> {
                               return Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
-                                  Image(
-                                    image: AssetImage('assets/drawer.png'),
-                                    height: 100,
-                                    width: 100,
+                                  Image.asset("assets/drawer.png",
+                                      color: Colors.white, height: 80),
+                                  SizedBox(
+                                    height: 10,
                                   ),
                                   Text(
                                     "Olá , ${!model.isLoggedIn() ? "" : model.userData["name"]}",
