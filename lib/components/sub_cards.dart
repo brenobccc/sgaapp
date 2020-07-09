@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SubCard extends StatelessWidget {
-  final border = Radius.circular(20);
+  final border = Radius.circular(15);
   final String titulo;
   final Function onPressed;
   final String rota;
@@ -30,6 +30,7 @@ class SubCard extends StatelessWidget {
         //color: color ?? Color.fromRGBO(245, 207, 79, 0.5),
         borderRadius: BorderRadius.circular(15),
         elevation: 3,
+        color: Colors.transparent,
         child: Column(
           children: <Widget>[
             Container(
@@ -50,9 +51,11 @@ class SubCard extends StatelessWidget {
               child: Container(
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  borderRadius:
-                      BorderRadius.only(bottomLeft: border, bottomRight: border),
-                  color: color ?? Color.fromRGBO(245, 207, 79, 0.6),
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: border, bottomRight: border),
+                  color: color == null
+                      ? Color.fromRGBO(245, 207, 79, 0.6).withOpacity(0.5)
+                      : color.withOpacity(0.5),
                 ),
                 padding: EdgeInsets.all(5),
                 child: Text(
