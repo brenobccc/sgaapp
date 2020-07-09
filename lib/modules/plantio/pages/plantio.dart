@@ -57,7 +57,7 @@ class _PlantioState extends State<Plantio> {
   Widget build(BuildContext context) {
     return Scaffold(
      resizeToAvoidBottomPadding: false,
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xFFf0f0f0),
       body: SafeArea(
         child: Column(
           children: <Widget>[

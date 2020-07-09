@@ -127,7 +127,7 @@ class _MenuPrincpalState extends State<MenuPrincpal> {
       body: TELAS[indice],
       bottomNavigationBar: BottomNavigationBar(
         elevation: 10,
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFFfefefe),
         currentIndex: indice,
         onTap: (valor) {
           setState(() {
