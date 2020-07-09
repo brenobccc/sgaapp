@@ -19,10 +19,13 @@ class _ConteudoPlantioState extends State<ConteudoPlantio> {
       return Padding(
         padding: EdgeInsets.symmetric(horizontal: 5),
         child: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
+          //color: Colors.red,
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: Image.asset(
+              e,
+            ),
           ),
-          child: Image.asset(e),
         ),
       );
     }).toList();
@@ -38,7 +41,7 @@ class _ConteudoPlantioState extends State<ConteudoPlantio> {
           enlargeMainPage: true,
           pagerSize: 20,
           // viewportFraction: 1.0,
-          activeIndicator:  Color.fromRGBO(245, 207, 79, 1),
+          activeIndicator: Color.fromRGBO(245, 207, 79, 1),
           items: imagens,
         ),
       );
@@ -62,7 +65,7 @@ class _ConteudoPlantioState extends State<ConteudoPlantio> {
         centerTitle: true,
         backgroundColor: Color.fromRGBO(245, 207, 79, 1),
         leading: IconButton(
-          color: Colors.white,
+            color: Colors.white,
             icon: Icon(Icons.arrow_back_ios),
             onPressed: () => Navigator.pop(context)),
       ),
@@ -95,7 +98,7 @@ class _ConteudoPlantioState extends State<ConteudoPlantio> {
                       style: TextStyle(fontSize: 15),
                     ),
                     foregroundColor: Colors.white,
-                    backgroundColor:  Color.fromRGBO(245, 207, 79, 1),
+                    backgroundColor: Color.fromRGBO(245, 207, 79, 1),
                   ),
                   SizedBox(
                     width: 20,
@@ -117,7 +120,7 @@ class _ConteudoPlantioState extends State<ConteudoPlantio> {
                       style: TextStyle(fontSize: 15),
                     ),
                     foregroundColor: Colors.white,
-                    backgroundColor:  Color.fromRGBO(245, 207, 79, 1),
+                    backgroundColor: Color.fromRGBO(245, 207, 79, 1),
                   ),
                   Expanded(child: Container()),
                 ],
