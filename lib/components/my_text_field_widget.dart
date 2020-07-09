@@ -13,6 +13,7 @@ class MyTextFieldWidget extends StatelessWidget {
   final bool showLength;
   final bool withPadding;
   final void Function(String) onChanged;
+  final Color color;
 
   final bool withSeach;
 
@@ -28,7 +29,7 @@ class MyTextFieldWidget extends StatelessWidget {
       this.showLength = true,
       this.onChanged,
       this.withPadding = false,
-      this.withSeach = false})
+      this.withSeach = false, this.color})
       : super(key: key);
 
   @override
@@ -40,7 +41,7 @@ class MyTextFieldWidget extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
             bottomRight: Radius.circular(10), bottomLeft: Radius.circular(10)),
-        color: Colors.transparent,
+      color: color?? Colors.transparent,
       ),
       child: TextField(
         onChanged: onChanged,
