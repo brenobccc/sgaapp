@@ -632,7 +632,7 @@ class MockListTabs {
                 "É uma das culturas mais importantes do mundo, e pode ser consumida em variadas formas e composições.",
             imagens: [
               "assets/agronomia/batata/batata_scroll/batata1.jpg",
-              "assets/agronomia/batata/batata_scroll/batata.jpg"
+              "assets/agronomia/batata/batata_scroll/batata2.jpg"
             ],
             pragas: [
               SubCard(
