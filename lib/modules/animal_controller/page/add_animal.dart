@@ -60,7 +60,7 @@ class _AddAnimalState extends State<AddAnimal> {
       floatingActionButton: FloatingActionButton.extended(
         onPressed: saveButtom,
         shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(15))),
+            borderRadius: BorderRadius.all(Radius.circular(30))),
         icon: Icon(
           Icons.save,
           size: 30,
@@ -71,12 +71,20 @@ class _AddAnimalState extends State<AddAnimal> {
           style: TextStyle(fontSize: 15, color: Colors.white),
         ),
         foregroundColor: Colors.white,
-        backgroundColor: Colors.orangeAccent,
+        backgroundColor: Color.fromRGBO(245, 207, 79, 1),
       ),
       appBar: AppBar(
-        backgroundColor: Colors.green,
+        backgroundColor: Color.fromRGBO(245, 207, 79, 1),
+        title: Text(
+          "Adicinar Animal",
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
+        centerTitle: true,
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),
+          color: Colors.white,
           onPressed: () {
             Navigator.pop(context, false);
           },
@@ -84,6 +92,7 @@ class _AddAnimalState extends State<AddAnimal> {
         actions: <Widget>[
           widget.todo != null
               ? IconButton(
+                  color: Colors.white,
                   icon: Icon(Icons.delete),
                   onPressed: _showExclusionDialog,
                 )
