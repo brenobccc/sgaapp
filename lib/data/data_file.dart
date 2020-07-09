@@ -8,7 +8,7 @@ class MockListTabs {
   static final ListCardsModel listMock = ListCardsModel(listSubCards: [
     // Cards da Tela Principal
     SubCard(
-      color: Colors.blue,
+      color: Color(0XFF87c9d7),
       titulo: "Algodão",
       rota: 'ConteudoPlantio',
       imagem: "assets/agronomia/algodao.png",
@@ -155,7 +155,7 @@ class MockListTabs {
     ),
 
     SubCard(
-      color: Colors.brown,
+      color: Color(0XFF8f671f),
       titulo: "Amendoim",
       rota: 'ConteudoPlantio',
       imagem: "assets/agronomia/amendoin.png",
@@ -309,12 +309,12 @@ class MockListTabs {
                 },
               ),
             ]),
-        "cor": Colors.brown
+        "cor": Color(0XFF8f671f)
       },
     ),
 
     SubCard(
-      color: Colors.grey,
+      color: Color(0xFFf2e8de),
       titulo: "Arroz",
       rota: 'ConteudoPlantio',
       imagem: "assets/agronomia/arroz.png",
@@ -480,12 +480,12 @@ class MockListTabs {
                 },
               ),
             ]),
-        "cor": Colors.grey
+        "cor": Color(0xFFf2e8de)
       },
     ),
 
     SubCard(
-      color: Colors.blue,
+      color: Color(0XFFedae51),
       titulo: "Café",
       rota: 'ConteudoPlantio',
       imagem: "assets/agronomia/cafe.png",
@@ -615,12 +615,12 @@ class MockListTabs {
                 },
               ),
             ]),
-        "cor": Colors.blue
+        "cor": Color(0xFFedae51)
       },
     ),
 
     SubCard(
-      color: Colors.grey,
+      color: Color(0xFFe1b82c),
       titulo: "Batata",
       rota: 'ConteudoPlantio',
       imagem: "assets/agronomia/batata.png",
@@ -787,7 +787,7 @@ class MockListTabs {
                 },
               ),
             ]),
-        "cor": Colors.grey
+        "cor": Color(0xFFe1b82c)
       },
     ),
   ]);
