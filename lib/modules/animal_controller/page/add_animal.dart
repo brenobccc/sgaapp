@@ -76,7 +76,7 @@ class _AddAnimalState extends State<AddAnimal> {
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(245, 207, 79, 1),
         title: Text(
-          "Adicinar Animal",
+          "Adicionar Animal",
           style: TextStyle(
             color: Colors.white,
           ),
