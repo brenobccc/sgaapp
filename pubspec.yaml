@@ -68,8 +68,14 @@ flutter:
     - assets/agronomia/algodao/pragas/algodao_scroll/
     - assets/agronomia/amendoim/amendoim_scroll/
     - assets/agronomia/arroz/arroz_scroll/
+    - assets/agronomia/batata/batata_scroll/
+    - assets/agronomia/cafe/cafe_scroll/
     - assets/agronomia/arroz/pragas/
     - assets/agronomia/arroz/doencas/
+    - assets/agronomia/batata/pragas/
+    - assets/agronomia/batata/doencas/
+    - assets/agronomia/cafe/pragas/
+    - assets/agronomia/cafe/doencas/
     - assets/agronomia/algodao/pragas/pragas/
     - assets/agronomia/algodao/pragas/doencas/
     - assets/agronomia/amendoim/pragas/

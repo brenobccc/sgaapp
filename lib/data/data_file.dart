@@ -483,5 +483,312 @@ class MockListTabs {
         "cor": Colors.grey
       },
     ),
+
+    SubCard(
+      color: Colors.blue,
+      titulo: "Café",
+      rota: 'ConteudoPlantio',
+      imagem: "assets/agronomia/cafe.png",
+      args: {
+        "dados": SubCardsModel(
+            // Cards da Tela  que tem o carrocel de fotos
+            titulo: "Café",
+            conteudo:
+                "O café veio das terras altas da Etiópia, chegou ao Brasil em 1727, ele é uma bebida consumida em vários países.",
+            imagens: [
+              "assets/agronomia/cafe/cafe_scroll/cafe1.jpg",
+              "assets/agronomia/cafe/cafe_scroll/café2.jpg"
+            ],
+            pragas: [
+              SubCard(
+                // Cards da Tela  de pragas
+                titulo: "Broca do café(Hypothenemus hampei)",
+                rota: 'Content',
+                imagem:
+                    "assets/agronomia/cafe/pragas/feijao_pragas_brocacafe.png",
+                args: {
+                  "dados": ConteudosModel(
+                      imagem:
+                          "assets/agronomia/cafe/pragas/feijao_pragas_brocacafe.png",
+                      conteudo:
+                          'Culturas Afetadas: Café, Todas as culturas com ocorrência do alvo biológico\nEsta praga é considerada, por conta que ataca os frutos independente do estágio de maturação.\nDano:\nA qualidade do café é prejudicada, e ocorre perda de peso, resultando em um produto de tipo e valor comercial inferiores.\nControle:Controle químico: realizar pulverizações e monitoramentos.\ncontrole cultural: Destruir cafezais velhos e abandonados, Controle Biológico: um dos importantes inimigos naturais da broca é a vespa-da-costa-do-marfim.',
+                      titulo: "Broca do café(Hypothenemus hampei)")
+                },
+              ),
+              SubCard(
+                // Cards da Tela  de pragas
+                titulo: "Bicho mineiro(Leucoptera coffeella)",
+                rota: 'Content',
+                imagem:
+                    "assets/agronomia/cafe/pragas/feijao_pragas_bichomineiro.png",
+                args: {
+                  "dados": ConteudosModel(
+                      imagem:
+                          "assets/agronomia/cafe/pragas/feijao_pragas_bichomineiro.png",
+                      conteudo:
+                          "Culturas Afetadas: Café\nSinônimos: Cemiostoma coffeella, Elachista coffeella e Perileucoptera coffeella.\nA mariposa é a principal praga da cultura do café, ela possui hábito noturno e o seu ataque ocorre durante todo o ano, e seu pico é entre outubro e junho.\nDanos:A lagarta causa destruição do parênquima, elas vão secando e a parte atacada vai aumentando com o desenvolvimento da lagarta, os sintomas são mais visíveis na parte alta da planta, onde há um desfolhamento. \nControle: Utilizar inseticidas específicos, sem prejudicar os inimigos naturais. outra medida é eliminar as ervas daninhas dos cafezais, o que diminui a ação da praga.",
+                      titulo: "Bicho mineiro(Leucoptera coffeella)")
+                },
+              ),
+              SubCard(
+                // Cards da Tela  de pragas
+                titulo:
+                    "Ácaro vermelho/Aranha vermelha do cafeeiro (Oligonychus ilicis)",
+                rota: 'Content',
+                imagem:
+                    "assets/agronomia/cafe/pragas/feijao_pragas_acarovermelho.png",
+                args: {
+                  "dados": ConteudosModel(
+                      imagem:
+                          "assets/agronomia/cafe/pragas/feijao_pragas_acarovermelho.png",
+                      conteudo:
+                          "Culturas Afetadas: Café\nSeus ataques mais intensos são observados no período seco.\nDanos: Às folhas ao serem atacadas, ficam bronzeadas e perdem o brilho, quando mais severos, os ataques provocam quedas das folhas.\nControle: Uso de acaricidas específicos, obter cuidado no uso de inseticidas.",
+                      titulo:
+                          "Ácaro vermelho/Aranha vermelha do cafeeiro (Oligonychus ilicis)")
+                },
+              ),
+              SubCard(
+                // Cards da Tela  de pragas
+                titulo: "Cigarrinha/Cigarrinha da CVC (Oncometopia facialis)",
+                rota: 'Content',
+                imagem:
+                    "assets/agronomia/cafe/pragas/feijao_pragas_cigarrinhas.png",
+                args: {
+                  "dados": ConteudosModel(
+                      imagem:
+                          "assets/agronomia/cafe/pragas/feijao_pragas_cigarrinhas.png",
+                      conteudo:
+                          "Culturas Afetadas: Café, Citros\nOs adultos medem em torno de 12 mm, têm o corpo robusto e de coloração marrom-avermelhada, levemente violácea.\nDanos: Ela suga a seiva do xilema das plantas, ela também transmite a bactéria, agente da doença chamada de amarelinho.\nControle: Controle químico, e uso de inseticidas.",
+                      titulo:
+                          "Cigarrinha/Cigarrinha da CVC (Oncometopia facialis)")
+                },
+              ),
+            ],
+            doencas: [
+              SubCard(
+                // Cards da Tela  de doenças
+                titulo: "Ferrugem do cafeeiro/Ferrugem (Hemileia vastatrix)",
+                rota: 'Content',
+                imagem:
+                    "assets/agronomia/cafe/doencas/cafe_doencas_ferrugem.png",
+                args: {
+                  "dados": ConteudosModel(
+                      imagem:
+                          "assets/agronomia/cafe/doencas/cafe_doencas_ferrugem.png",
+                      conteudo:
+                          "Culturas Afetadas: Cacau, Café, Todas as culturas com ocorrência do alvo biológico\nÉ um patógeno que provoca prejuízos durante os anos de alta produção da cultura.\nDanos: Ela provoca queda precoce das folhas e seca dos ramos.\nControle: Uso de Cultivares resistentes, e fungicidas.",
+                      titulo:
+                          "Ferrugem do cafeeiro/Ferrugem (Hemileia vastatrix)")
+                },
+              ),
+              SubCard(
+                // Cards da Tela  de doenças
+                titulo:
+                    "Seca de ponteiros/Mancha de Phoma (Phoma costaricensis)",
+                rota: 'Content',
+                imagem:
+                    "assets/agronomia/cafe/doencas/cafe_doencas_manchaphoma.png",
+                args: {
+                  "dados": ConteudosModel(
+                      imagem:
+                          "assets/agronomia/cafe/doencas/cafe_doencas_manchaphoma.png",
+                      conteudo:
+                          "Culturas Afetadas: Café\nEla é causada por diferentes fatores, sobressaindo-se as condições climáticas desfavoráveis, má nutrição das plantas e ocorrência de pragas e doenças.\nDanos: Reduz a produção do ano e do próximo, além de tornar uma bebida de qualidade inferior. Controle: Seleção de áreas de plantio, adubação equilibrada, uso de inseticidas.",
+                      titulo:
+                          "Seca de ponteiros/Mancha de Phoma (Phoma costaricensis)")
+                },
+              ),
+              SubCard(
+                // Cards da Tela  de doenças
+                titulo: "Olho pardo/Cercosporiose (Cercospora coffeicola)",
+                rota: 'Content',
+                imagem:
+                    "assets/agronomia/cafe/doencas/cafe_doencas_olhopardo.png",
+                args: {
+                  "dados": ConteudosModel(
+                    imagem:
+                        "assets/agronomia/cafe/doencas/cafe_doencas_olhopardo.png",
+                    conteudo:
+                        "Culturas Afetadas: Café, Café (Mudas)Ela é uma das doenças mais antiga das Américas, ela causa desfolha e reduz a produção. Danos: Às folhas atacadas caem rapidamente, ocorrendo desfolha e seca dos ramos. Controle: cuidados na formação das mudas, limpar sempre as semenrtes, manter uma fertilização equilibrada na lavoura, também utilizar fungicidas protetores.",
+                    titulo: "Olho pardo/Cercosporiose (Cercospora coffeicola)",
+                  )
+                },
+              ),
+            ]),
+        "cor": Colors.blue
+      },
+    ),
+
+    SubCard(
+      color: Colors.grey,
+      titulo: "Batata",
+      rota: 'ConteudoPlantio',
+      imagem: "assets/agronomia/batata.png",
+      args: {
+        "dados": SubCardsModel(
+            // Cards da Tela  que tem o carrocel de fotos
+            titulo: "Batata",
+            conteudo:
+                "É uma das culturas mais importantes do mundo, e pode ser consumida em variadas formas e composições.",
+            imagens: [
+              "assets/agronomia/batata/batata_scroll/batata1.jpg",
+              "assets/agronomia/batata/batata_scroll/batata.jpg"
+            ],
+            pragas: [
+              SubCard(
+                // Cards da Tela  de pragas
+                titulo: "Cigarrinha verde(Empoasca kraemeri)",
+                rota: 'Content',
+                imagem:
+                    "assets/agronomia/batata/pragas/batata_pragas_cigarrinhaverde.png",
+                args: {
+                  "dados": ConteudosModel(
+                    imagem:
+                        "assets/agronomia/batata/pragas/batata_pragas_cigarrinhaverde.png",
+                    conteudo:
+                        'Culturas Afetadas: Algodão, Amendoim, Batata, Feijão, Feijão vagem, Mamão, Mandioca,Pinhão-manso\nEles causam prejuízos por conta de suas picadas, com isso eles injetam toxinas na plantas atacadas.\nDanos:\n Podem ser como consequência da penetração do estilete no floema da planta, além disso,também há a injeção de substâncias toxicogênicas durante a alimentação.\nControle: Controle químico das ninfas e adultos com inseticidas registrados para as culturas.',
+                    titulo: "Cigarrinha verde(Empoasca kraemeri)",
+                  )
+                },
+              ),
+              SubCard(
+                // Cards da Tela  de pragas
+                titulo: "Bicho tromba/Broca da batatinha (Phyrdenus muriceus)",
+                rota: 'Content',
+                imagem:
+                    "assets/agronomia/batata/pragas/batata_pragas_bichoelefante.png",
+                args: {
+                  "dados": ConteudosModel(
+                    imagem:
+                        "assets/agronomia/batata/pragas/batata_pragas_bichoelefante.png",
+                    conteudo:
+                        "Culturas Afetadas: Estes insetos apresentam hábito noturno e atacam várias solanáceas, como a batata, berinjela, fumo, jiló, pimentão e tomate.Eles apresentam hábito noturno e acatam várias solanáceas.\nDanos:Os adulto deixam as folhas rendilhadas e atacam os tubérculos descobertos.\nAs larvas fazem galerias nos tubérculos, nos quais podem servir de entrada para microorganismos indesejáveis. \nControle: Pulverizações com inseticidas específicos.",
+                    titulo:
+                        "Bicho tromba/Broca da batatinha (Phyrdenus muriceus)",
+                  )
+                },
+              ),
+              SubCard(
+                // Cards da Tela  de pragas
+                titulo:
+                    "Larva minadora/Mosca minadora (Liriomyza huidobrensis)",
+                rota: 'Content',
+                imagem:
+                    "assets/agronomia/batata/pragas/batata_pragas_moscamineradora.png",
+                args: {
+                  "dados": ConteudosModel(
+                      imagem:
+                          "assets/agronomia/batata/pragas/batata_pragas_moscamineradora.png",
+                      conteudo:
+                          "Culturas Afetadas: Agrião, Alface, Almeirão, Batata, Beterraba, Chicória, Crisântemo , Ervilha, Espinafre, Feijão, Feijão vagem, Melancia, Melão, Pepino, Rosa, Rúcula, Tomate, Tomate industrial, Tomate rasteiro industrial\nDanos: Elas abrem minas no interior, e se alimentam dos tecidos, destruindo parte ou totalmente da folha, causando secamento, em alguns casos, o desenvolvimento da cultura pode ser prejudicado.\ncontrole: Pulverização com inseticidas piretróides, ou aplicação de inseticidas sistêmicos granulados específicos.",
+                      titulo:
+                          "Larva minadora/Mosca minadora (Liriomyza huidobrensis)")
+                },
+              ),
+              SubCard(
+                // Cards da Tela  de pragas
+                titulo:
+                    "Traça da batatinha/Cegadeira (Phthorimaea operculella)",
+                rota: 'Content',
+                imagem:
+                    "assets/agronomia/batata/pragas/batata_pragas_traca.png",
+                args: {
+                  "dados": ConteudosModel(
+                      imagem:
+                          "assets/agronomia/batata/pragas/batata_pragas_traca.png",
+                      conteudo:
+                          "Culturas Afetadas: Batata, Berinjela, Fumo, Pimentão, Tomate\nEste inseto é uma importante praga para as solanáceas em geral, sendo mais importante na batatinha.\nDanos: As lagartas atacam a folhas, até começarem a secar, logo depois abandonam as folhas, passando a atacar os frutos, até destruí-los.\nControle: Pulverização com uso de inseticidas específicos",
+                      titulo:
+                          "Traça da batatinha/Cegadeira (Phthorimaea operculella)")
+                },
+              ),
+              SubCard(
+                // Cards da Tela  de pragas
+                titulo: "Lagarta rosca(Agrotis ipsilon)",
+                rota: 'Content',
+                imagem:
+                    "assets/agronomia/batata/pragas/batata_pragas_lagartarosca.png",
+                args: {
+                  "dados": ConteudosModel(
+                      imagem:
+                          "assets/agronomia/batata/pragas/batata_pragas_lagartarosca.png",
+                      conteudo:
+                          "Culturas Afetadas: Abóbora, Abobrinha, Acelga, Agrião, Alface, Alho, Batata, Batatayacon, Berinjela, Beterraba, Brócolis, Cebola, Chalota, Chicória, Chuchu, Couve, Couve-chinesa, Couve-de-bruxelas, Couve-flor, Espinafre, Fumo, Gengibre, Jiló, Mandioquinha-salsa, Maxixe, Melancia, Milho, Nabo, Pimenta, Pimentão, Quiabo, Rabanete, Repolho, Rúcula, Soja, Tomate, Trigo A fêmea deste inseto pode colocar em média 1000 ovos.\nDanos:A lagarta vive enterrada no solo, e sai a noite para cortar a plântulas rente ao solo, elas podem causar o sintoma de “Coração morto”, também pode provocar o perfilhamento excessivo destas, gerando uma touceira.\nControle:\nEm lugares com histórico desta praga, usar tratamento de sementes com inseticidas, e a eliminação antecipada de plantas invasoras hospedeiras, em áreas menores, distribuição de iscas preparadas com base de farelo, melaço, e inseticidas sem odor.",
+                      titulo: "Lagarta rosca(Agrotis ipsilon)")
+                },
+              ),
+            ],
+            doencas: [
+              SubCard(
+                // Cards da Tela  de doenças
+                titulo:
+                    "Pinta preta grande/Mancha de alternaria (Alternaria solani)",
+                rota: 'Content',
+                imagem:
+                    "assets/agronomia/batata/doencas/batata_doencas_pintapreta.png",
+                args: {
+                  "dados": ConteudosModel(
+                      imagem:
+                          "assets/agronomia/batata/doencas/batata_doencas_pintapreta.png",
+                      conteudo:
+                          "Culturas Afetadas: Alstroemeria, Batata, Berinjela, Beterraba, Cebola, Cravina, Cravo, Crisântemo , Jiló, Lisianthus, Pimenta, Pimentão, Rosa, Todas as culturas com ocorrência do alvo biológico, Tomate, Tomate envarado\nÉ uma das principais doenças, Ela é encontrada em todas as regiões produtoras de batata,\nDanos: Ele ataca toda a parte aérea da planta, surgem pequenas manchas escuras, depois crescem , maior número de lesões pode surgir em plantas com deficiência nutricional, em tubérculos, elas tendem a provocar podridão seca.\nControle:\nUsar alguns Cultivares nacionais que têm resistência intermediária a pinta preta, como o Aracy e Contenda.",
+                      titulo:
+                          "Pinta preta grande/Mancha de alternaria (Alternaria solani)")
+                },
+              ),
+              SubCard(
+                // Cards da Tela  de doenças
+                titulo:
+                    "Canela-preta/Podridão-mole (Pectobacterium carotovorum)",
+                rota: 'Content',
+                imagem:
+                    "assets/agronomia/batata/doencas/batata_doencas_podridaomole.png",
+                args: {
+                  "dados": ConteudosModel(
+                    imagem:
+                        "assets/agronomia/batata/doencas/batata_doencas_podridaomole.png",
+                    conteudo:
+                        "Culturas Afetadas: Batata\nEm alta umidade, e temperatura elevada e solos ácidos, ela constitui um problema sério nas crucíferas.\nDanos: A bactéria penetra tecidos da planta e causa encharcamento, o tecido torna-se mole.E após o órgão afetado apodrece rapidamente.\nControle: Evitar ferimentos, equilibrar adubação, fazer rotação de culturas, controlar insetos, plantas cultivares ou híbridos resistentes a podridão negra.",
+                    titulo:
+                        "Canela-preta/Podridão-mole (Pectobacterium carotovorum)",
+                  )
+                },
+              ),
+              SubCard(
+                // Cards da Tela  de doenças
+                titulo: "Requeima(Phytophthora infestans)",
+                rota: 'Content',
+                imagem:
+                    "assets/agronomia/batata/doencas/batata_doencas_requeima.png",
+                args: {
+                  "dados": ConteudosModel(
+                      imagem:
+                         "assets/agronomia/batata/doencas/batata_doencas_requeima.png",
+                conteudo:
+                          "Culturas Afetadas: Batata, Cacau, Pimentão, Tomate, Tomate envarado, Tomate rasteiro\nÉ a doença mais importante para diversas culturas de importância econômica.\nDanos: Os primeiros sintomas são manchas pequenas, aumentado rapidamente,tornando escuras, amarronzadas ou pretas, podendo causar necrose dos tecidos e morte dos folíolos\nControle: Uso de variedades resistentes, e Realizar pulverizações com fungicidas protetores e sistêmicos, registrados para as culturas.",
+                      titulo: "Requeima(Phytophthora infestans)")
+                  },
+              ),
+              SubCard(
+                // Cards da Tela  de doenças
+                titulo: "Sarna prateada(Helminthosporium solani)",
+                rota: 'Content',
+                imagem:
+                    "assets/agronomia/arroz/doencas/arroz_doencas_queimaGlumelas.png",
+                args: {
+                  "dados": ConteudosModel(
+                    imagem:
+                        "assets/agronomia/arroz/doencas/arroz_doencas_queimaGlumelas.png",
+                    conteudo:
+                        "O patógeno possui distribuição mundial, e é encontrado na maioria das regiões produtoras de batata. Danos: Inicia-se com a formação de manchas claras, que depois adquirem brilho prateado, quando a infecção é muito grande, pode se estender por todo o tubérculo. \nControle: utilizar semente de batata de boa qualidade e livre do patógeno.",
+                    titulo:
+                        "Sarna prateada(Helminthosporium solani)",
+                  )
+                },
+              ),
+            ]),
+        "cor": Colors.grey
+      },
+    ),
   ]);
 }
