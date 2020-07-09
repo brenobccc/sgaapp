@@ -7,9 +7,7 @@ import 'package:sgaapp/data/data_file.dart';
 import 'package:sgaapp/modules/plantio/mock/mock_plantio.dart';
 import 'package:sgaapp/modules/plantio/model/plantio_model.dart';
 
-
 class Plantio extends StatefulWidget {
-
   final ListCardsModel model = MockListTabs.listMock;
 
   @override
@@ -18,7 +16,7 @@ class Plantio extends StatefulWidget {
 
 class _PlantioState extends State<Plantio> {
   var controller = TextEditingController();
-
+  List filtrar;
   Widget createGrid(BuildContext context, List<SubCard> lista) {
     return AnimationLimiter(
       child: Scrollbar(
@@ -50,8 +48,15 @@ class _PlantioState extends State<Plantio> {
   }
 
   @override
+  void initState() {
+    filtrar = widget.model.listSubCards;
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+     resizeToAvoidBottomPadding: false,
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
@@ -61,8 +66,19 @@ class _PlantioState extends State<Plantio> {
               withPadding: true,
               keyboardType: TextInputType.text,
               hintText: "Pesquise aqui",
+              controller: controller,
+              onChanged: (value) {
+                filtrar = widget.model.listSubCards.where((element) {
+                  return element.titulo
+                      .toLowerCase()
+                      .contains(value.toLowerCase());
+                }).toList();
+                setState(() {
+                  
+                });
+              },
             ),
-            Expanded(child: createGrid(context, widget.model.listSubCards)),
+            Expanded(child: createGrid(context, filtrar)),
           ],
         ),
       ),

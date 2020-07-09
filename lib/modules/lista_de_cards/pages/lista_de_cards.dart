@@ -14,8 +14,8 @@ class ListDeCards extends StatefulWidget {
 
 class _ListDeCardsState extends State<ListDeCards> {
   var controller = TextEditingController();
+  List filtrar;
 
-  
   Widget createGrid(BuildContext context, List lista) {
     return AnimationLimiter(
       child: Scrollbar(
@@ -35,9 +35,7 @@ class _ListDeCardsState extends State<ListDeCards> {
               duration: const Duration(milliseconds: 375),
               child: SlideAnimation(
                 verticalOffset: 50.0,
-                child: ScaleAnimation(
-                  child: lista[index]
-                ),
+                child: ScaleAnimation(child: lista[index]),
               ),
             );
           },
@@ -47,8 +45,16 @@ class _ListDeCardsState extends State<ListDeCards> {
   }
 
   @override
+  void initState() {
+    filtrar = widget.argumentos;
+
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       appBar: AppBar(
         leading: IconButton(
             icon: Icon(Icons.arrow_back_ios),
@@ -64,11 +70,22 @@ class _ListDeCardsState extends State<ListDeCards> {
               withPadding: true,
               keyboardType: TextInputType.text,
               hintText: "Pesquise aqui",
+              controller: controller,
+              onChanged: (value) {
+                print(value);
+
+                filtrar = (widget.argumentos as List).where((element) {
+                  return element.titulo
+                      .toLowerCase()
+                      .contains(value.toLowerCase());
+                }).toList();
+
+                print(filtrar);
+                setState(() {});
+              },
             ),
             Expanded(
-              child: createGrid(
-                context,
-                widget.argumentos),
+              child: createGrid(context, filtrar),
             ),
           ],
         ),
