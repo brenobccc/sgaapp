@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: "Flutter's Clothings",
         theme: ThemeData(
-            primarySwatch: Colors.purple, primaryColor: Colors.orange[200]),
+            primarySwatch: Colors.orange, primaryColor: Colors.orange[200]),
         debugShowCheckedModeBanner: false,
         home: SplashPage(),
         onGenerateRoute: RouteGenerator.generateRoute,
