@@ -314,7 +314,7 @@ class MockListTabs {
     ),
 
     SubCard(
-      color: Color(0xFFf2e8de),
+      color: Color(0xFFbdbebd),
       titulo: "Arroz",
       rota: 'ConteudoPlantio',
       imagem: "assets/agronomia/arroz.png",
@@ -480,7 +480,7 @@ class MockListTabs {
                 },
               ),
             ]),
-        "cor": Color(0xFFf2e8de)
+        "cor": Color(0xFFbdbebd)
       },
     ),
 
