@@ -150,7 +150,7 @@ class MockListTabs {
                 },
               ),
             ]),
-        "cor": Colors.blue
+        "cor": Color(0XFF87c9d7),
       },
     ),
 
