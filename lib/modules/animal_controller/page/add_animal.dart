@@ -67,11 +67,11 @@ class _AddAnimalState extends State<AddAnimal> {
           color: Colors.white,
         ),
         label: Text(
-          '  Salvar  ',
-          style: TextStyle(fontSize: 15, color: Colors.white),
+          'Salvar',
+          style: TextStyle(fontSize: 20, color: Colors.white),
         ),
         foregroundColor: Colors.white,
-        backgroundColor: Color.fromRGBO(245, 207, 79, 1),
+        backgroundColor: Color(0xFFf5cf4f),
       ),
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(245, 207, 79, 1),
@@ -85,7 +85,7 @@ class _AddAnimalState extends State<AddAnimal> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),
           color: Colors.white,
-          onPressed: () {
+          onPressed: () { 
             Navigator.pop(context, false);
           },
         ),
