@@ -629,7 +629,7 @@ class MockListTabs {
             // Cards da Tela  que tem o carrocel de fotos
             titulo: "Batata",
             conteudo:
-                "É uma das culturas mais importantes do mundo, e pode ser consumida em variadas formas e composições.",
+                "      É uma das culturas mais importantes do mundo, e pode ser consumida em variadas formas e composições.",
             imagens: [
               "assets/agronomia/batata/batata_scroll/batata1.jpg",
               "assets/agronomia/batata/batata_scroll/batata2.jpg"
@@ -646,7 +646,7 @@ class MockListTabs {
                     imagem:
                         "assets/agronomia/batata/pragas/batata_pragas_cigarrinhaverde.png",
                     conteudo:
-                        'Culturas Afetadas: Algodão, Amendoim, Batata, Feijão, Feijão vagem, Mamão, Mandioca,Pinhão-manso\nEles causam prejuízos por conta de suas picadas, com isso eles injetam toxinas na plantas atacadas.\nDanos:\n Podem ser como consequência da penetração do estilete no floema da planta, além disso,também há a injeção de substâncias toxicogênicas durante a alimentação.\nControle: Controle químico das ninfas e adultos com inseticidas registrados para as culturas.',
+                        'Culturas Afetadas: Algodão, Amendoim, Batata, Feijão, Feijão vagem, Mamão, Mandioca, Pinhão-manso.\n\n     Eles causam prejuízos por conta de suas picadas, com isso eles injetam toxinas na plantas atacadas.\n\n Danos:\n       Podem ser como consequência da penetração do estilete no floema da planta, além disso, também há a injeção de substâncias toxicogênicas durante a alimentação.\n\n Controle:\n       Controle químico das ninfas e adultos com inseticidas registrados para as culturas.\n\n\n\n',
                     titulo: "Cigarrinha verde(Empoasca kraemeri)",
                   )
                 },
@@ -662,7 +662,7 @@ class MockListTabs {
                     imagem:
                         "assets/agronomia/batata/pragas/batata_pragas_bichoelefante.png",
                     conteudo:
-                        "Culturas Afetadas: Estes insetos apresentam hábito noturno e atacam várias solanáceas, como a batata, berinjela, fumo, jiló, pimentão e tomate.Eles apresentam hábito noturno e acatam várias solanáceas.\nDanos:Os adulto deixam as folhas rendilhadas e atacam os tubérculos descobertos.\nAs larvas fazem galerias nos tubérculos, nos quais podem servir de entrada para microorganismos indesejáveis. \nControle: Pulverizações com inseticidas específicos.",
+                        "Culturas Afetadas: Estes insetos apresentam hábito noturno e atacam várias solanáceas, como a batata, berinjela, fumo, jiló, pimentão e tomate.\n\n  Danos:\n      Os adulto deixam as folhas rendilhadas e atacam os tubérculos descobertos, as larvas fazem galerias nos tubérculos, nos quais podem servir de entrada para microorganismos indesejáveis.\n\n  Controle:\n       Pulverizações com inseticidas específicos.\n\n\n\n",
                     titulo:
                         "Bicho tromba/Broca da batatinha (Phyrdenus muriceus)",
                   )
@@ -680,7 +680,7 @@ class MockListTabs {
                       imagem:
                           "assets/agronomia/batata/pragas/batata_pragas_moscamineradora.png",
                       conteudo:
-                          "Culturas Afetadas: Agrião, Alface, Almeirão, Batata, Beterraba, Chicória, Crisântemo , Ervilha, Espinafre, Feijão, Feijão vagem, Melancia, Melão, Pepino, Rosa, Rúcula, Tomate, Tomate industrial, Tomate rasteiro industrial\nDanos: Elas abrem minas no interior, e se alimentam dos tecidos, destruindo parte ou totalmente da folha, causando secamento, em alguns casos, o desenvolvimento da cultura pode ser prejudicado.\ncontrole: Pulverização com inseticidas piretróides, ou aplicação de inseticidas sistêmicos granulados específicos.",
+                          "Culturas Afetadas: Agrião, Alface, Almeirão, Batata, Beterraba, Chicória, Crisântemo , Ervilha, Espinafre, Feijão, Feijão vagem, Melancia, Melão, Pepino, Rosa, Rúcula, Tomate, Tomate industrial, Tomate rasteiro industrial.\n\n Danos:\n      Elas abrem minas no interior, e se alimentam dos tecidos, destruindo parte ou totalmente da folha, causando secamento, em alguns casos, o desenvolvimento da cultura pode ser prejudicado.\n\nControle:\n       Pulverização com inseticidas piretróides, ou aplicação de inseticidas sistêmicos granulados específicos.\n\n\n\n",
                       titulo:
                           "Larva minadora/Mosca minadora (Liriomyza huidobrensis)")
                 },
@@ -697,7 +697,7 @@ class MockListTabs {
                       imagem:
                           "assets/agronomia/batata/pragas/batata_pragas_traca.png",
                       conteudo:
-                          "Culturas Afetadas: Batata, Berinjela, Fumo, Pimentão, Tomate\nEste inseto é uma importante praga para as solanáceas em geral, sendo mais importante na batatinha.\nDanos: As lagartas atacam a folhas, até começarem a secar, logo depois abandonam as folhas, passando a atacar os frutos, até destruí-los.\nControle: Pulverização com uso de inseticidas específicos",
+                          "Culturas Afetadas: Batata, Berinjela, Fumo, Pimentão, Tomate.\n\nEste inseto é uma importante praga para as solanáceas em geral, sendo mais importante na batatinha.\n\n Danos:\n      As lagartas atacam a folhas, até começarem a secar, logo depois abandonam as folhas, passando a atacar os frutos, até destruí-los.\n\n  Controle:\n       Pulverização com uso de inseticidas específicos.\n\n\n\n",
                       titulo:
                           "Traça da batatinha/Cegadeira (Phthorimaea operculella)")
                 },
@@ -713,7 +713,7 @@ class MockListTabs {
                       imagem:
                           "assets/agronomia/batata/pragas/batata_pragas_lagartarosca.png",
                       conteudo:
-                          "Culturas Afetadas: Abóbora, Abobrinha, Acelga, Agrião, Alface, Alho, Batata, Batatayacon, Berinjela, Beterraba, Brócolis, Cebola, Chalota, Chicória, Chuchu, Couve, Couve-chinesa, Couve-de-bruxelas, Couve-flor, Espinafre, Fumo, Gengibre, Jiló, Mandioquinha-salsa, Maxixe, Melancia, Milho, Nabo, Pimenta, Pimentão, Quiabo, Rabanete, Repolho, Rúcula, Soja, Tomate, Trigo A fêmea deste inseto pode colocar em média 1000 ovos.\nDanos:A lagarta vive enterrada no solo, e sai a noite para cortar a plântulas rente ao solo, elas podem causar o sintoma de “Coração morto”, também pode provocar o perfilhamento excessivo destas, gerando uma touceira.\nControle:\nEm lugares com histórico desta praga, usar tratamento de sementes com inseticidas, e a eliminação antecipada de plantas invasoras hospedeiras, em áreas menores, distribuição de iscas preparadas com base de farelo, melaço, e inseticidas sem odor.",
+                          "Culturas Afetadas: Abóbora, Abobrinha, Acelga, Agrião, Alface, Alho, Batata, Batatayacon, Berinjela, Beterraba, Brócolis, Cebola, Chalota, Chicória, Chuchu, Couve, Couve-chinesa, Couve-de-bruxelas, Couve-flor, Espinafre, Fumo, Gengibre, Jiló, Mandioquinha-salsa, Maxixe, Melancia, Milho, Nabo, Pimenta, Pimentão, Quiabo, Rabanete, Repolho, Rúcula, Soja, Tomate, Trigo.\n\n      A fêmea deste inseto pode colocar em média 1000 ovos.\n\n  Danos:\n        A lagarta vive enterrada no solo, e sai a noite para cortar a plântulas rente ao solo, elas podem causar o sintoma de “Coração morto”, também pode provocar o perfilhamento excessivo destas, gerando uma touceira.\n\n Controle:\n     Em lugares com histórico desta praga, usar tratamento de sementes com inseticidas, e a eliminação antecipada de plantas invasoras hospedeiras, em áreas menores, distribuição de iscas preparadas com base de farelo, melaço, e inseticidas sem odor.\n\n\n\n",
                       titulo: "Lagarta rosca(Agrotis ipsilon)")
                 },
               ),
@@ -731,7 +731,7 @@ class MockListTabs {
                       imagem:
                           "assets/agronomia/batata/doencas/batata_doencas_pintapreta.png",
                       conteudo:
-                          "Culturas Afetadas: Alstroemeria, Batata, Berinjela, Beterraba, Cebola, Cravina, Cravo, Crisântemo , Jiló, Lisianthus, Pimenta, Pimentão, Rosa, Todas as culturas com ocorrência do alvo biológico, Tomate, Tomate envarado\nÉ uma das principais doenças, Ela é encontrada em todas as regiões produtoras de batata,\nDanos: Ele ataca toda a parte aérea da planta, surgem pequenas manchas escuras, depois crescem , maior número de lesões pode surgir em plantas com deficiência nutricional, em tubérculos, elas tendem a provocar podridão seca.\nControle:\nUsar alguns Cultivares nacionais que têm resistência intermediária a pinta preta, como o Aracy e Contenda.",
+                          "Culturas Afetadas: Alstroemeria, Batata, Berinjela, Beterraba, Cebola, Cravina, Cravo, Crisântemo, Jiló, Lisianthus, Pimenta, Pimentão, Rosa, Tomate, Tomate envarado, e todas as culturas com ocorrência do alvo biológico.\n\n     É uma das principais doenças, e ela é encontrada em todas as regiões produtoras de batata.\n\n  Danos:\n      Ele ataca toda a parte aérea da planta, surgem pequenas manchas escuras, depois crescem , maior número de lesões pode surgir em plantas com deficiência nutricional, em tubérculos, elas tendem a provocar podridão seca.\n\n Controle:\n     Usar alguns cultivares nacionais que têm resistência intermediária a pinta preta, como o Aracy e Contenda.\n\n\n\n",
                       titulo:
                           "Pinta preta grande/Mancha de alternaria (Alternaria solani)")
                 },
@@ -748,7 +748,7 @@ class MockListTabs {
                     imagem:
                         "assets/agronomia/batata/doencas/batata_doencas_podridaomole.png",
                     conteudo:
-                        "Culturas Afetadas: Batata\nEm alta umidade, e temperatura elevada e solos ácidos, ela constitui um problema sério nas crucíferas.\nDanos: A bactéria penetra tecidos da planta e causa encharcamento, o tecido torna-se mole.E após o órgão afetado apodrece rapidamente.\nControle: Evitar ferimentos, equilibrar adubação, fazer rotação de culturas, controlar insetos, plantas cultivares ou híbridos resistentes a podridão negra.",
+                        "Culturas Afetadas: Batata.\n\n       Em alta umidade, e temperatura elevada e solos ácidos, ela constitui um problema sério nas crucíferas.\n\n  Danos:\n      A bactéria penetra tecidos da planta e causa encharcamento, o tecido torna-se mole, e após o órgão afetado apodrece rapidamente.\n\n  Controle:\n     Evitar ferimentos, equilibrar adubação, fazer rotação de culturas, controlar insetos, plantas cultivares ou híbridos resistentes a podridão negra.\n\n\n\n",
                     titulo:
                         "Canela-preta/Podridão-mole (Pectobacterium carotovorum)",
                   )
@@ -765,7 +765,7 @@ class MockListTabs {
                       imagem:
                          "assets/agronomia/batata/doencas/batata_doencas_requeima.png",
                 conteudo:
-                          "Culturas Afetadas: Batata, Cacau, Pimentão, Tomate, Tomate envarado, Tomate rasteiro\nÉ a doença mais importante para diversas culturas de importância econômica.\nDanos: Os primeiros sintomas são manchas pequenas, aumentado rapidamente,tornando escuras, amarronzadas ou pretas, podendo causar necrose dos tecidos e morte dos folíolos\nControle: Uso de variedades resistentes, e Realizar pulverizações com fungicidas protetores e sistêmicos, registrados para as culturas.",
+                          "Culturas Afetadas: Batata, Cacau, Pimentão, Tomate, Tomate envarado, Tomate rasteiro.\n\n      É a doença mais importante para diversas culturas de importância econômica.\n\nDanos:\n     Os primeiros sintomas são manchas pequenas, aumentado rapidamente,tornando escuras, amarronzadas ou pretas, podendo causar necrose dos tecidos e morte dos folíolos.\n\n  Controle:\n       Uso de variedades resistentes, e realizar pulverizações com fungicidas protetores e sistêmicos, registrados para as culturas.\n\n\n\n",
                       titulo: "Requeima(Phytophthora infestans)")
                   },
               ),
@@ -780,7 +780,7 @@ class MockListTabs {
                     imagem:
                         "assets/agronomia/arroz/doencas/arroz_doencas_queimaGlumelas.png",
                     conteudo:
-                        "O patógeno possui distribuição mundial, e é encontrado na maioria das regiões produtoras de batata. Danos: Inicia-se com a formação de manchas claras, que depois adquirem brilho prateado, quando a infecção é muito grande, pode se estender por todo o tubérculo. \nControle: utilizar semente de batata de boa qualidade e livre do patógeno.",
+                        "O patógeno possui distribuição mundial, e é encontrado na maioria das regiões produtoras de batata.\n\n  Danos:\n      Inicia-se com a formação de manchas claras, que depois adquirem brilho prateado, quando a infecção é muito grande, pode se estender por todo o tubérculo.\n\n Controle:\n       Utilizar semente de batata de boa qualidade e livre do patógeno.\n\n\n\n",
                     titulo:
                         "Sarna prateada(Helminthosporium solani)",
                   )
