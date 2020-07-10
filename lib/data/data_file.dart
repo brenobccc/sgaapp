@@ -17,7 +17,7 @@ class MockListTabs {
             // Cards da Tela  que tem o carrocel de fotos
             titulo: "Algodão",
             conteudo:
-                " O algodão é uma fibra usada para fazer tecidos e outros produtos. E ele cresce em plantas semelhantes a arbustos",
+                "   O algodão é uma fibra usada para fazer tecidos e outros produtos.\n   E ele cresce em plantas semelhantes a arbustos",
             imagens: [
               "assets/agronomia/algodao/pragas/algodao_scroll/algodao1.jpg",
               "assets/agronomia/algodao/pragas/algodao_scroll/algodao2.jpg"
@@ -25,7 +25,7 @@ class MockListTabs {
             pragas: [
               SubCard(
                 // Cards da Tela  de pragas
-                titulo: "Bicudo do Algodoeiro (Anthonomus grandis)",
+                titulo: "Bicudo do Algodoeiro(Anthonomus grandis)",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/algodao/pragas/pragas/algodao_pragas_biculdoalgodoeiro.png",
@@ -34,7 +34,7 @@ class MockListTabs {
                       imagem:
                           "assets/agronomia/algodao/pragas/pragas/algodao_pragas_biculdoalgodoeiro.png",
                       conteudo:
-                          'Eles recebem o nome de bicudo por terem uma cabeça prolongada, formando um“bico característico.”O Bicudo é uma das pragas chave do algodoeiro que contém maior relevância econômica na cultura do algodão, e pode atacar a cultura desde o início da floração até a colheita.ele é da família dos curculionídeos, de cor cinzenta ou castanha e contém mandíbulas afiadas. De origem da América Central, veio ao Brasil em 1983.Nas condições climáticas do Brasil, o inseto leva de 14 a 22 dias para completar o seu ciclo de desenvolvimento.\nControle:\n● Controle biológico.\nÉ aquele que ocorre pela ação constante de agentes biológicos\nnativos(entomopatógenos, predadores e/ou parasitóides) contra a praga,Esse controle é chamado natural porque ocorre sem a intervenção direta do homem na manipulação dos organismos benéficos\n● Controle Cultural.\n● Controle químico;\nO controle deve conter medidas integradas de manejo, que compreendem autilização de inseticidas químicos, uma vez tomada a decisão de controle\nquímico de uma determinada população de inseto-praga do algodoeiro, aescolha e o uso do produto devem ser criteriosos.medidas para controle:Plantio-isca.Tubo mata bicudo.Pulverização de inseticidas.Uma prática importante é a rotação de produtos com diferentes mecanismos de açãoO momento ideal para o controle do bicudo é quando a flor branca está totalmente abertadas 9h às 16h, período no qual o bicudo fica circulando;Pontos importantes:Escolha da cultivar,época de plantio, catação de botões florais, destruição dasoqueira e rotação de culturas.',
+                          '   Eles recebem o nome de bicudo por terem uma cabeça prolongada, formando um “bico característico”.\n   O Bicudo é uma das pragas chave do algodoeiro que contém maior relevância econômica na cultura do algodão, e pode atacar a cultura desde o início da floração até a colheita.\n   Ele é da família dos curculionídeos, de cor cinzenta ou castanha e contém mandíbulas afiadas.\n   De origem da América Central, veio ao Brasil em 1983. Nas condições climáticas do Brasil, o inseto leva de 14 a 22 dias para completar o seu ciclo de desenvolvimento\n\nControle da praga:\n  ● Controle biológico.\n    É aquele que ocorre pela ação constante de agentes biológicos nativos(entomopatógenos, predadores e/ou parasitóides) contra a praga,\n    Esse controle é chamado natural porque ocorre sem a intervenção direta do homem na manipulação dos organismos benéficos\n  ● Controle Cultural.\n  ● Controle químico;\n O controle deve conter medidas integradas de manejo, que compreendem autilização de inseticidas químicos, uma vez tomada a decisão de controle químico de uma determinada população de inseto-praga do algodoeiro, a escolha e o uso do produto devem ser criteriosos.\n\nMedidas para controle:   \n      Plantio-isca.     \n      Tubo mata bicudo.     \n      Pulverização de inseticidas.      \n\n    Uma prática importante é a rotação de produtos com diferentes mecanismos de ação.\n\n   O momento ideal para o controle do bicudo é quando a flor branca está totalmente aberta, das 9h às 16h(período no qual o bicudo fica circulando).\n\nPontos importantes:\n   Escolha da cultivar\n   Época de plantio.\n   Catação de botões florais, destruição dasoqueira e rotação de culturas.\n\n\n\n',
                       titulo: "Bicudo do Algodoeiro (Anthonomus grandis)")
                 },
               ),
