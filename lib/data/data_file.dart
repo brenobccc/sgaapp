@@ -323,7 +323,7 @@ class MockListTabs {
             // Cards da Tela  que tem o carrocel de fotos
             titulo: "Arroz",
             conteudo:
-                "O arroz (Oryza sativa) é uma planta da família das gramíneas. Durante muitos anos, os grãos dessas plantas constituíram a base alimentar de muitos povos em todo o mundo. Hoje em dia não é diferente, a cultura do arroz é a terceira maior do mundo. O arroz com feijão, por exemplo, é a base de alimentação do brasileiro.",
+                "     O arroz (Oryza sativa) é uma planta da família das gramíneas.\n     Durante muitos anos, os grãos dessas plantas constituíram a base alimentar de muitos povos em todo o mundo, hoje em dia não é diferente, a cultura do arroz é a terceira maior do mundo. O arroz com feijão, por exemplo, é a base de alimentação do brasileiro.",
             imagens: [
               "assets/agronomia/arroz/arroz_scroll/arroz1.jpg",
               "assets/agronomia/arroz/arroz_scroll/arroz2.jpg"
@@ -341,7 +341,7 @@ class MockListTabs {
                     imagem:
                         "assets/agronomia/arroz/pragas/arroz_pragas_brocacolo.png",
                     conteudo:
-                        'Culturas Afetadas: Algodão, Amendoim, Arroz, Aveia, Centeio, Cevada, Feijão, Feijão-caupi, Gengibre, Girassol, Mamona, Milho, Soja, Sorgo, Trigo Seu aparecimento é esporádico, e está relacionado a secas em períodos, no qual favorece o intenso desenvolvimento da praga. Danos: Provocam murcha e a morte das folhas, mais conhecido como ”coração morto”\nControle:\nTratamento das sementes com inseticidas sistêmicos, em anos de seca, é recomendável o uso de produtos com ação de contato e profundidade associado ao tratamento das sementes.',
+                        'Culturas Afetadas: Algodão, Amendoim, Arroz, Aveia, Centeio, Cevada, Feijão, Feijão-caupi, Gengibre, Girassol, Mamona, Milho, Soja, Sorgo, Trigo.\n\n      Seu aparecimento é esporádico, e está relacionado a secas em períodos, no qual favorece o intenso desenvolvimento da praga.\n\n Danos:\n      Provocam murcha e a morte das folhas, mais conhecido como ”coração morto”.\n\n  Controle:     \nTratamento das sementes com inseticidas sistêmicos.\n     Em anos de seca, é recomendável o uso de produtos com ação de contato e profundidade associado ao tratamento das sementes.\n\n\n\n',
                     titulo:
                         "Broca do colo./lagarta elasmo(Elasmopalpus lignosellus)",
                   )
@@ -358,7 +358,7 @@ class MockListTabs {
                       imagem:
                           "assets/agronomia/arroz/pragas/arroz_pragas_pulgaoraiz.png",
                       conteudo:
-                          "Culturas Afetadas: Arroz, Arroz irrigado\nEles contém uma cor de cinza escuro, e formam colônias nas raízes das plantas\ndanos: eles sugam a seiva das raízes, injetam toxinas, fazendo elas ficarem amarelas a paralisando o crescimento. Controle: Pode ser feito de forma Biológica, Sendo efetuado o controle com patógenos, como o Entomophthora sp, também pode ser feito controle de forma Química, usando os inseticidas seletivos.",
+                          "Culturas Afetadas: Arroz, Arroz irrigado.\n\n      Eles contém uma cor de cinza escuro, e formam colônias nas raízes das plantas.\n\nDanos:\n      Eles sugam a seiva das raízes, injetam toxinas, fazendo elas ficarem amarelas a paralisando o crescimento.\n\n  Controle:\n     Pode ser feito de forma Biológica, sendo efetuado o controle com patógenos, como o Entomophthora sp, também pode ser feito controle de forma Química, usando os inseticidas seletivos.\n\n\n\n",
                       titulo: "Pulgão da raiz(Rhopalosiphum rufiabdominale)")
                 },
               ),
@@ -374,7 +374,7 @@ class MockListTabs {
                     imagem:
                         "assets/agronomia/arroz/pragas/arroz_pragas_cigarrinhapastagens.png",
                     conteudo:
-                        "Culturas Afetadas: Arroz, Milho, Pastagens, Todas as culturas com ocorrência do alvo biológico\nElas infestam áreas de pastagens. Danos: Ao picarem as folhas, elas mostram áreas cloróticas e com sinais de necrose, no qual pode se acarretar na morte da planta.\nControle: Tratando as sementes com inseticidas e realizar cultivo em lugares longes de pastagens.",
+                        "Culturas Afetadas: Arroz, Milho, Pastagens, Todas as culturas com ocorrência do alvo biológico.\n\n      Elas infestam áreas de pastagens.\n\n Danos:\n      Ao picarem as folhas, elas mostram áreas cloróticas e com sinais de necrose, no qual pode se acarretar na morte da planta.\n\n  Controle:\n     Tratando as sementes com inseticidas e realizar cultivo em lugares longes de pastagens.\n\n\n\n",
                     titulo:
                         "Cigarrinha das pastagens/Cigarrinha dos capinzais (Deois flavopicta)",
                   )
@@ -391,7 +391,7 @@ class MockListTabs {
                       imagem:
                           "assets/agronomia/arroz/pragas/arroz_pragas_cascudopreto.png",
                       conteudo:
-                          "Culturas Afetadas: Arroz, Cana-de-açúcar\n Danos: causam perfurações na planta de maneira agressiva, acarretando sérios prejuízos. Controle: Uso de inseticidas específicos registrados para as culturas.",
+                          "Culturas Afetadas: Arroz, Cana-de-açúcar.\n\n Danos:\n     Causam perfurações na planta de maneira agressiva, acarretando sérios prejuízos.\n\n  Controle:\n     Uso de inseticidas específicos registrados para as culturas.\n\n\n\n",
                       titulo: "Cascudo preto(Euetheola humilis)")
                 },
               ),
@@ -407,7 +407,7 @@ class MockListTabs {
                       imagem:
                           "assets/agronomia/arroz/pragas/arroz_pragas_percevejograo.png",
                       conteudo:
-                          "Culturas Afetadas: Arroz é um dos percevejos que causam danos a várias culturas, principalmente no arroz. Danos: Eles sugam a seiva das folhas e grãos leitosos, causando chochamento engessamento dos grãos.\nControle: Realizar o uso de inseticidas específicos.",
+                          "Culturas Afetadas: Arroz é um dos percevejos que causam danos a várias culturas, principalmente no arroz.\n\n  Danos:\n      Eles sugam a seiva das folhas e grãos leitosos, causando chochamento engessamento dos grãos.\n\n  Controle:\n     Realizar o uso de inseticidas específicos.\n\n\n\n",
                       titulo:
                           "Percevejo do arroz/Percevejo da panícula (Oebalus poecilus)")
                 },
@@ -425,7 +425,7 @@ class MockListTabs {
                       imagem:
                           "assets/agronomia/arroz/doencas/arroz_doencas_brusone.png",
                       conteudo:
-                          "Culturas Afetadas: Arroz, Arroz irrigado, Cevada, Gramados, Milheto, Tratamento de sementes, Trigo Ela é considerada a doença mais importante do arroz. As perdas são variáveis em função da variedade cultivada e dos fatores climáticos na área de cultivo.\nDanos: Ela pode ocorrer em todas as partes da planta, nas folhas os sintomas mais comuns se iniciam por pequenos pontos de coloração castanhas, e evoluem para manchas elípticas, quando a doença ocorre fortemente nos estágios iniciais dela, o impacto é tão grande que a queima das folhas leva a morte da planta.\nControle: Variedades resistentes, práticas culturas e aplicação de fungicida de maneira integrada.",
+                          "Culturas Afetadas: Arroz, Arroz irrigado, Cevada, Gramados, Milheto, Tratamento de sementes, Trigo.\n\n      Ela é considerada a doença mais importante do arroz, as perdas são variáveis em função da variedade cultivada e dos fatores climáticos na área de cultivo.\n\n  Danos:\n      Ela pode ocorrer em todas as partes da planta, nas folhas os sintomas mais comuns se iniciam por pequenos pontos de coloração castanhas, e evoluem para manchas elípticas, quando a doença ocorre fortemente nos estágios iniciais dela, o impacto é tão grande que a queima das folhas leva a morte da planta.\n\n Controle:\n     Variedades resistentes, práticas culturas e aplicação de fungicida de maneira integrada.\n\n\n\n",
                       titulo: "Brusone(Pyricularia grisea)")
                 },
               ),
@@ -441,7 +441,7 @@ class MockListTabs {
                     imagem:
                         "assets/agronomia/arroz/doencas/arroz_doencas_manchaparda.png",
                     conteudo:
-                        "Culturas Afetadas: Arroz, Arroz irrigado\nA mancha parda normalmente ocorre tanto em coulturas instaladas sobb condições irrigadas como de sequeiro.\nDanos: Os sintomas são frequentemente encontrado nas folhas e nos grãos. Nos grãos, as manchas em ataques severos podem cobrir parcial ou totalmente a superfície do grão, podendo acarretar chochamento, redução de peso e gessamento do mesmo. Sementes severamente atacadas normalmente sofrem redução do seu poder germinativo e os coleóptilos podem morrer.\nControle: Utilização de pulverização com produtos químicos, rotação de cultura, e eliminação de gramíneas das proximidades da área cultivada.",
+                        "Culturas Afetadas: Arroz, Arroz irrigado.\n\n      A mancha parda normalmente ocorre tanto em coulturas instaladas sobre condições irrigadas, como de sequeiro.\n\n  Danos:\n      Os sintomas são frequentemente encontrado nas folhas e nos grãos.\n     Nos grãos, as manchas em ataques severos podem cobrir parcial ou totalmente a superfície do grão, podendo acarretar chochamento, redução de peso e gessamento do mesmo. Sementes severamente atacadas normalmente sofrem redução do seu poder germinativo e os coleóptilos podem morrer.\n\nControle: Utilização de pulverização com produtos químicos, rotação de cultura, e eliminação de gramíneas das proximidades da área cultivada.\n\n\n\n",
                     titulo:
                         "Mancha parda/Helminthosporiose, mancha foliar (Bipolaris oryzae)",
                   )
@@ -458,13 +458,13 @@ class MockListTabs {
                       imagem:
                           "assets/agronomia/arroz/doencas/arroz_doencas_escaldadurafolha.png",
                       conteudo:
-                          "Culturas Afetadas: Arroz\nSua ocorrência se dá em locais cuja estação de cultivo caracteriza -se por baixas temperaturas e umidades elevada.\nDanos: Com o desenvolvimento da doença, as manchas coalescem e secam, destruindo uma grande porção da áreas foliar.]\nControle; Realizar tratamento das sementes com fungicidas específicos,registrados pela cultura.",
+                          "Culturas Afetadas: Arroz.\n\n      Sua ocorrência se dá em locais cuja estação de cultivo caracteriza-se por baixas temperaturas e umidades elevada.\n\n Danos:\n      Com o desenvolvimento da doença, as manchas coalescem e secam, destruindo uma grande porção da áreas foliar.\n\n  Controle:\n       Realizar tratamento das sementes com fungicidas específicos, registrados pela cultura.\n\n\n\n",
                       titulo: "Escaldadura(Rhynchosporium secalis)")
                 },
               ),
               SubCard(
                 // Cards da Tela  de doenças
-                titulo: "Mancha BarrentaQueima das glumelas(Phoma sorghina)",
+                titulo: "Mancha Barrenta / Queima das glumelas(Phoma sorghina)",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/arroz/doencas/arroz_doencas_queimaGlumelas.png",
@@ -473,9 +473,9 @@ class MockListTabs {
                     imagem:
                         "assets/agronomia/arroz/doencas/arroz_doencas_queimaGlumelas.png",
                     conteudo:
-                        "Culturas Afetadas: Arroz, Milho, Sorgo\nEsta doença é importante onde o florescimento e a maturação de grãos ocorrem em períodos chuvosos e de alta umidade relativa ao ar. \nControle:\nRealizar alteração na época de plantio, uso de cultivares resistentes, e em última instância,o tratamento químico de sementes.",
+                        "Culturas Afetadas: Arroz, Milho, Sorgo.\n\n      Esta doença é importante onde o florescimento e a maturação de grãos ocorrem em períodos chuvosos e de alta umidade relativa ao ar.\n\n Controle:\n     Realizar alteração na época de plantio, uso de cultivares resistentes, e em última instância, o tratamento químico de sementes.\n\n\n\n",
                     titulo:
-                        "Mancha BarrentaQueima das glumelas(Phoma sorghina)",
+                        "Mancha Barrenta / Queima das glumelas(Phoma sorghina)",
                   )
                 },
               ),
@@ -494,7 +494,7 @@ class MockListTabs {
             // Cards da Tela  que tem o carrocel de fotos
             titulo: "Café",
             conteudo:
-                "O café veio das terras altas da Etiópia, chegou ao Brasil em 1727, ele é uma bebida consumida em vários países.",
+                "     O café veio das terras altas da Etiópia, chegou ao Brasil em 1727, ele é uma bebida consumida em vários países.",
             imagens: [
               "assets/agronomia/cafe/cafe_scroll/cafe1.jpg",
               "assets/agronomia/cafe/cafe_scroll/café2.jpg"
@@ -511,7 +511,7 @@ class MockListTabs {
                       imagem:
                           "assets/agronomia/cafe/pragas/feijao_pragas_brocacafe.png",
                       conteudo:
-                          'Culturas Afetadas: Café, Todas as culturas com ocorrência do alvo biológico\nEsta praga é considerada, por conta que ataca os frutos independente do estágio de maturação.\nDano:\nA qualidade do café é prejudicada, e ocorre perda de peso, resultando em um produto de tipo e valor comercial inferiores.\nControle:Controle químico: realizar pulverizações e monitoramentos.\ncontrole cultural: Destruir cafezais velhos e abandonados, Controle Biológico: um dos importantes inimigos naturais da broca é a vespa-da-costa-do-marfim.',
+                          'Culturas Afetadas: Café, e todas as culturas com ocorrência do alvo biológico.\n\n     Esta praga é bastante considerada, por conta que ataca os frutos independente do estágio de maturação.\n\n  Danos:\n      A qualidade do café é prejudicada, e ocorre perda de peso, resultando em um produto de tipo e valor comercial inferiores.\n\n Controle:\n       Controle químico - realizar pulverizações e monitoramentos.\n\n       Controle cultural - Destruir cafezais velhos e abandonados.\n\n        Controle Biológico: um dos importantes inimigos naturais da broca é a vespa-da-costa-do-marfim.\n\n\n\n',
                       titulo: "Broca do café(Hypothenemus hampei)")
                 },
               ),
@@ -526,7 +526,7 @@ class MockListTabs {
                       imagem:
                           "assets/agronomia/cafe/pragas/feijao_pragas_bichomineiro.png",
                       conteudo:
-                          "Culturas Afetadas: Café\nSinônimos: Cemiostoma coffeella, Elachista coffeella e Perileucoptera coffeella.\nA mariposa é a principal praga da cultura do café, ela possui hábito noturno e o seu ataque ocorre durante todo o ano, e seu pico é entre outubro e junho.\nDanos:A lagarta causa destruição do parênquima, elas vão secando e a parte atacada vai aumentando com o desenvolvimento da lagarta, os sintomas são mais visíveis na parte alta da planta, onde há um desfolhamento. \nControle: Utilizar inseticidas específicos, sem prejudicar os inimigos naturais. outra medida é eliminar as ervas daninhas dos cafezais, o que diminui a ação da praga.",
+                          "Culturas Afetadas: Café.\n\nSinônimos: Cemiostoma coffeella, Elachista coffeella e Perileucoptera coffeella.\n\n      A mariposa é a principal praga da cultura do café, ela possui hábito noturno e o seu ataque ocorre durante todo o ano, e seu pico é entre outubro e junho.\n\nDanos:\n       A lagarta causa destruição do parênquima, elas vão secando e a parte atacada vai aumentando com o desenvolvimento da lagarta, os sintomas são mais visíveis na parte alta da planta, onde há um desfolhamento.\n\n  Controle:\n     Utilizar inseticidas específicos, sem prejudicar os inimigos naturais. outra medida é eliminar as ervas daninhas dos cafezais, o que diminui a ação da praga.\n\n\n\n",
                       titulo: "Bicho mineiro(Leucoptera coffeella)")
                 },
               ),
@@ -542,7 +542,7 @@ class MockListTabs {
                       imagem:
                           "assets/agronomia/cafe/pragas/feijao_pragas_acarovermelho.png",
                       conteudo:
-                          "Culturas Afetadas: Café\nSeus ataques mais intensos são observados no período seco.\nDanos: Às folhas ao serem atacadas, ficam bronzeadas e perdem o brilho, quando mais severos, os ataques provocam quedas das folhas.\nControle: Uso de acaricidas específicos, obter cuidado no uso de inseticidas.",
+                          "Culturas Afetadas: Café.\n      Seus ataques mais intensos são observados no período seco.\n\n Danos:\n      As folhas ao serem atacadas, ficam bronzeadas e perdem o brilho, quando mais severos, os ataques provocam quedas das folhas.\n\n  Controle:\n     Uso de acaricidas específicos, obter cuidado no uso de inseticidas.\n\n\n\n",
                       titulo:
                           "Ácaro vermelho/Aranha vermelha do cafeeiro (Oligonychus ilicis)")
                 },
@@ -558,7 +558,7 @@ class MockListTabs {
                       imagem:
                           "assets/agronomia/cafe/pragas/feijao_pragas_cigarrinhas.png",
                       conteudo:
-                          "Culturas Afetadas: Café, Citros\nOs adultos medem em torno de 12 mm, têm o corpo robusto e de coloração marrom-avermelhada, levemente violácea.\nDanos: Ela suga a seiva do xilema das plantas, ela também transmite a bactéria, agente da doença chamada de amarelinho.\nControle: Controle químico, e uso de inseticidas.",
+                          "Culturas Afetadas: Café, e Citros.\n\n     Os adultos medem em torno de 12 mm, têm o corpo robusto e de coloração marrom-avermelhada, levemente violácea.\n\n  Danos:\n      Ela suga a seiva do xilema das plantas, ela também transmite a bactéria, agente da doença chamada de amarelinho.\n\nControle:\n     Controle químico, e uso de inseticidas.\n\n\n\n",
                       titulo:
                           "Cigarrinha/Cigarrinha da CVC (Oncometopia facialis)")
                 },
@@ -576,7 +576,7 @@ class MockListTabs {
                       imagem:
                           "assets/agronomia/cafe/doencas/cafe_doencas_ferrugem.png",
                       conteudo:
-                          "Culturas Afetadas: Cacau, Café, Todas as culturas com ocorrência do alvo biológico\nÉ um patógeno que provoca prejuízos durante os anos de alta produção da cultura.\nDanos: Ela provoca queda precoce das folhas e seca dos ramos.\nControle: Uso de Cultivares resistentes, e fungicidas.",
+                          "Culturas Afetadas: Cacau, Café, e todas as culturas com ocorrência do alvo biológico.\n\n      É um patógeno que provoca prejuízos durante os anos de alta produção da cultura.\n\n  Danos:\n      Ela provoca queda precoce das folhas e seca dos ramos.\n\n  Controle:\n     Uso de Cultivares resistentes, e fungicidas.\n\n\n\n",
                       titulo:
                           "Ferrugem do cafeeiro/Ferrugem (Hemileia vastatrix)")
                 },
@@ -593,7 +593,7 @@ class MockListTabs {
                       imagem:
                           "assets/agronomia/cafe/doencas/cafe_doencas_manchaphoma.png",
                       conteudo:
-                          "Culturas Afetadas: Café\nEla é causada por diferentes fatores, sobressaindo-se as condições climáticas desfavoráveis, má nutrição das plantas e ocorrência de pragas e doenças.\nDanos: Reduz a produção do ano e do próximo, além de tornar uma bebida de qualidade inferior. Controle: Seleção de áreas de plantio, adubação equilibrada, uso de inseticidas.",
+                          "Culturas Afetadas: Café.\n\n     Ela é causada por diferentes fatores, sobressaindo-se as condições climáticas desfavoráveis, má nutrição das plantas e ocorrência de pragas e doenças.\n\n  Danos:\n      Reduz a produção do ano e do próximo, além de tornar uma bebida de qualidade inferior.\n\n  Controle:\n     Seleção de áreas de plantio, adubação equilibrada, uso de inseticidas.\n\n\n\n",
                       titulo:
                           "Seca de ponteiros/Mancha de Phoma (Phoma costaricensis)")
                 },
@@ -609,7 +609,7 @@ class MockListTabs {
                     imagem:
                         "assets/agronomia/cafe/doencas/cafe_doencas_olhopardo.png",
                     conteudo:
-                        "Culturas Afetadas: Café, Café (Mudas)Ela é uma das doenças mais antiga das Américas, ela causa desfolha e reduz a produção. Danos: Às folhas atacadas caem rapidamente, ocorrendo desfolha e seca dos ramos. Controle: cuidados na formação das mudas, limpar sempre as semenrtes, manter uma fertilização equilibrada na lavoura, também utilizar fungicidas protetores.",
+                        "Culturas Afetadas: Café, Café (Mudas).\n\n     Ela é uma das doenças mais antiga das Américas, ela causa desfolha e reduz a produção.\n\n  Danos:\n      As folhas atacadas caem rapidamente, ocorrendo desfolha e seca dos ramos.\n\n Controle:\n     Cuidados na formação das mudas, limpar sempre as semenrtes, manter uma fertilização equilibrada na lavoura, também utilizar fungicidas protetores.\n\n\n\n",
                     titulo: "Olho pardo/Cercosporiose (Cercospora coffeicola)",
                   )
                 },
