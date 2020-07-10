@@ -29,7 +29,7 @@ class _MenuPrincpalState extends State<MenuPrincpal> {
               "assets/icones/icone_logo.svg",
               height: 25,
             ),
-            onPressed: () {},
+            onPressed: null,
           ),
         ),
         actions: <Widget>[
