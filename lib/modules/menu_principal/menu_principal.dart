@@ -19,6 +19,16 @@ class _MenuPrincpalState extends State<MenuPrincpal> {
     return Scaffold(
       key: _scaffoldKey,
       appBar: AppBar(
+        title: Center(
+          child: Text(
+            "SGAAPP",
+            style: TextStyle(
+              fontSize: 20,
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
         backgroundColor: Color.fromRGBO(245, 207, 79, 1),
         elevation: 0,
         automaticallyImplyLeading: false,

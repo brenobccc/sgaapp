@@ -13,7 +13,7 @@ class SplashPage extends StatefulWidget {
 class SplashPageState extends State<SplashPage> {
   Future<void> navigationToNextPage() {
     if (LocalAuth.instance.auth) {
-      return Navigator.of(context).pushReplacementNamed('/HomePagePrincipal');
+      return Navigator.of(context).pushReplacementNamed('MenuPrincpal');
     }
     return Navigator.of(context).pushReplacementNamed('/HomePage');
   }

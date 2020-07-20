@@ -25,7 +25,7 @@ class MockListTabs {
             pragas: [
               SubCard(
                 // Cards da Tela  de pragas
-                titulo: "Bicudo do Algodoeiro(Anthonomus grandis)",
+                titulo: "Bicudo do\nAlgodoeiro.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/algodao/pragas/pragas/algodao_pragas_biculdoalgodoeiro.png",
@@ -40,7 +40,7 @@ class MockListTabs {
               ),
               SubCard(
                 // Cards da Tela  de pragas
-                titulo: "Broca da Raiz.(Eutinobothrus brasiliensis)",
+                titulo: "Broca da Raiz.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/algodao/pragas/pragas/algodao_pragas_brocaraiz.png",
@@ -55,7 +55,7 @@ class MockListTabs {
               ),
               SubCard(
                 // Cards da Tela  de pragas
-                titulo: "Pulgão do algodoeiro(Aphis gossypii)",
+                titulo: "Pulgão do\nalgodoeiro.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/algodao/pragas/pragas/algodao_pragas_pulgaoalgodoeiro.png",
@@ -70,7 +70,7 @@ class MockListTabs {
               ),
               SubCard(
                 // Cards da Tela  de pragas
-                titulo: "Helicoverpa Armigera.",
+                titulo: "Helicoverpa\nArmigera.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/algodao/pragas/pragas/algodao_pragas_helicoverpaamigera.png",
@@ -85,7 +85,7 @@ class MockListTabs {
               ),
               SubCard(
                 // Cards da Tela  de pragas
-                titulo: "Percevejo Verde(Fede Fede - Nezara Viridula)",
+                titulo: "Percevejo\nVerde.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/algodao/pragas/pragas/algodao_pragas_percevejoverde.png",
@@ -102,7 +102,7 @@ class MockListTabs {
             doencas: [
               SubCard(
                 // Cards da Tela  de doenças
-                titulo: "Mancha de Ramulária(Ramularia Areola).",
+                titulo: "Mancha de\nRamulária.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/algodao/pragas/doencas/algodao_doencas_mancharamularia.png",
@@ -118,7 +118,7 @@ class MockListTabs {
               SubCard(
                 // Cards da Tela  de doenças
                 titulo:
-                    "Ramulose(Colletotrichum gossypii var. cephalosporioides)",
+                    "Ramulose.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/algodao/pragas/doencas/algodao_doencas_ramulose.png",
@@ -135,7 +135,7 @@ class MockListTabs {
               SubCard(
                 // Cards da Tela  de doenças
                 titulo:
-                    "Fusariose/Murcha de Fusarium (Fusarium oxysporum f.sp.vasinfectum)",
+                    "Murcha de\nFusarium.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/algodao/pragas/doencas/algodao_doencas_murcharafusarium.png",
@@ -172,7 +172,7 @@ class MockListTabs {
             pragas: [
               SubCard(
                 // Cards da Tela  de pragas
-                titulo: "Lagarta do pescoço vermelho(Stegasta bosquella)",
+                titulo: "Lagarta Pescoço\nVermelho.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/amendoim/pragas/amendoin_pragas_lagartacapin.png",
@@ -187,7 +187,7 @@ class MockListTabs {
               ),
               SubCard(
                 // Cards da Tela  de pragas
-                titulo: "Lagarta dos capinzais(Mocis Lapites)",
+                titulo: "Lagarta\ndos capinzais.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/amendoim/pragas/amendoin_pragas_lagartacapin.png",
@@ -202,7 +202,7 @@ class MockListTabs {
               ),
               SubCard(
                 // Cards da Tela  de pragas
-                titulo: "Percevejo castanho(Scaptocoris castanea)",
+                titulo: "Percevejo\nCastanho.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/amendoim/pragas/amendoin_pragas_percevejocastanho.png",
@@ -217,7 +217,7 @@ class MockListTabs {
               ),
               SubCard(
                 // Cards da Tela  de pragas
-                titulo: "Cigarrinha verde(Empoasca kraemeri)",
+                titulo: "Cigarrinha\nVerde.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/amendoim/pragas/amendoin_pragas_cigarrinhaverde.png",
@@ -232,7 +232,7 @@ class MockListTabs {
               ),
               SubCard(
                 // Cards da Tela  de pragas
-                titulo: "Traça (Corcyra cephalonica)",
+                titulo: "Traça.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/amendoim/pragas/amendoin_pragas_traca.png",
@@ -250,7 +250,7 @@ class MockListTabs {
               SubCard(
                 // Cards da Tela  de doenças
                 titulo:
-                    "Mancha castanha / Mancha foliar (Cercospora arachidicola)",
+                    "Mancha\nCastanha.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/amendoim/doencas/amendoin_doencas_manchamcastanha.png",
@@ -265,7 +265,7 @@ class MockListTabs {
               ),
               SubCard(
                 // Cards da Tela  de doenças
-                titulo: "Mancha preta(Pseudocercospora personata)",
+                titulo: "Mancha\nPreta.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/amendoim/doencas/amendoin_doencas_manchapreta.png",
@@ -295,7 +295,7 @@ class MockListTabs {
               ),
               SubCard(
                 // Cards da Tela  de doenças
-                titulo: "Mancha Barrenta",
+                titulo: "Mancha\nBarrenta.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/amendoim/doencas/amendoin_doencas_manchabarrenta.png",
@@ -332,7 +332,7 @@ class MockListTabs {
               SubCard(
                 // Cards da Tela  de pragas
                 titulo:
-                    "Broca do colo./lagarta elasmo(Elasmopalpus lignosellus)",
+                    "Broca do colo.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/arroz/pragas/arroz_pragas_brocacolo.png",
@@ -349,7 +349,7 @@ class MockListTabs {
               ),
               SubCard(
                 // Cards da Tela  de pragas
-                titulo: "Pulgão da raiz(Rhopalosiphum rufiabdominale)",
+                titulo: "Pulgão da\nRaiz",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/arroz/pragas/arroz_pragas_pulgaoraiz.png",
@@ -365,7 +365,7 @@ class MockListTabs {
               SubCard(
                 // Cards da Tela  de pragas
                 titulo:
-                    "Cigarrinha das pastagens/Cigarrinha dos capinzais (Deois flavopicta)",
+                    "Cigarrinha das\nPastagens.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/arroz/pragas/arroz_pragas_cigarrinhapastagens.png",
@@ -382,7 +382,7 @@ class MockListTabs {
               ),
               SubCard(
                 // Cards da Tela  de pragas
-                titulo: "Cascudo preto(Euetheola humilis)",
+                titulo: "Cascudo\nPreto.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/arroz/pragas/arroz_pragas_cascudopreto.png",
@@ -398,7 +398,7 @@ class MockListTabs {
               SubCard(
                 // Cards da Tela  de pragas
                 titulo:
-                    "Percevejo do arroz/Percevejo da panícula (Oebalus poecilus)",
+                    "Percevejo do\nArroz.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/arroz/pragas/arroz_pragas_percevejograo.png",
@@ -416,7 +416,7 @@ class MockListTabs {
             doencas: [
               SubCard(
                 // Cards da Tela  de doenças
-                titulo: "Brusone(Pyricularia grisea)",
+                titulo: "Brusone.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/arroz/doencas/arroz_doencas_brusone.png",
@@ -432,7 +432,7 @@ class MockListTabs {
               SubCard(
                 // Cards da Tela  de doenças
                 titulo:
-                    "Mancha parda/Helminthosporiose, mancha foliar (Bipolaris oryzae)",
+                    "Mancha Parda.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/arroz/doencas/arroz_doencas_manchaparda.png",
@@ -449,7 +449,7 @@ class MockListTabs {
               ),
               SubCard(
                 // Cards da Tela  de doenças
-                titulo: "Escaldadura(Rhynchosporium secalis).",
+                titulo: "Escaldadura.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/arroz/doencas/arroz_doencas_escaldadurafolha.png",
@@ -464,7 +464,7 @@ class MockListTabs {
               ),
               SubCard(
                 // Cards da Tela  de doenças
-                titulo: "Mancha Barrenta / Queima das glumelas(Phoma sorghina)",
+                titulo: "Mancha\nBarrenta.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/arroz/doencas/arroz_doencas_queimaGlumelas.png",
@@ -502,7 +502,7 @@ class MockListTabs {
             pragas: [
               SubCard(
                 // Cards da Tela  de pragas
-                titulo: "Broca do café(Hypothenemus hampei)",
+                titulo: "Broca do\nCafé.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/cafe/pragas/feijao_pragas_brocacafe.png",
@@ -517,7 +517,7 @@ class MockListTabs {
               ),
               SubCard(
                 // Cards da Tela  de pragas
-                titulo: "Bicho mineiro(Leucoptera coffeella)",
+                titulo: "Bicho\nMineiro.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/cafe/pragas/feijao_pragas_bichomineiro.png",
@@ -533,7 +533,7 @@ class MockListTabs {
               SubCard(
                 // Cards da Tela  de pragas
                 titulo:
-                    "Ácaro vermelho/Aranha vermelha do cafeeiro (Oligonychus ilicis)",
+                    "Ácaro\nVermelho.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/cafe/pragas/feijao_pragas_acarovermelho.png",
@@ -549,7 +549,7 @@ class MockListTabs {
               ),
               SubCard(
                 // Cards da Tela  de pragas
-                titulo: "Cigarrinha/Cigarrinha da CVC (Oncometopia facialis)",
+                titulo: "Cigarrinha.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/cafe/pragas/feijao_pragas_cigarrinhas.png",
@@ -567,7 +567,7 @@ class MockListTabs {
             doencas: [
               SubCard(
                 // Cards da Tela  de doenças
-                titulo: "Ferrugem do cafeeiro/Ferrugem (Hemileia vastatrix)",
+                titulo: "Ferrugem do\nCafeeiro.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/cafe/doencas/cafe_doencas_ferrugem.png",
@@ -584,7 +584,7 @@ class MockListTabs {
               SubCard(
                 // Cards da Tela  de doenças
                 titulo:
-                    "Seca de ponteiros/Mancha de Phoma (Phoma costaricensis)",
+                    "Mancha de\nPhoma.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/cafe/doencas/cafe_doencas_manchaphoma.png",
@@ -600,7 +600,7 @@ class MockListTabs {
               ),
               SubCard(
                 // Cards da Tela  de doenças
-                titulo: "Olho pardo/Cercosporiose (Cercospora coffeicola)",
+                titulo: "Olho pardo.\n(Cercosporiose)",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/cafe/doencas/cafe_doencas_olhopardo.png",
@@ -637,7 +637,7 @@ class MockListTabs {
             pragas: [
               SubCard(
                 // Cards da Tela  de pragas
-                titulo: "Cigarrinha verde(Empoasca kraemeri)",
+                titulo: "Cigarrinha\nVerde.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/batata/pragas/batata_pragas_cigarrinhaverde.png",
@@ -653,7 +653,7 @@ class MockListTabs {
               ),
               SubCard(
                 // Cards da Tela  de pragas
-                titulo: "Bicho tromba/Broca da batatinha (Phyrdenus muriceus)",
+                titulo: "Bicho Tromba.\n(Broca da batatinha)",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/batata/pragas/batata_pragas_bichoelefante.png",
@@ -671,7 +671,7 @@ class MockListTabs {
               SubCard(
                 // Cards da Tela  de pragas
                 titulo:
-                    "Larva minadora/Mosca minadora (Liriomyza huidobrensis)",
+                    "Larva Minadora.\n(Mosca minadora)",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/batata/pragas/batata_pragas_moscamineradora.png",
@@ -688,7 +688,7 @@ class MockListTabs {
               SubCard(
                 // Cards da Tela  de pragas
                 titulo:
-                    "Traça da batatinha/Cegadeira (Phthorimaea operculella)",
+                    "Traça da\nBatatinha.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/batata/pragas/batata_pragas_traca.png",
@@ -704,7 +704,7 @@ class MockListTabs {
               ),
               SubCard(
                 // Cards da Tela  de pragas
-                titulo: "Lagarta rosca(Agrotis ipsilon)",
+                titulo: "Lagarta\nRosca.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/batata/pragas/batata_pragas_lagartarosca.png",
@@ -722,7 +722,7 @@ class MockListTabs {
               SubCard(
                 // Cards da Tela  de doenças
                 titulo:
-                    "Pinta preta grande/Mancha de alternaria (Alternaria solani)",
+                    "Pinta Preta\nGrande.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/batata/doencas/batata_doencas_pintapreta.png",
@@ -739,7 +739,7 @@ class MockListTabs {
               SubCard(
                 // Cards da Tela  de doenças
                 titulo:
-                    "Canela-preta/Podridão-mole (Pectobacterium carotovorum)",
+                    "Canela-preta.\n(Podridão-mole)",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/batata/doencas/batata_doencas_podridaomole.png",
@@ -756,7 +756,7 @@ class MockListTabs {
               ),
               SubCard(
                 // Cards da Tela  de doenças
-                titulo: "Requeima(Phytophthora infestans)",
+                titulo: "Requeima.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/batata/doencas/batata_doencas_requeima.png",
@@ -771,7 +771,7 @@ class MockListTabs {
               ),
               SubCard(
                 // Cards da Tela  de doenças
-                titulo: "Sarna prateada(Helminthosporium solani)",
+                titulo: "Sarna\nPrateada.",
                 rota: 'Content',
                 imagem:
                     "assets/agronomia/arroz/doencas/arroz_doencas_queimaGlumelas.png",
