@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
     return ScopedModel<UserModel>(
       model: UserModel(),
       child: MaterialApp(
-        title: "Flutter's Clothings",
+        title: "SGAAPP",
         theme: ThemeData(
             primarySwatch: Colors.orange, primaryColor: Colors.orange[200]),
         debugShowCheckedModeBanner: false,
